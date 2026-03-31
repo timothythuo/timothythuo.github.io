@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timothy Thuo | Virtual Assistant</title>
+<title>Timothy Thuo | Professional Virtual Assistant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -14,165 +14,135 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:#0f172a;
-color:#f1f5f9;
-line-height:1.6;
+background:#f8fafc;
+color:#0f172a;
 }
 
-section{
-padding:80px 10%;
-}
-
-h1,h2{
-font-weight:700;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
+/* HEADER */
+.header{
+background:white;
+padding:20px 10%;
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-text-align:center;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:15px;
-animation:fadeIn 1s ease;
-}
-
-.hero p{
-margin-bottom:25px;
-color:#cbd5e1;
-}
-
-.btn-group{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:12px 25px;
-color:white;
-text-decoration:none;
-border-radius:30px;
-transition:0.3s;
-display:inline-flex;
-align-items:center;
-gap:8px;
-}
-
-.whatsapp{
-background:#22c55e;
-}
-
-.email{
-background:#3b82f6;
-}
-
-.btn:hover{
-transform:scale(1.08);
-opacity:0.9;
-}
-
-/* SERVICES */
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-text-align:center;
-transition:0.4s;
-opacity:0;
-transform:translateY(40px);
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
-}
-
-.card:hover{
-transform:translateY(-10px);
-background:#334155;
-}
-
-/* CONTACT */
-
-.contact-box{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-text-align:center;
-}
-
-/* FLOATING WHATSAPP */
-
-.float-wa{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#22c55e;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-box-shadow:0 4px 15px rgba(0,0,0,0.4);
-transition:0.3s;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
 z-index:1000;
 }
 
-.float-wa:hover{
-transform:scale(1.1);
+.logo{
+font-weight:700;
+font-size:1.3rem;
+color:#14a800;
 }
 
-/* STICKY TOP BAR */
+/* BUTTONS */
+.btn{
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+display:inline-flex;
+align-items:center;
+gap:8px;
+font-weight:600;
+transition:0.3s;
+cursor:pointer;
+}
 
-.sticky-bar{
-position:fixed;
-top:0;
-width:100%;
-background:#1e293b;
-padding:10px;
+.hire{
+background:#14a800;
+color:white;
+}
+
+.email{
+background:#0ea5e9;
+color:white;
+}
+
+.paypal{
+background:#0070ba;
+color:white;
+}
+
+.btn:hover{
+opacity:0.85;
+transform:translateY(-2px);
+}
+
+/* PROFILE SECTION */
+.profile{
+padding:70px 10%;
 display:flex;
-justify-content:center;
-z-index:999;
+gap:50px;
+align-items:center;
+flex-wrap:wrap;
 }
 
+.profile img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #14a800;
+}
+
+.profile-info h1{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.profile-info p{
+margin-bottom:15px;
+color:#475569;
+max-width:600px;
+}
+
+.rating{
+color:#facc15;
+margin-bottom:15px;
+}
+
+/* SECTIONS */
+.section{
+padding:60px 10%;
+}
+
+.section h2{
+margin-bottom:30px;
+font-size:1.5rem;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
 footer{
 text-align:center;
-padding:20px;
-background:#0f172a;
-color:#94a3b8;
-}
-
-/* Animation */
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+padding:30px;
+background:#f1f5f9;
+margin-top:40px;
+color:#64748b;
 }
 
 </style>
@@ -180,40 +150,45 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
-<!-- Sticky Top Hire Button -->
-<div class="sticky-bar">
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn whatsapp">
+<!-- HEADER -->
+<div class="header">
+<div class="logo">Timothy Thuo</div>
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn hire">
 <i class="fab fa-whatsapp"></i> Hire Me
 </a>
 </div>
 
-<section class="hero">
-<div>
-<h1>Timothy Thuo</h1>
-<p>Professional Virtual Assistant Helping You Scale Faster 🚀</p>
+<!-- PROFILE SECTION -->
+<section class="profile">
 
-<div class="btn-group">
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn whatsapp">
+<!-- 🔥 CHANGE profile.jpg IF YOUR IMAGE NAME IS DIFFERENT -->
+<img src="profile.jpg" alt="Timothy Thuo">
+
+<div class="profile-info">
+<h1>Professional Virtual Assistant</h1>
+<div class="rating">★★★★★ 5.0</div>
+
+<p>
+I am a dedicated IT graduate specializing in virtual assistance, data entry,
+transcription, customer support, social media management, and digital solutions.
+I help businesses stay organized, efficient, and profitable.
+</p>
+
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn hire">
 <i class="fab fa-whatsapp"></i> WhatsApp Me
 </a>
 
-<a href="mailto:timothythuo@gmail.com" class="btn email">
+<a href="mailto:timothythuo0@gmail.com" class="btn email">
 <i class="fas fa-envelope"></i> Email Me
 </a>
-</div>
 
 </div>
 </section>
 
-<section>
-<h2>About Me</h2>
-<p style="text-align:center; max-width:700px; margin:auto;">
-Dedicated IT graduate specializing in virtual assistance, data entry, transcription, and digital support services. I help businesses stay organized and grow efficiently.
-</p>
-</section>
+<!-- SERVICES -->
+<section class="section">
+<h2>Services</h2>
 
-<section>
-<h2>My Services</h2>
 <div class="services">
 <div class="card">Virtual Assistance</div>
 <div class="card">Data Entry</div>
@@ -224,39 +199,38 @@ Dedicated IT graduate specializing in virtual assistance, data entry, transcript
 <div class="card">Graphic Design</div>
 <div class="card">Online Research</div>
 </div>
+
 </section>
 
-<section>
-<h2>Let's Work Together</h2>
-<div class="contact-box">
-<p>Email: timothythuo@gmail.com</p>
-<p>Phone: +254 794 301 929</p>
+<!-- PAYMENT SECTION -->
+<section class="section">
+<h2>Payment Options</h2>
+
+<div class="services">
+
+<div class="card">
+<h3><i class="fab fa-paypal"></i> PayPal</h3>
+<p>Secure international payments accepted via PayPal.</p>
+<br>
+<a href="https://www.paypal.com/paypalme/timothythuo0@gmail.com" target="_blank" class="btn paypal">
+Pay via PayPal
+</a>
 </div>
+
+<div class="card">
+<h3><i class="fas fa-mobile-alt"></i> M-Pesa</h3>
+<p>Send payment via M-Pesa to:</p>
+<p><strong>0794 301 929</strong></p>
+<p>Name: Timothy Thuo</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Timothy Thuo
+© 2026 Timothy Thuo | Professional Freelance Profile
 </footer>
-
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="float-wa">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-cards.forEach(card => {
-const position = card.getBoundingClientRect().top;
-const screenPosition = window.innerHeight / 1.2;
-
-if(position < screenPosition){
-card.classList.add('show');
-}
-});
-});
-</script>
 
 </body>
 </html>
