@@ -6,6 +6,7 @@
 <title>Timothy Thuo | Virtual Assistant</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -14,6 +15,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -36,6 +38,8 @@ margin-bottom:40px;
 color:#38bdf8;
 }
 
+/* HERO */
+
 .hero{
 height:100vh;
 display:flex;
@@ -56,19 +60,38 @@ margin-bottom:25px;
 color:#cbd5e1;
 }
 
+.btn-group{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
 .btn{
-background:#22c55e;
 padding:12px 25px;
 color:white;
 text-decoration:none;
 border-radius:30px;
 transition:0.3s;
+display:inline-flex;
+align-items:center;
+gap:8px;
+}
+
+.whatsapp{
+background:#22c55e;
+}
+
+.email{
+background:#3b82f6;
 }
 
 .btn:hover{
-background:#16a34a;
-transform:scale(1.05);
+transform:scale(1.08);
+opacity:0.9;
 }
+
+/* SERVICES */
 
 .services{
 display:grid;
@@ -81,13 +104,22 @@ background:#1e293b;
 padding:30px;
 border-radius:15px;
 text-align:center;
-transition:0.3s;
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
 transform:translateY(-10px);
 background:#334155;
 }
+
+/* CONTACT */
 
 .contact-box{
 background:#1e293b;
@@ -96,12 +128,47 @@ border-radius:15px;
 text-align:center;
 }
 
+/* FLOATING WHATSAPP */
+
+.float-wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+box-shadow:0 4px 15px rgba(0,0,0,0.4);
+transition:0.3s;
+z-index:1000;
+}
+
+.float-wa:hover{
+transform:scale(1.1);
+}
+
+/* STICKY TOP BAR */
+
+.sticky-bar{
+position:fixed;
+top:0;
+width:100%;
+background:#1e293b;
+padding:10px;
+display:flex;
+justify-content:center;
+z-index:999;
+}
+
 footer{
 text-align:center;
 padding:20px;
 background:#0f172a;
 color:#94a3b8;
 }
+
+/* Animation */
 
 @keyframes fadeIn{
 from{opacity:0;transform:translateY(20px);}
@@ -113,11 +180,28 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
+<!-- Sticky Top Hire Button -->
+<div class="sticky-bar">
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn whatsapp">
+<i class="fab fa-whatsapp"></i> Hire Me
+</a>
+</div>
+
 <section class="hero">
 <div>
 <h1>Timothy Thuo</h1>
 <p>Professional Virtual Assistant Helping You Scale Faster 🚀</p>
-<a href="https://wa.me/254794301929" class="btn">Hire Me on WhatsApp</a>
+
+<div class="btn-group">
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn whatsapp">
+<i class="fab fa-whatsapp"></i> WhatsApp Me
+</a>
+
+<a href="mailto:timothythuo@gmail.com" class="btn email">
+<i class="fas fa-envelope"></i> Email Me
+</a>
+</div>
+
 </div>
 </section>
 
@@ -153,6 +237,26 @@ Dedicated IT graduate specializing in virtual assistance, data entry, transcript
 <footer>
 © 2026 Timothy Thuo
 </footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="float-wa">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+cards.forEach(card => {
+const position = card.getBoundingClientRect().top;
+const screenPosition = window.innerHeight / 1.2;
+
+if(position < screenPosition){
+card.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
