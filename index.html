@@ -15,11 +15,26 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
+transition:0.3s;
 }
 
 body{
 background:#f8fafc;
 color:#0f172a;
+}
+
+/* DARK MODE */
+body.dark{
+background:#0f172a;
+color:white;
+}
+
+body.dark .card{
+background:#1e293b;
+}
+
+body.dark footer{
+background:#1e293b;
 }
 
 /* HEADER */
@@ -33,6 +48,10 @@ box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
 z-index:1000;
+}
+
+body.dark .header{
+background:#1e293b;
 }
 
 .logo{
@@ -50,31 +69,21 @@ display:inline-flex;
 align-items:center;
 gap:8px;
 font-weight:600;
-transition:0.3s;
 cursor:pointer;
+border:none;
 }
 
-.hire{
-background:#14a800;
-color:white;
-}
-
-.email{
-background:#0ea5e9;
-color:white;
-}
-
-.paypal{
-background:#0070ba;
-color:white;
-}
+.hire{background:#14a800;color:white;}
+.email{background:#0ea5e9;color:white;}
+.paypal{background:#0070ba;color:white;}
+.dark-toggle{background:#111;color:white;}
 
 .btn:hover{
 opacity:0.85;
 transform:translateY(-2px);
 }
 
-/* PROFILE SECTION */
+/* PROFILE */
 .profile{
 padding:70px 10%;
 display:flex;
@@ -91,63 +100,33 @@ object-fit:cover;
 border:4px solid #14a800;
 }
 
-.profile-info h1{
-font-size:2rem;
-margin-bottom:10px;
-}
+.profile-info h1{font-size:2rem;margin-bottom:10px;}
+.profile-info p{margin-bottom:15px;color:#475569;max-width:600px;}
+body.dark .profile-info p{color:#cbd5e1;}
 
-.profile-info p{
-margin-bottom:15px;
-color:#475569;
-max-width:600px;
-}
-
-.rating{
-color:#facc15;
-margin-bottom:15px;
-}
+.rating{color:#facc15;margin-bottom:15px;}
 
 /* SECTIONS */
-.section{
-padding:60px 10%;
-}
+.section{padding:60px 10%;}
+.section h2{margin-bottom:30px;font-size:1.6rem;}
 
-.section h2{
-margin-bottom:30px;
-font-size:1.5rem;
-}
-
-/* SERVICES */
-.services{
+/* GRID */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
+/* CARD */
 .card{
 background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.05);
-transition:0.3s;
-cursor:pointer;
 }
 
 .card:hover{
 transform:translateY(-5px);
-}
-
-.card.active{
-border-left:4px solid #14a800;
-}
-
-.service-details{
-max-height:0;
-overflow:hidden;
-transition:max-height 0.4s ease;
-margin-top:10px;
-color:#475569;
-font-size:0.95rem;
 }
 
 /* FOOTER */
@@ -160,10 +139,7 @@ color:#64748b;
 }
 
 @media(max-width:768px){
-.profile{
-flex-direction:column;
-text-align:center;
-}
+.profile{flex-direction:column;text-align:center;}
 }
 
 </style>
@@ -174,155 +150,127 @@ text-align:center;
 <!-- HEADER -->
 <div class="header">
 <div class="logo">Timothy Thuo</div>
+
+<div>
+<button class="btn dark-toggle" onclick="toggleDark()">
+<i class="fas fa-moon"></i>
+</button>
+
 <a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn hire">
 <i class="fab fa-whatsapp"></i> Hire Me
 </a>
 </div>
+</div>
 
-<!-- PROFILE SECTION -->
+<!-- PROFILE -->
 <section class="profile">
-
 <img src="profile.jpg" alt="Timothy Thuo">
 
 <div class="profile-info">
 <h1>Professional Virtual Assistant</h1>
 <div class="rating">★★★★★ 5.0</div>
-
 <p>
-I am a dedicated IT graduate specializing in virtual assistance, data entry,
-transcription, customer support, social media management, and digital solutions.
-I help businesses stay organized, efficient, and profitable.
+Helping businesses stay organized, efficient and profitable through
+virtual assistance, tech support and digital services.
 </p>
-
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn hire">
-<i class="fab fa-whatsapp"></i> WhatsApp Me
-</a>
 
 <a href="mailto:timothythuo0@gmail.com" class="btn email">
 <i class="fas fa-envelope"></i> Email Me
 </a>
-
 </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section">
 <h2>Services</h2>
+<div class="grid">
 
-<div class="services">
+<div class="card"><h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3><p>Admin support, scheduling, email handling.</p></div>
+<div class="card"><h3><i class="fas fa-keyboard"></i> Data Entry</h3><p>Spreadsheets, CRM updates, data processing.</p></div>
+<div class="card"><h3><i class="fas fa-headphones"></i> Transcription</h3><p>Accurate audio & video transcription.</p></div>
+<div class="card"><h3><i class="fas fa-comments"></i> Customer Support</h3><p>Live chat & email client support.</p></div>
+<div class="card"><h3><i class="fas fa-code"></i> Web Development</h3><p>Portfolio & small business websites.</p></div>
+<div class="card"><h3><i class="fas fa-pen-nib"></i> Graphic Design</h3><p>Logos & marketing materials.</p></div>
 
-<div class="card" onclick="toggleService('va')">
-<h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3>
-<div id="va" class="service-details">
-<p>Email & calendar management, scheduling, executive admin support and organization.</p>
 </div>
-</div>
+</section>
 
-<div class="card" onclick="toggleService('data')">
-<h3><i class="fas fa-keyboard"></i> Data Entry</h3>
-<div id="data" class="service-details">
-<p>Accurate spreadsheet work, CRM updates, database management and data processing.</p>
-</div>
-</div>
+<!-- PRICING -->
+<section class="section">
+<h2>Pricing</h2>
+<div class="grid">
 
-<div class="card" onclick="toggleService('transcription')">
-<h3><i class="fas fa-headphones"></i> Transcription</h3>
-<div id="transcription" class="service-details">
-<p>Audio & video transcription with high accuracy and quick turnaround time.</p>
-</div>
+<div class="card">
+<h3>Virtual Assistance</h3>
+<p><strong>From $8/hour</strong></p>
 </div>
 
-<div class="card" onclick="toggleService('support')">
-<h3><i class="fas fa-comments"></i> Customer Support</h3>
-<div id="support" class="service-details">
-<p>Email support, live chat handling, ticket management and client communication.</p>
-</div>
+<div class="card">
+<h3>Web Development</h3>
+<p><strong>From $150/project</strong></p>
 </div>
 
-<div class="card" onclick="toggleService('smm')">
-<h3><i class="fas fa-hashtag"></i> Social Media Management</h3>
-<div id="smm" class="service-details">
-<p>Content creation, post scheduling, engagement growth and analytics tracking.</p>
-</div>
-</div>
-
-<div class="card" onclick="toggleService('web')">
-<h3><i class="fas fa-code"></i> Web Development</h3>
-<div id="web" class="service-details">
-<p>Portfolio sites, landing pages and small business websites.</p>
-</div>
-</div>
-
-<div class="card" onclick="toggleService('design')">
-<h3><i class="fas fa-pen-nib"></i> Graphic Design</h3>
-<div id="design" class="service-details">
-<p>Logos, branding kits, social media graphics and marketing materials.</p>
-</div>
-</div>
-
-<div class="card" onclick="toggleService('research')">
-<h3><i class="fas fa-search"></i> Online Research</h3>
-<div id="research" class="service-details">
-<p>Market research, competitor analysis, product sourcing and lead generation.</p>
-</div>
+<div class="card">
+<h3>Graphic Design</h3>
+<p><strong>From $30/design</strong></p>
 </div>
 
 </div>
 </section>
 
-<!-- PAYMENT SECTION -->
+<!-- PORTFOLIO -->
 <section class="section">
-<h2>Payment Options</h2>
-
-<div class="services">
+<h2>Portfolio</h2>
+<div class="grid">
 
 <div class="card">
-<h3><i class="fab fa-paypal"></i> PayPal</h3>
-<p>Secure international payments accepted via PayPal.</p>
-<br>
-<a href="https://www.paypal.com/paypalme/timothythuo0@gmail.com" target="_blank" class="btn paypal">
-Pay via PayPal
-</a>
+<h3>Business Website</h3>
+<p>Designed and deployed a responsive small business website.</p>
 </div>
 
 <div class="card">
-<h3><i class="fas fa-mobile-alt"></i> M-Pesa</h3>
-<p>Send payment via M-Pesa to:</p>
-<p><strong>0794 301 929</strong></p>
-<p>Name: Timothy Kamau</p>
+<h3>Social Media Campaign</h3>
+<p>Managed content & engagement growth strategy.</p>
+</div>
+
+<div class="card">
+<h3>Data Management Project</h3>
+<p>Organized and cleaned 10,000+ records.</p>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>Testimonials</h2>
+<div class="grid">
+
+<div class="card">
+<p>"Timothy is reliable and highly professional. Highly recommended!"</p>
+<strong>- Client A</strong>
+</div>
+
+<div class="card">
+<p>"Delivered my website on time and exceeded expectations."</p>
+<strong>- Client B</strong>
+</div>
+
+<div class="card">
+<p>"Excellent communication and great attention to detail."</p>
+<strong>- Client C</strong>
 </div>
 
 </div>
 </section>
 
 <footer>
-© 2026 Timothy Thuo | Professional Freelance Profile
+© 2026 Timothy Thuo | Professional Virtual Assistant
 </footer>
 
 <script>
-function toggleService(id){
-
-var allDetails = document.querySelectorAll('.service-details');
-var allCards = document.querySelectorAll('.card');
-
-allDetails.forEach(function(detail){
-detail.style.maxHeight = null;
-});
-
-allCards.forEach(function(card){
-card.classList.remove('active');
-});
-
-var element = document.getElementById(id);
-var parentCard = element.parentElement;
-
-if(element.style.maxHeight){
-element.style.maxHeight = null;
-parentCard.classList.remove('active');
-}else{
-element.style.maxHeight = element.scrollHeight + "px";
-parentCard.classList.add('active');
-}
+function toggleDark(){
+document.body.classList.toggle("dark");
 }
 </script>
 
