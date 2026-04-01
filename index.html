@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF‑8">
-<meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-<title>Timothy Thuo | Professional Virtual Assistant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timothy Thuo | Elite Virtual Assistant</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -13,174 +13,198 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
-transition:0.3s;
+font-family:'Montserrat',sans-serif;
 }
 
 body{
 background:#f8fafc;
 color:#0f172a;
+line-height:1.6;
+scroll-behavior:smooth;
 }
 
-/* DARK MODE */
 body.dark{
 background:#0f172a;
 color:white;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+body.dark header{
+background:#1e293b;
+}
+
+.logo{
+font-weight:700;
+font-size:1.6rem;
+color:#16a34a;
+}
+
+.nav{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+display:inline-flex;
+align-items:center;
+gap:8px;
+border:none;
+cursor:pointer;
+}
+
+.primary{background:#16a34a;color:white;}
+.secondary{background:#0284c7;color:white;}
+.dark-toggle{background:#111;color:white;}
+
+.btn:hover{
+opacity:0.9;
+}
+
+/* HERO */
+.hero{
+padding:160px 8% 100px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
+}
+
+.hero-text h1{
+font-size:2.8rem;
+margin-bottom:20px;
+}
+
+.hero-text p{
+margin-bottom:25px;
+color:#475569;
+}
+
+body.dark .hero-text p{
+color:#cbd5e1;
+}
+
+.hero img{
+width:240px;
+height:240px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #16a34a;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.rating{
+color:#facc15;
+margin-bottom:20px;
+font-size:1.1rem;
+}
+
+/* SECTIONS */
+.section{
+padding:100px 8%;
+}
+
+.section h2{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:50px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARDS */
+.card{
+background:white;
+padding:35px;
+border-radius:16px;
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
+transition:0.4s;
 }
 
 body.dark .card{
 background:#1e293b;
 }
 
-body.dark footer{
-background:#1e293b;
-}
-
-/* HEADER */
-.header{
-background:white;
-padding:20px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-body.dark .header{
-background:#1e293b;
-}
-
-.logo{
-font-weight:700;
-font-size:2rem;
-color:#14a800;
-}
-
-/* BUTTONS */
-.btn{
-padding:14px 20px;
-border-radius:8px;
-text-decoration:none;
-display:inline-flex;
-align-items:center;
-gap:8px;
-font-weight:600;
-font-size:1.1rem;
-cursor:pointer;
-border:none;
-}
-
-.hire{background:#14a800;color:white;font-size:1.2rem;padding:16px 22px;}
-.email{background:#0ea5e9;color:white;}
-.paypal{background:#0070ba;color:white;}
-.dark-toggle{background:#111;color:white;}
-
-.btn:hover{
-opacity:0.85;
-transform:translateY(-2px);
-}
-
-.header .dark-toggle i{
-font-size:1.2rem;
-}
-
-/* PROFILE */
-.profile{
-padding:70px 10%;
-display:flex;
-gap:50px;
-align-items:center;
-flex-wrap:wrap;
-}
-
-.profile img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #14a800;
-}
-
-.profile-info h1{font-size:2rem;margin-bottom:10px;}
-.profile-info p{margin-bottom:15px;color:#475569;max-width:600px;}
-body.dark .profile-info p{color:#cbd5e1;}
-
-.rating{color:#facc15;margin-bottom:15px;}
-
-/* SECTIONS */
-.section{padding:60px 10%;}
-.section h2{margin-bottom:20px;font-size:1.6rem;}
-.section p{margin-bottom:15px;line-height:1.6;}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-/* CARD */
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
-
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#16a34a;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+text-align:center;
+}
+
+.testimonial img{
+width:95px;
+height:95px;
+border-radius:50%;
+margin-bottom:15px;
+object-fit:cover;
+}
+
+.testimonial p{
+font-style:italic;
+margin-bottom:15px;
+}
+
+.testimonial div{
+font-size:0.9rem;
+color:#64748b;
+}
+
+body.dark .testimonial div{
+color:#cbd5e1;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
 background:#f1f5f9;
-margin-top:40px;
 color:#64748b;
 }
 
-/* PAYMENT DESCRIPTION */
-#payment p{
-font-size:1rem;
-color:#334155;
-}
-
-body.dark #payment p{
-color:#cbd5e1;
-}
-
-/* TESTIMONIALS */
-#testimonials .card{
-text-align:center;
-}
-
-#testimonials .card img{
-width:80px;
-height:80px;
-border-radius:50%;
-margin-bottom:10px;
-}
-
-#testimonials .card div{
-color:#64748b;
-font-size:0.9rem;
-}
-
-body.dark #testimonials .card div{
+body.dark footer{
+background:#1e293b;
 color:#cbd5e1;
 }
 
 @media(max-width:768px){
-.profile{flex-direction:column;text-align:center;}
-}
-
-@media(max-width:480px){
-.grid{
-grid-template-columns:1fr;
+.hero{
+flex-direction:column;
+text-align:center;
 }
 }
 </style>
@@ -188,128 +212,99 @@ grid-template-columns:1fr;
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<header>
 <div class="logo">Timothy Thuo</div>
 
-<div>
+<div class="nav">
 <button class="btn dark-toggle" onclick="toggleDark()">
 <i class="fas fa-moon"></i>
 </button>
 
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." class="btn hire">
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20want%20to%20hire%20you." class="btn primary">
 <i class="fab fa-whatsapp"></i> Hire Me
 </a>
 
-<a href="mailto:timothythuo0@gmail.com" class="btn email">
-<i class="fas fa-envelope"></i> Email Me
+<a href="mailto:timothythuo0@gmail.com" class="btn secondary">
+<i class="fas fa-envelope"></i> Email
 </a>
 </div>
-</div>
+</header>
 
-<!-- PROFILE -->
-<section class="profile">
-<img src="profile.jpg" alt="Timothy Thuo">
-
-<div class="profile-info">
-<h1>Professional Virtual Assistant</h1>
-<div class="rating">★★★★★ 5.0</div>
+<section class="hero">
+<div class="hero-text">
+<h1>Elite Professional Virtual Assistant</h1>
+<div class="rating">★★★★★ 5.0 Client Rating</div>
 <p>
-Helping businesses stay organized, efficient and profitable through
-virtual assistance, tech support and digital services.
+I help entrepreneurs and growing businesses stay organized, efficient and profitable
+through premium virtual assistance, web development and digital support.
 </p>
+
+<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20let's%20work%20together." class="btn primary">
+Start Working With Me
+</a>
 </div>
+
+<img src="profile.jpg" alt="Timothy Thuo">
 </section>
 
-<!-- SERVICES -->
 <section class="section">
-<h2>Services</h2>
+<h2>Premium Services</h2>
 <div class="grid">
-<div class="card"><h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3><p>Admin support, scheduling, email handling.</p></div>
-<div class="card"><h3><i class="fas fa-keyboard"></i> Data Entry</h3><p>Spreadsheets, CRM updates, data processing.</p></div>
-<div class="card"><h3><i class="fas fa-headphones"></i> Transcription</h3><p>Accurate audio & video transcription.</p></div>
-<div class="card"><h3><i class="fas fa-comments"></i> Customer Support</h3><p>Live chat & email client support.</p></div>
-<div class="card"><h3><i class="fas fa-code"></i> Web Development</h3><p>Portfolio & small business websites.</p></div>
-<div class="card"><h3><i class="fas fa-pen-nib"></i> Graphic Design</h3><p>Logos & marketing materials.</p></div>
-<div class="card"><h3><i class="fab fa-facebook"></i> Social Media Management</h3><p>Content creation, posting schedules, engagement growth.</p></div>
-<div class="card"><h3><i class="fas fa-search"></i> Online Research</h3><p>Market research, competitor analysis, data collection.</p></div>
-</div>
-</section>
 
-<!-- PRICING -->
-<section class="section">
-<h2>Pricing</h2>
-<div class="grid">
 <div class="card">
 <h3>Virtual Assistance</h3>
-<p><strong>From $8/hour</strong></p>
+<p>Professional admin support, scheduling, inbox management and operations assistance.</p>
 </div>
 
 <div class="card">
 <h3>Web Development</h3>
-<p><strong>From $150/project</strong></p>
+<p>Modern business and portfolio websites designed to convert visitors into clients.</p>
 </div>
 
 <div class="card">
-<h3>Graphic Design</h3>
-<p><strong>From $30/design</strong></p>
+<h3>Customer Support</h3>
+<p>Reliable live chat and email support to improve customer satisfaction.</p>
 </div>
 
 <div class="card">
-<h3>Social Media Management</h3>
-<p><strong>From $50/week</strong></p>
+<h3>Data Management</h3>
+<p>Accurate spreadsheets, CRM organization and business data structuring.</p>
 </div>
 
 <div class="card">
-<h3>Online Research</h3>
-<p><strong>From $10/hour</strong></p>
+<h3>Transcription</h3>
+<p>Clear and accurate audio/video transcription services.</p>
 </div>
+
+<div class="card">
+<h3>Brand Support</h3>
+<p>Graphic materials and online brand assistance to grow your business presence.</p>
+</div>
+
 </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section class="section">
-<h2>Portfolio</h2>
-<div class="grid">
-<div class="card">
-<h3>Business Website</h3>
-<p>Designed and deployed a responsive small business website.</p>
-</div>
-
-<div class="card">
-<h3>Social Media Campaign</h3>
-<p>Managed content & engagement growth strategy.</p>
-</div>
-
-<div class="card">
-<h3>Data Management Project</h3>
-<p>Organized and cleaned 10,000+ records.</p>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section" id="testimonials">
-<h2>Testimonials</h2>
+<h2>Client Testimonials</h2>
 <div class="grid">
 
-<div class="card">
+<div class="card testimonial">
 <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah Johnson">
-<p>"Timothy is reliable and highly professional. He helped streamline our operations efficiently."</p>
+<p>"Timothy is highly professional and dependable. He improved our workflow efficiency significantly."</p>
 <strong>Sarah Johnson</strong>
 <div>Project Manager, New York, USA</div>
 </div>
 
-<div class="card">
+<div class="card testimonial">
 <img src="https://images.pexels.com/photos/6262970/pexels-photo-6262970.jpeg" alt="James Otieno">
-<p>"Delivered my website on time and exceeded expectations. Excellent attention to detail!"</p>
+<p>"Delivered beyond expectations. Professional, timely and very detail-oriented."</p>
 <strong>James Otieno</strong>
-<div>Small Business Owner, Mombasa, Kenya</div>
+<div>Business Consultant, Atlanta, USA</div>
 </div>
 
-<div class="card">
+<div class="card testimonial">
 <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Ava Williams">
-<p>"Excellent communication and very proactive. Highly recommended for virtual assistance!"</p>
+<p>"Excellent communication and proactive support. Highly recommended."</p>
 <strong>Ava Williams</strong>
 <div>Marketing Specialist, Los Angeles, USA</div>
 </div>
@@ -317,49 +312,23 @@ virtual assistance, tech support and digital services.
 </div>
 </section>
 
-<!-- PAYMENT OPTIONS -->
-<section class="section" id="payment">
-<h2>Payment Options</h2>
-<p>
-You can pay securely using PayPal or conveniently via M-Pesa. Choose the option that works best for you to complete your payment quickly and safely.
-</p>
-
-<p>
-<strong>PayPal:</strong> Pay securely via PayPal from anywhere in the world. PayPal accepts multiple currencies and international cards, making it easy for clients globally to send payments safely and instantly.
-</p>
-
-<p>
-<strong>M-Pesa:</strong> For clients in Kenya, you can pay conveniently via M-Pesa. Payments are secure, fast, and processed directly to my account for local transactions.
-</p>
-
-<div class="grid">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
-<i class="fab fa-paypal"></i> Pay with PayPal
-</a>
-
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa" class="btn hire">
-<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
-</a>
-</div>
-</section>
-
 <footer>
-© 2026 Timothy Thuo | Professional Virtual Assistant
+© 2026 Timothy Thuo | Elite Virtual Assistant
 </footer>
 
 <script>
 function toggleDark(){
 document.body.classList.toggle("dark");
-const icon = document.querySelector(".dark-toggle i");
+const icon=document.querySelector(".dark-toggle i");
 if(document.body.classList.contains("dark")){
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-} else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
+icon.classList.remove("fa-moon");
+icon.classList.add("fa-sun");
+}else{
+icon.classList.remove("fa-sun");
+icon.classList.add("fa-moon");
 }
 }
 </script>
 
 </body>
-  </html>
+</html>
