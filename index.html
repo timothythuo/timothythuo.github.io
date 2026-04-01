@@ -55,7 +55,7 @@ background:#1e293b;
 
 .logo{
 font-weight:700;
-font-size:2rem; /* bigger */
+font-size:2rem;
 color:#14a800;
 }
 
@@ -153,14 +153,34 @@ body.dark #payment p{
 color:#cbd5e1;
 }
 
+#testimonials .card{
+text-align:center;
+}
+
+#testimonials .card img{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+#testimonials .card div{
+color:#64748b;
+font-size:0.9rem;
+}
+
+body.dark #testimonials .card div{
+color:#cbd5e1;
+}
+
 @media(max-width:768px){
 .profile{flex-direction:column;text-align:center;}
 }
 
 @media(max-width:480px){
-    .grid{
-        grid-template-columns: 1fr;
-    }
+.grid{
+grid-template-columns:1fr;
+}
 }
 </style>
 </head>
@@ -268,23 +288,31 @@ virtual assistance, tech support and digital services.
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section">
+<section class="section" id="testimonials">
 <h2>Testimonials</h2>
 <div class="grid">
+
 <div class="card">
-<p>"Timothy is reliable and highly professional. Highly recommended!"</p>
-<strong>- Client A</strong>
+<img src="client1.jpg" alt="Sarah Mwangi">
+<p>"Timothy is reliable and highly professional. He helped streamline our operations efficiently."</p>
+<strong>Sarah Mwangi</strong>
+<div>Operations Manager, Nairobi</div>
 </div>
 
 <div class="card">
-<p>"Delivered my website on time and exceeded expectations."</p>
-<strong>- Client B</strong>
+<img src="client2.jpg" alt="James Otieno">
+<p>"Delivered my website on time and exceeded expectations. Excellent attention to detail!"</p>
+<strong>James Otieno</strong>
+<div>Small Business Owner, Mombasa</div>
 </div>
 
 <div class="card">
-<p>"Excellent communication and great attention to detail."</p>
-<strong>- Client C</strong>
+<img src="client3.jpg" alt="Amina Hassan">
+<p>"Excellent communication and very proactive. Highly recommended for virtual assistance!"</p>
+<strong>Amina Hassan</strong>
+<div>Entrepreneur, Nairobi</div>
 </div>
+
 </div>
 </section>
 
