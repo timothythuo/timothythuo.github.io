@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -62,12 +61,12 @@ color:#14a800;
 
 /* BUTTONS */
 .btn{
-padding:12px 18px;
+padding:10px 16px;
 border-radius:8px;
 text-decoration:none;
 display:inline-flex;
 align-items:center;
-gap:8px;
+gap:6px;
 font-weight:600;
 cursor:pointer;
 border:none;
@@ -76,6 +75,7 @@ border:none;
 .hire{background:#14a800;color:white;}
 .email{background:#0ea5e9;color:white;}
 .paypal{background:#0070ba;color:white;}
+.mpesa{background:#fbbf24;color:white;}
 .dark-toggle{background:#111;color:white;}
 
 .btn:hover{
@@ -123,10 +123,21 @@ background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.05);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .card:hover{
 transform:translateY(-5px);
+}
+
+/* CARD BUTTONS */
+.card .card-buttons{
+margin-top:15px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
 /* FOOTER */
@@ -166,12 +177,8 @@ color:#64748b;
 <i class="fab fa-whatsapp"></i> Hire Me
 </a>
 
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
-<i class="fab fa-paypal"></i> Pay with PayPal
-</a>
-
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa" class="btn hire">
-<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+<a href="mailto:timothythuo0@gmail.com" class="btn email">
+<i class="fas fa-envelope"></i> Email Me
 </a>
 </div>
 </div>
@@ -199,14 +206,117 @@ virtual assistance, tech support and digital services.
 <h2>Services</h2>
 <div class="grid">
 
-<div class="card"><h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3><p>Admin support, scheduling, email handling.</p></div>
-<div class="card"><h3><i class="fas fa-keyboard"></i> Data Entry</h3><p>Spreadsheets, CRM updates, data processing.</p></div>
-<div class="card"><h3><i class="fas fa-headphones"></i> Transcription</h3><p>Accurate audio & video transcription.</p></div>
-<div class="card"><h3><i class="fas fa-comments"></i> Customer Support</h3><p>Live chat & email client support.</p></div>
-<div class="card"><h3><i class="fas fa-code"></i> Web Development</h3><p>Portfolio & small business websites.</p></div>
-<div class="card"><h3><i class="fas fa-pen-nib"></i> Graphic Design</h3><p>Logos & marketing materials.</p></div>
-<div class="card"><h3><i class="fab fa-facebook"></i> Social Media Management</h3><p>Content creation, posting schedules, engagement growth.</p></div>
-<div class="card"><h3><i class="fas fa-search"></i> Online Research</h3><p>Market research, competitor analysis, data collection.</p></div>
+<!-- Virtual Assistance -->
+<div class="card">
+<h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3>
+<p>Admin support, scheduling, email handling.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Virtual%20Assistance" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Data Entry -->
+<div class="card">
+<h3><i class="fas fa-keyboard"></i> Data Entry</h3>
+<p>Spreadsheets, CRM updates, data processing.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Data%20Entry" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Transcription -->
+<div class="card">
+<h3><i class="fas fa-headphones"></i> Transcription</h3>
+<p>Accurate audio & video transcription.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Transcription" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Customer Support -->
+<div class="card">
+<h3><i class="fas fa-comments"></i> Customer Support</h3>
+<p>Live chat & email client support.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Customer%20Support" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Web Development -->
+<div class="card">
+<h3><i class="fas fa-code"></i> Web Development</h3>
+<p>Portfolio & small business websites.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Web%20Development" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Graphic Design -->
+<div class="card">
+<h3><i class="fas fa-pen-nib"></i> Graphic Design</h3>
+<p>Logos & marketing materials.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Graphic%20Design" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Social Media Management -->
+<div class="card">
+<h3><i class="fab fa-facebook"></i> Social Media Management</h3>
+<p>Content creation, posting schedules, engagement growth.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Social%20Media%20Management" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
+
+<!-- Online Research -->
+<div class="card">
+<h3><i class="fas fa-search"></i> Online Research</h3>
+<p>Market research, competitor analysis, data collection.</p>
+<div class="card-buttons">
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Online%20Research" class="btn mpesa">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+</a>
+</div>
+</div>
 
 </div>
 </section>
