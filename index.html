@@ -55,20 +55,20 @@ background:#1e293b;
 
 .logo{
 font-weight:700;
-font-size:2rem; /* increased from 1.3rem */
+font-size:2rem; /* bigger */
 color:#14a800;
 }
 
 /* BUTTONS */
 .btn{
-padding:14px 20px; /* slightly larger */
+padding:14px 20px;
 border-radius:8px;
 text-decoration:none;
 display:inline-flex;
 align-items:center;
 gap:8px;
 font-weight:600;
-font-size:1.1rem; /* increased font */
+font-size:1.1rem;
 cursor:pointer;
 border:none;
 }
@@ -84,7 +84,7 @@ transform:translateY(-2px);
 }
 
 .header .dark-toggle i{
-font-size:1.2rem; /* bigger moon/sun icon */
+font-size:1.2rem;
 }
 
 /* PROFILE */
@@ -112,7 +112,8 @@ body.dark .profile-info p{color:#cbd5e1;}
 
 /* SECTIONS */
 .section{padding:60px 10%;}
-.section h2{margin-bottom:30px;font-size:1.6rem;}
+.section h2{margin-bottom:20px;font-size:1.6rem;}
+.section p{margin-bottom:15px;line-height:1.6;}
 
 /* GRID */
 .grid{
@@ -140,6 +141,16 @@ padding:30px;
 background:#f1f5f9;
 margin-top:40px;
 color:#64748b;
+}
+
+/* PAYMENT DESCRIPTION */
+#payment p{
+font-size:1rem;
+color:#334155;
+}
+
+body.dark #payment p{
+color:#cbd5e1;
 }
 
 @media(max-width:768px){
@@ -280,6 +291,18 @@ virtual assistance, tech support and digital services.
 <!-- PAYMENT OPTIONS -->
 <section class="section" id="payment">
 <h2>Payment Options</h2>
+<p>
+You can pay securely using PayPal or conveniently via M-Pesa. Choose the option that works best for you to complete your payment quickly and safely.
+</p>
+
+<p>
+<strong>PayPal:</strong> Pay securely via PayPal from anywhere in the world. PayPal accepts multiple currencies and international cards, making it easy for clients globally to send payments safely and instantly.
+</p>
+
+<p>
+<strong>M-Pesa:</strong> For clients in Kenya, you can pay conveniently via M-Pesa. Payments are secure, fast, and processed directly to my account for local transactions.
+</p>
+
 <div class="grid">
 <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
 <i class="fab fa-paypal"></i> Pay with PayPal
