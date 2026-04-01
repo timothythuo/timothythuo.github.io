@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -61,49 +62,26 @@ color:#14a800;
 
 /* BUTTONS */
 .btn{
-padding:10px 16px;
+padding:12px 18px;
 border-radius:8px;
 text-decoration:none;
 display:inline-flex;
 align-items:center;
-gap:6px;
+gap:8px;
 font-weight:600;
 cursor:pointer;
 border:none;
-transition:0.2s;
 }
+
+.hire{background:#14a800;color:white;}
+.email{background:#0ea5e9;color:white;}
+.paypal{background:#0070ba;color:white;}
+.dark-toggle{background:#111;color:white;}
 
 .btn:hover{
 opacity:0.85;
 transform:translateY(-2px);
 }
-
-/* COLORS FOR SERVICE BUTTONS */
-.btn.va-paypal{background:#0070ba;color:white;}
-.btn.va-mpesa{background:#fbbf24;color:white;}
-
-.btn.de-paypal{background:#1e40af;color:white;}
-.btn.de-mpesa{background:#facc15;color:black;}
-
-.btn.trans-paypal{background:#9333ea;color:white;}
-.btn.trans-mpesa{background:#f472b6;color:white;}
-
-.btn.cs-paypal{background:#0ea5e9;color:white;}
-.btn.cs-mpesa{background:#22c55e;color:white;}
-
-.btn.web-paypal{background:#f97316;color:white;}
-.btn.web-mpesa{background:#ea580c;color:white;}
-
-.btn.gd-paypal{background:#db2777;color:white;}
-.btn.gd-mpesa{background:#be185d;color:white;}
-
-.btn.smm-paypal{background:#6366f1;color:white;}
-.btn.smm-mpesa{background:#818cf8;color:white;}
-
-.btn.or-paypal{background:#16a34a;color:white;}
-.btn.or-mpesa{background:#4ade80;color:black;}
-
-.btn.dark-toggle{background:#111;color:white;}
 
 /* PROFILE */
 .profile{
@@ -145,21 +123,10 @@ background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,0.05);
-display:flex;
-flex-direction:column;
-justify-content:space-between;
 }
 
 .card:hover{
 transform:translateY(-5px);
-}
-
-/* CARD BUTTONS */
-.card .card-buttons{
-margin-top:15px;
-display:flex;
-gap:10px;
-flex-wrap:wrap;
 }
 
 /* FOOTER */
@@ -176,9 +143,9 @@ color:#64748b;
 }
 
 @media(max-width:480px){
-    .grid{
-        grid-template-columns: 1fr;
-    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
 }
 
 </style>
@@ -199,8 +166,12 @@ color:#64748b;
 <i class="fab fa-whatsapp"></i> Hire Me
 </a>
 
-<a href="mailto:timothythuo0@gmail.com" class="btn email">
-<i class="fas fa-envelope"></i> Email Me
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal">
+<i class="fab fa-paypal"></i> Pay with PayPal
+</a>
+
+<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa" class="btn hire">
+<i class="fas fa-mobile-alt"></i> Pay with M-Pesa
 </a>
 </div>
 </div>
@@ -228,85 +199,14 @@ virtual assistance, tech support and digital services.
 <h2>Services</h2>
 <div class="grid">
 
-<!-- Virtual Assistance -->
-<div class="card">
-<h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3>
-<p>Admin support, scheduling, email handling.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn va-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Virtual%20Assistance" class="btn va-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Data Entry -->
-<div class="card">
-<h3><i class="fas fa-keyboard"></i> Data Entry</h3>
-<p>Spreadsheets, CRM updates, data processing.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn de-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Data%20Entry" class="btn de-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Transcription -->
-<div class="card">
-<h3><i class="fas fa-headphones"></i> Transcription</h3>
-<p>Accurate audio & video transcription.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn trans-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Transcription" class="btn trans-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Customer Support -->
-<div class="card">
-<h3><i class="fas fa-comments"></i> Customer Support</h3>
-<p>Live chat & email client support.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn cs-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Customer%20Support" class="btn cs-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Web Development -->
-<div class="card">
-<h3><i class="fas fa-code"></i> Web Development</h3>
-<p>Portfolio & small business websites.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn web-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Web%20Development" class="btn web-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Graphic Design -->
-<div class="card">
-<h3><i class="fas fa-pen-nib"></i> Graphic Design</h3>
-<p>Logos & marketing materials.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn gd-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Graphic%20Design" class="btn gd-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Social Media Management -->
-<div class="card">
-<h3><i class="fab fa-facebook"></i> Social Media Management</h3>
-<p>Content creation, posting schedules, engagement growth.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn smm-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Social%20Media%20Management" class="btn smm-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
-
-<!-- Online Research -->
-<div class="card">
-<h3><i class="fas fa-search"></i> Online Research</h3>
-<p>Market research, competitor analysis, data collection.</p>
-<div class="card-buttons">
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn or-paypal"><i class="fab fa-paypal"></i> Pay with PayPal</a>
-<a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa%20for%20Online%20Research" class="btn or-mpesa"><i class="fas fa-mobile-alt"></i> Pay with M-Pesa</a>
-</div>
-</div>
+<div class="card"><h3><i class="fas fa-user-tie"></i> Virtual Assistance</h3><p>Admin support, scheduling, email handling.</p></div>
+<div class="card"><h3><i class="fas fa-keyboard"></i> Data Entry</h3><p>Spreadsheets, CRM updates, data processing.</p></div>
+<div class="card"><h3><i class="fas fa-headphones"></i> Transcription</h3><p>Accurate audio & video transcription.</p></div>
+<div class="card"><h3><i class="fas fa-comments"></i> Customer Support</h3><p>Live chat & email client support.</p></div>
+<div class="card"><h3><i class="fas fa-code"></i> Web Development</h3><p>Portfolio & small business websites.</p></div>
+<div class="card"><h3><i class="fas fa-pen-nib"></i> Graphic Design</h3><p>Logos & marketing materials.</p></div>
+<div class="card"><h3><i class="fab fa-facebook"></i> Social Media Management</h3><p>Content creation, posting schedules, engagement growth.</p></div>
+<div class="card"><h3><i class="fas fa-search"></i> Online Research</h3><p>Market research, competitor analysis, data collection.</p></div>
 
 </div>
 </section>
@@ -399,14 +299,16 @@ function toggleDark(){
 document.body.classList.toggle("dark");
 const icon = document.querySelector(".dark-toggle i");
 if(document.body.classList.contains("dark")){
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
 } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
 }
 }
 </script>
 
 </body>
 </html>
+
+
