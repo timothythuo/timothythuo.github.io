@@ -26,7 +26,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 .hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#475569;}
 .hero img{width:220px;height:220px;border-radius:50%;border:6px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit:cover;margin-top:30px;}
 
-.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block; transition: 0.3s; margin: 8px;}
+.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block; transition: 0.3s; margin: 8px; cursor: pointer; border: none;}
 .primary{background:#16a34a;color:white; border: 2px solid #16a34a;}
 .primary:hover{background:#15803d; transform: translateY(-2px);}
 .whatsapp{background:#25D366; color: white; border: 2px solid #25D366;}
@@ -38,6 +38,15 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 .card{background:white;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.03); border: 1px solid #f1f5f9;}
 .card h3{margin-bottom:12px;color:#16a34a; font-size: 1.25rem;}
 .pricing-tag{font-size:1rem;font-weight:700;margin-top:15px;color:#1e293b; display: block; border-top: 1px solid #f1f5f9; padding-top: 10px;}
+
+/* Tool Icon Styling */
+.tool-icons {display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;}
+.tool-item {text-align: center; font-size: 0.8rem; font-weight: 600; color: #64748b;}
+.tool-item i {font-size: 2.5rem; display: block; margin-bottom: 8px;}
+.fa-wordpress {color: #21759b;}
+.fa-hubspot {color: #ff7a59;}
+.fa-envelope-open-text {color: #007c89;} /* Mailchimp style */
+.fa-paypal {color: #003087;}
 
 .retainer-card {background: white; border: 2px solid #16a34a; margin-top: 40px; position: relative;}
 .badge {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #16a34a; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;}
@@ -56,6 +65,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 
 .contact-form-container {max-width: 600px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);}
 input, textarea {width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none;}
+#form-status {margin-top: 15px; font-weight: 600; text-align: center; display: none;}
 
 footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
 .footer-socials a{color:white; margin: 0 12px; font-size: 1.4rem; transition: 0.3s;}
@@ -127,6 +137,14 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
     </div>
 </div>
 
+<div class="tool-icons" data-aos="fade-up">
+    <div class="tool-item"><i class="fab fa-wordpress"></i> WordPress</div>
+    <div class="tool-item"><i class="fab fa-hubspot"></i> HubSpot</div>
+    <div class="tool-item"><i class="fas fa-envelope-open-text"></i> Mailchimp</div>
+    <div class="tool-item"><i class="fab fa-paypal"></i> PayPal</div>
+    <div class="tool-item"><i class="fas fa-robot" style="color: #16a34a;"></i> OpenAI/GPT</div>
+</div>
+
 <div style="margin-top: 50px; max-width: 850px; margin-left: auto; margin-right: auto;">
     <div class="card retainer-card" data-aos="zoom-in">
         <div class="badge">Most Popular Retainer</div>
@@ -138,7 +156,7 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
             <li><i class="fas fa-check-circle" style="color:#16a34a"></i> Weekly Website Maintenance & Updates</li>
             <li><i class="fas fa-check-circle" style="color:#16a34a"></i> Priority Strategic Business Support</li>
         </ul>
-        <a href="#contact" class="btn primary" style="width:100%; margin: 0;">Inquire About Growth Retainer</a>
+        <a href="#contact" class="btn primary" style="width:100%; margin: 0; text-align: center;">Inquire About Growth Retainer</a>
     </div>
 </div>
 </section>
@@ -188,14 +206,14 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
                 <span class="mpesa-num" id="mNo">0794301929</span>
                 <button class="copy-btn" onclick="copyNum()">Copy Number</button>
             </div>
-            <a href="https://wa.me/254794301929?text=PaymentSent" class="btn whatsapp" style="width: 100%; margin: 0; font-size: 0.9rem;">Confirm via WhatsApp</a>
+            <a href="https://wa.me/254794301929?text=PaymentSent" class="btn whatsapp" style="width: 100%; margin: 0; font-size: 0.9rem; text-align: center;">Confirm via WhatsApp</a>
         </div>
         <div class="billing-card" data-aos="fade-left">
             <div class="billing-verified"><i class="fas fa-globe"></i> Global Secure Checkout</div>
             <h4><i class="fab fa-paypal" style="color:#0070ba"></i> PayPal Merchant</h4>
             <p style="font-size: 0.85rem; color:#64748b;">Secure card payments for international clients.</p>
             <br>
-            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba; border-color:#0070ba; width: 100%; margin: 0; font-size: 0.9rem;">Pay via PayPal</a>
+            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba; border-color:#0070ba; width: 100%; margin: 0; font-size: 0.9rem; text-align: center;">Pay via PayPal</a>
         </div>
     </div>
 </section>
@@ -203,18 +221,19 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
 <section class="section" id="contact">
     <div class="contact-form-container">
         <h2 style="margin-bottom: 20px;">Send a Brief</h2>
-        <form action="https://formspree.io/f/xvzvbygw" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xvzvbygw" method="POST">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <textarea name="message" placeholder="How can I help your business grow?" required></textarea>
-            <button type="submit" class="btn primary" style="width: 100%; margin: 0;">Submit Request</button>
+            <button type="submit" id="submit-btn" class="btn primary" style="width: 100%; margin: 0;">Submit Request</button>
+            <p id="form-status"></p>
         </form>
     </div>
 </section>
 
 <footer>
     <div class="footer-socials">
-        <a href="http://www.linkedin.com/in/timothy-thuo" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.facebook.com/share/1DbrXocvYg/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="mailto:timothythuo0@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -225,6 +244,7 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:1000,once:true});
+
 function copyNum() {
     const num = document.getElementById("mNo").innerText;
     navigator.clipboard.writeText(num);
@@ -233,8 +253,46 @@ function copyNum() {
     btn.style.background = '#0e7d37';
     setTimeout(() => { btn.innerHTML = 'Copy Number'; btn.style.background = '#16a34a'; }, 2000);
 }
+
+// Formspree AJAX Script (Stays on your page)
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const submitBtn = document.getElementById("submit-btn");
+    
+    submitBtn.innerHTML = "Sending...";
+    submitBtn.disabled = true;
+
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Thanks! Your message has been sent successfully.";
+            status.style.display = "block";
+            status.style.color = "#16a34a";
+            form.reset();
+            submitBtn.innerHTML = "Submit Request";
+            submitBtn.disabled = false;
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form";
+                }
+            });
+        }
+    }).catch(error => {
+        status.innerHTML = "Oops! Network error. Please try again.";
+    });
+});
 </script>
 
 </body>
-                                                                                             </html>
+    </html>
     
