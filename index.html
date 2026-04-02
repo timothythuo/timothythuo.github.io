@@ -99,6 +99,10 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
     .payment-grid {grid-template-columns: 1fr;}
     .method-left {border-right: none; border-bottom: 1px solid #f1f5f9;}
 }
+/* New style for green copy button feedback */
+.copy-trigger.copied {
+    background: #0e7d37;
+}
 </style>
 </head>
 
@@ -110,6 +114,7 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 <div class="logo">Timothy Thuo</div>
 <nav class="nav">
 <a href="#services">Services</a>
+<a href="#testimonials">Testimonials</a>
 <a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -118,10 +123,10 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 <section class="hero" data-aos="fade-up">
 <h1>Executive Virtual Assistant & Business Solutions Specialist</h1>
 <p>Empowering entrepreneurs and global consultants through seamless business operations, expert web development, and strategic administrative support.</p>
-<img src="profile.jpg" alt="Timothy Thuo">
-<br><br>
-<a href="mailto:timothythuo0@gmail.com?subject=Hire%20Timothy%20Thuo" class="btn primary">Hire Me</a>
+<a href="mailto:timothythuo0@gmail.com?subject=Hire%20Timothy%20Thuo" class="btn primary">Start Our Partnership</a>
 <a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<br><br>
+<img src="profile.jpg" alt="Timothy Thuo">
 </section>
 
 <div class="tech-stack" data-aos="fade-up">
@@ -185,6 +190,42 @@ I specialize in transforming operational chaos into streamlined success. As an <
         <div class="pricing">Kenya: KSh 4,000/design | Int: $35/design</div>
     </div>
 </div>
+</section>
+
+<section class="section" id="testimonials">
+    <h2 data-aos="fade-up">Client Testimonials</h2>
+    <div class="grid">
+        <div class="card" data-aos="fade-up">
+            <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
+                <img src="client-woman1.jpg" alt="Sarah J." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <div>
+                    <h3 style="margin:0;">Sarah J.</h3>
+                    <p style="font-size:0.9rem; color:#475569;">Founder, Tech Start-up (USA)</p>
+                </div>
+            </div>
+            <p>Timothy transformed our CRM. Our lead management is now incredibly efficient. Highly recommended!</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
+                <img src="client-woman2.jpg" alt="Emily R." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <div>
+                    <h3 style="margin:0;">Emily R.</h3>
+                    <p style="font-size:0.9rem; color:#475569;">Marketing Director (USA)</p>
+                </div>
+            </div>
+            <p>The automation workflows Timothy created saved us hours of manual work. A true professional!</p>
+        </div>
+        <div class="card" data-aos="fade-up">
+            <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
+                <img src="client-man1.jpg" alt="Michael B." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <div>
+                    <h3 style="margin:0;">Michael B.</h3>
+                    <p style="font-size:0.9rem; color:#475569;">CEO, Consultancy (Int'l)</p>
+                </div>
+            </div>
+            <p>Our new website is sleek and fast. Timothy's web specialist skills are top-notch!</p>
+        </div>
+    </div>
 </section>
 
 <section class="section" id="pricing" style="background: #f1f5f9;">
@@ -308,8 +349,10 @@ function copyMpesa() {
     navigator.clipboard.writeText(num);
     const btn = document.querySelector('.copy-trigger');
     btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+    btn.classList.add('copied'); // Apply green color feedback
     setTimeout(() => {
         btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        btn.classList.remove('copied'); // Remove green color feedback
     }, 2000);
 }
 
@@ -328,5 +371,4 @@ function topFunction() {
 </script>
 
 </body>
-                                                                        </html>
-      
+</html>
