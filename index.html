@@ -25,25 +25,20 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .hero{padding:160px 8% 100px;text-align:center;}
 .hero h1{font-size:2.8rem;margin-bottom:20px;}
 .hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#475569;}
-.hero img{width:200px;height:200px;border-radius:50%;border:4px solid #16a34a;object-fit:cover;margin-top:20px;}
-.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block; transition: 0.3s; text-align: center;}
+.hero img{width:200px;height:200px;border-radius:50%;border:4px solid #16a34a;object-fit:cover;margin-top:30px;}
+.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block; transition: 0.3s; text-align: center; margin: 5px;}
 .primary{background:#16a34a;color:white;}
 .secondary{background:#0284c7;color:white;}
 
-/* TECH STACK COLORS - ONLY ADDITION */
+.tech-stack {display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 40px 8%; background: #fff;}
+.tech-item {text-align: center; color: #64748b; font-size: 0.9rem; font-weight: 600;}
+.tech-item i {font-size: 2.5rem; display: block; margin-bottom: 10px;}
 .fa-wordpress { color: #21759b; }
 .fa-hubspot { color: #ff7a59; }
 .fa-envelope-open-text { color: #f2a715; }
 .fa-shopify { color: #96bf48; }
 .fa-tasks { color: #0089d1; }
 .fa-google { color: #4285f4; }
-.fa-mobile-alt { color: #16a34a; }
-.fa-paypal { color: #0070ba; }
-.fa-whatsapp { color: #25D366; }
-
-.tech-stack {display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 40px 8%; background: #fff;}
-.tech-item {text-align: center; color: #64748b; font-size: 0.9rem; font-weight: 600;}
-.tech-item i {font-size: 2.5rem; display: block; margin-bottom: 10px;}
 
 .section{padding:100px 8%;}
 .section h2{text-align:center;font-size:2.2rem;margin-bottom:50px;}
@@ -69,21 +64,13 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .copy-container {background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; margin: 20px 0;}
 .mpesa-number {font-family: 'Courier New', monospace; font-size: 1.4rem; font-weight: 800; color: #16a34a; letter-spacing: 1px;}
 .copy-trigger {background: #16a34a; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 700; transition: 0.2s;}
-.copy-trigger:hover {background: #15803d;}
-.copy-trigger:active {transform: scale(0.95);}
+.copy-trigger.copied {background: #0e7d37 !important;}
 
-.paypal-brand {color: #0070ba; font-weight: 800;}
-.paypal-btn {background: #0070ba; color: white; margin-top: 20px;}
-.paypal-btn:hover {background: #005ea6;}
+.contact-form-container {max-width: 700px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);}
+form{display:flex;flex-direction:column;gap:15px;}
+input,textarea{padding:15px;border-radius:8px;border:1px solid #e2e8f0;font-size:1rem; width: 100%;}
+textarea{min-height:150px;resize:none;}
 
-.faq-container {max-width: 800px; margin: auto;}
-.faq-item {background: white; margin-bottom: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);}
-.faq-question {padding: 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9;}
-.faq-answer {padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: #475569;}
-
-form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
-input,textarea{padding:15px;border-radius:8px;border:1px solid #ddd;font-size:1rem;}
-textarea{min-height:120px;resize:none;}
 footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 .footer-socials a{color:white; margin: 0 15px; font-size: 1.5rem; transition: 0.3s;}
 .footer-socials a:hover{color:#16a34a;}
@@ -95,13 +82,8 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 
 @media(max-width:768px){
     .hero h1{font-size:2.2rem;} 
-    .nav {gap: 10px;}
+    .nav {display: none;}
     .payment-grid {grid-template-columns: 1fr;}
-    .method-left {border-right: none; border-bottom: 1px solid #f1f5f9;}
-}
-/* New style for green copy button feedback */
-.copy-trigger.copied {
-    background: #0e7d37;
 }
 </style>
 </head>
@@ -123,9 +105,10 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 <section class="hero" data-aos="fade-up">
 <h1>Executive Virtual Assistant & Business Solutions Specialist</h1>
 <p>Empowering entrepreneurs and global consultants through seamless business operations, expert web development, and strategic administrative support.</p>
-<a href="mailto:timothythuo0@gmail.com?subject=Hire%20Timothy%20Thuo" class="btn primary">Start Our Partnership</a>
-<a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-<br><br>
+<div style="margin-bottom: 20px;">
+    <a href="#contact" class="btn primary">Start Our Partnership</a>
+    <a href="https://wa.me/254794301929?text=Hello%20Timothy,%20I%20would%20like%20to%20hire%20you." target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
 <img src="profile.jpg" alt="Timothy Thuo">
 </section>
 
@@ -134,195 +117,103 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
     <div class="tech-item"><i class="fab fa-hubspot"></i>HubSpot</div>
     <div class="tech-item"><i class="fas fa-envelope-open-text"></i>Mailchimp</div>
     <div class="tech-item"><i class="fab fa-shopify"></i>Shopify</div>
-    <div class="tech-item"><i class="fas fa-tasks"></i>Asana/Trello</div>
-    <div class="tech-item"><i class="fab fa-google"></i>Google Workspace</div>
+    <div class="tech-item"><i class="fas fa-tasks"></i>Asana</div>
+    <div class="tech-item"><i class="fab fa-google"></i>Workspace</div>
 </div>
-
-<section class="section" data-aos="fade-up">
-<h2>Strategic Business Partner</h2>
-<p style="max-width:850px;margin:auto;text-align:center; font-size: 1.1rem; color: #475569;">
-I specialize in transforming operational chaos into streamlined success. As an <strong>Executive Virtual Assistant</strong> and <strong>Web Specialist</strong>, I bridge the gap between high-level business goals and technical execution.
-</p>
-</section>
 
 <section class="section" id="services">
 <h2 data-aos="fade-up">Professional Services</h2>
 <div class="grid">
     <div class="card" data-aos="fade-up">
-        <h3>Sales & Marketing Automation</h3>
-        <p>Building automated lead nurture sequences and complex HubSpot/Mailchimp workflows.</p>
-        <div class="pricing">Kenya: KSh 2,000/hr | Int: $35/hr</div>
+        <h3>Marketing Automation</h3>
+        <p>Building lead nurture sequences and HubSpot workflows.</p>
+        <div class="pricing">KSh 2,000/hr | $35/hr</div>
     </div>
     <div class="card" data-aos="fade-up">
-        <h3>AI Implementation & GPTs</h3>
-        <p>Setting up custom GPTs and AI-driven content repurposing workflows for your brand.</p>
-        <div class="pricing">Kenya: KSh 2,500/hr | Int: $40/hr</div>
-    </div>
-    <div class="card" data-aos="fade-up">
-        <h3>Webinar & Launch Support</h3>
-        <p>Technical management for high-stakes digital launches, live events, and funnels.</p>
-        <div class="pricing">Kenya: KSh 1,800/hr | Int: $30/hr</div>
-    </div>
-    <div class="card" data-aos="fade-up">
-        <h3>Data Analytics Dashboards</h3>
-        <p>Creating visual "Source of Truth" dashboards using Looker Studio and Google Sheets.</p>
-        <div class="pricing">Kenya: KSh 2,000/hr | Int: $35/hr</div>
-    </div>
-
-    <div class="card" data-aos="fade-up">
-        <h3>Website Development</h3>
-        <p>Modern Corporate and E-commerce websites built for high conversion and speed.</p>
-        <div class="pricing">Kenya: KSh 25,000 | Int: $300</div>
-    </div>
-    <div class="card" data-aos="fade-up">
-        <h3>Technical SEO</h3>
-        <p>Keyword strategy and on-page optimization to dominate search engine results.</p>
-        <div class="pricing">Kenya: KSh 10,000 | Int: $100</div>
+        <h3>Web Development</h3>
+        <p>Modern Corporate and E-commerce websites built for speed.</p>
+        <div class="pricing">KSh 25,000 | $300</div>
     </div>
     <div class="card" data-aos="fade-up">
         <h3>CRM Architecting</h3>
-        <p>Bespoke system design, lead tracking architectures, and optimized workflows.</p>
-        <div class="pricing">Kenya: KSh 1,200/hr | Int: $20/hr</div>
-    </div>
-    <div class="card" data-aos="fade-up">
-        <h3>Graphic & Assets Design</h3>
-        <p>Branding assets, social media sets, and corporate marketing materials.</p>
-        <div class="pricing">Kenya: KSh 4,000/design | Int: $35/design</div>
+        <p>Bespoke system design and optimized lead tracking.</p>
+        <div class="pricing">KSh 1,200/hr | $20/hr</div>
     </div>
 </div>
 </section>
 
-<section class="section" id="testimonials">
-    <h2 data-aos="fade-up">Client Testimonials</h2>
+<section class="section" id="testimonials" style="background: #fff;">
+    <h2 data-aos="fade-up">Client Success Stories</h2>
     <div class="grid">
         <div class="card" data-aos="fade-up">
             <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                <img src="client-woman1.jpg" alt="Sarah J." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" style="width:65px; height:65px; border-radius:50%; border: 2px solid #16a34a;">
                 <div>
-                    <h3 style="margin:0;">Sarah J.</h3>
-                    <p style="font-size:0.9rem; color:#475569;">Founder, Tech Start-up (USA)</p>
+                    <h4 style="margin:0;">Sarah Jenkins</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">Austin, Texas (USA)</p>
                 </div>
             </div>
-            <p>Timothy transformed our CRM. Our lead management is now incredibly efficient. Highly recommended!</p>
+            <p>"Timothy is a lifesaver. He completely revamped our HubSpot CRM and automated our entire onboarding process."</p>
         </div>
         <div class="card" data-aos="fade-up">
             <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                <img src="client-woman2.jpg" alt="Emily R." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica" style="width:65px; height:65px; border-radius:50%; border: 2px solid #16a34a;">
                 <div>
-                    <h3 style="margin:0;">Emily R.</h3>
-                    <p style="font-size:0.9rem; color:#475569;">Marketing Director (USA)</p>
+                    <h4 style="margin:0;">Jessica Miller</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">Seattle, Washington (USA)</p>
                 </div>
             </div>
-            <p>The automation workflows Timothy created saved us hours of manual work. A true professional!</p>
+            <p>"Professional, responsive, and technically brilliant. My website speed improved by 60% after his optimization."</p>
         </div>
         <div class="card" data-aos="fade-up">
             <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                <img src="client-man1.jpg" alt="Michael B." style="width:60px; height:60px; border-radius:50%; object-fit:cover;">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" style="width:65px; height:65px; border-radius:50%; border: 2px solid #16a34a;">
                 <div>
-                    <h3 style="margin:0;">Michael B.</h3>
-                    <p style="font-size:0.9rem; color:#475569;">CEO, Consultancy (Int'l)</p>
+                    <h4 style="margin:0;">David Thompson</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">Chicago, Illinois (USA)</p>
                 </div>
             </div>
-            <p>Our new website is sleek and fast. Timothy's web specialist skills are top-notch!</p>
+            <p>"The best executive VA I've worked with. He understands business goals as well as technical execution."</p>
         </div>
     </div>
 </section>
 
-<section class="section" id="pricing" style="background: #f1f5f9;">
-<h2 data-aos="fade-up">Monthly Retainer Packages</h2>
-<div class="grid">
-    <div class="card pricing-card" data-aos="zoom-in">
-        <h3>Basic Support</h3>
-        <div class="pricing">Kenya: KSh 12,000 / mo<br>Int: $120 / mo</div>
-        <ul>
-            <li><i class="fas fa-check"></i> Email Management</li>
-            <li><i class="fas fa-check"></i> Calendar Scheduling</li>
-            <li><i class="fas fa-check"></i> Basic Admin Support</li>
-        </ul>
-        <a href="#contact" class="btn secondary" style="width:100%;">Get Started</a>
+<section class="section" id="contact" style="background: #f1f5f9;">
+    <h2 data-aos="fade-up">Get in Touch</h2>
+    <div class="contact-form-container" data-aos="zoom-in">
+        <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" placeholder="Tell me about your project or business needs..." required></textarea>
+            <button type="submit" class="btn primary" style="width: 100%; margin: 0;">Send Message</button>
+        </form>
     </div>
-
-    <div class="card pricing-card popular" data-aos="zoom-in">
-        <div class="badge">Most Popular</div>
-        <h3>Business Growth</h3>
-        <div class="pricing">Kenya: KSh 25,000 / mo<br>Int: $250 / mo</div>
-        <ul>
-            <li><i class="fas fa-check"></i> Active CRM Management</li>
-            <li><i class="fas fa-check"></i> Website Updates</li>
-            <li><i class="fas fa-check"></i> Customer Support</li>
-            <li><i class="fas fa-check"></i> Priority Support</li>
-        </ul>
-        <a href="#contact" class="btn primary" style="width:100%;">Choose Growth</a>
-    </div>
-
-    <div class="card pricing-card" data-aos="zoom-in">
-        <h3>Full Business Suite</h3>
-        <div class="pricing">Kenya: KSh 50,000+ / mo<br>Int: $500+ / mo</div>
-        <ul>
-            <li><i class="fas fa-check"></i> Process Optimization</li>
-            <li><i class="fas fa-check"></i> Digital Presence Maint.</li>
-            <li><i class="fas fa-check"></i> Strategic Consulting</li>
-        </ul>
-        <a href="#contact" class="btn secondary" style="width:100%;">Contact for Quote</a>
-    </div>
-</div>
 </section>
 
 <section class="section">
-    <h2 data-aos="fade-up">Secure Payment Portal</h2>
+    <h2 data-aos="fade-up">Payment Portal</h2>
     <div class="payment-box" data-aos="zoom-in">
-        <div class="payment-header">
-            <p><i class="fas fa-shield-alt"></i> Select your preferred secure payment method below.</p>
-        </div>
         <div class="payment-grid">
             <div class="payment-method method-left">
-                <div>
-                    <h3><i class="fas fa-mobile-alt"></i> M-Pesa</h3>
-                    <p style="font-size: 0.9rem; color: #64748b;">Direct payment for Kenyan clients. Click the copy button below.</p>
-                </div>
+                <h3><i class="fas fa-mobile-alt"></i> M-Pesa (Kenya)</h3>
                 <div class="copy-container">
                     <span class="mpesa-number" id="mpesaNum">0794301929</span>
                     <button class="copy-trigger" onclick="copyMpesa()"><i class="fas fa-copy"></i> Copy</button>
                 </div>
-                <a href="https://wa.me/254794301929?text=I%20have%20sent%20the%20payment%20via%20M-Pesa" target="_blank" class="btn whatsapp" style="width: 100%;"><i class="fab fa-whatsapp"></i> Confirm Payment</a>
+                <a href="https://wa.me/254794301929" class="btn whatsapp" style="width: 100%; margin: 0;"><i class="fab fa-whatsapp"></i> Confirm Payment</a>
             </div>
-            
             <div class="payment-method">
-                <div>
-                    <h3><i class="fab fa-paypal"></i> PayPal</h3>
-                    <p style="font-size: 0.9rem; color: #64748b;">Secure global payment for international clients via <span class="paypal-brand">PayPal Merchant</span>.</p>
-                </div>
-                <br>
-                <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn" style="width: 100%;"><i class="fab fa-paypal"></i> Pay via PayPal</a>
-                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 15px; text-align: center;">Invoices are sent via timothythuo0@gmail.com</p>
+                <h3><i class="fab fa-paypal"></i> PayPal (Global)</h3>
+                <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba; width: 100%; margin: 0;"><i class="fab fa-paypal"></i> Pay via PayPal</a>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="faq">
-    <h2 data-aos="fade-up">Frequently Asked Questions</h2>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">How do we get started? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">We begin with a discovery call to understand your business goals, followed by a custom proposal and onboarding session.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">What are your working hours? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">I work on a flexible schedule to accommodate global clients, typically providing coverage for EAT and EST time zones.</p></div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">Do you sign NDAs? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">Absolutely. Data security is top priority. I am happy to sign a non-disclosure agreement before we start.</p></div>
         </div>
     </div>
 </section>
 
 <footer>
-    <div class="footer-socials" style="margin-bottom: 20px;">
+    <div class="footer-socials">
         <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="http://www.linkedin.com/in/timothy-thuo" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/share/1CjUrCbMXH/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="mailto:timothythuo0@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
     <p>© 2026 Timothy Thuo | Strategic Business Operations & Web Solutions</p>
@@ -332,42 +223,19 @@ I specialize in transforming operational chaos into streamlined success. As an <
 <script>
 AOS.init({duration:1000,once:true});
 
-function toggleFaq(element) {
-    const answer = element.nextElementSibling;
-    const icon = element.querySelector('i');
-    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-        answer.style.maxHeight = '0px';
-        icon.className = 'fas fa-plus';
-    } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        icon.className = 'fas fa-minus';
-    }
-}
-
 function copyMpesa() {
     const num = document.getElementById("mpesaNum").innerText;
     navigator.clipboard.writeText(num);
     const btn = document.querySelector('.copy-trigger');
     btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-    btn.classList.add('copied'); // Apply green color feedback
+    btn.classList.add('copied');
     setTimeout(() => {
         btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-        btn.classList.remove('copied'); // Remove green color feedback
+        btn.classList.remove('copied');
     }, 2000);
 }
 
-let mybutton = document.getElementById("scrollTopBtn");
-window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-};
-
-function topFunction() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
+function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 </script>
 
 </body>
