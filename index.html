@@ -26,7 +26,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .hero h1{font-size:2.8rem;margin-bottom:20px;}
 .hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#475569;}
 .hero img{width:200px;height:200px;border-radius:50%;border:4px solid #16a34a;object-fit:cover;margin-top:20px;}
-.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block; transition: 0.3s;}
+.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block; transition: 0.3s; text-align: center;}
 .primary{background:#16a34a;color:white;}
 .secondary{background:#0284c7;color:white;}
 
@@ -40,22 +40,35 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
 .card{background:white;padding:35px;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.05);}
 .card h3{margin-bottom:15px;color:#16a34a;}
-.pricing{font-size:1.2rem;font-weight:600;margin:10px 0;color:#1e293b;}
+.pricing{font-size:1.1rem;font-weight:700;margin:15px 0;color:#1e293b; border-top: 1px solid #f1f5f9; padding-top: 10px;}
 
 /* Modern Pricing Table */
-.pricing-card {border: 2px solid transparent; transition: 0.3s; position: relative;}
+.pricing-card {border: 2px solid transparent; transition: 0.3s; position: relative; display: flex; flex-direction: column;}
 .pricing-card.popular {border-color: #16a34a; transform: scale(1.05); z-index: 2;}
 .badge {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #16a34a; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;}
-.pricing-card ul {list-style: none; margin: 20px 0; padding: 0;}
+.pricing-card ul {list-style: none; margin: 20px 0; padding: 0; flex-grow: 1;}
 .pricing-card ul li {margin-bottom: 10px; color: #475569; font-size: 0.95rem;}
 .pricing-card ul li i {color: #16a34a; margin-right: 8px;}
 
-/* Enhanced Payment Box */
-.payment-box{max-width: 800px; margin: auto; padding:50px; background:white; border-radius:16px; box-shadow:0 15px 35px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;}
-.payment-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;}
-.mpesa-copy {background: #f1f5f9; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e1; display: flex; justify-content: space-between; align-items: center; margin-top: 10px;}
-.mpesa-number {font-family: monospace; font-size: 1.2rem; font-weight: 700; color: #16a34a;}
-.copy-btn {background: #1e293b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;}
+/* PROFESSIONAL PAYMENT SECTION */
+.payment-box {max-width: 900px; margin: auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;}
+.payment-header {background: #1e293b; color: white; padding: 30px; text-align: center;}
+.payment-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 0;}
+.payment-method {padding: 40px; display: flex; flex-direction: column; justify-content: space-between;}
+.method-left {border-right: 1px solid #f1f5f9; background: #fafafa;}
+.payment-method h3 {display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 1.4rem;}
+
+/* M-Pesa Styling */
+.copy-container {background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; margin: 20px 0;}
+.mpesa-number {font-family: 'Courier New', monospace; font-size: 1.4rem; font-weight: 800; color: #16a34a; letter-spacing: 1px;}
+.copy-trigger {background: #16a34a; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 700; transition: 0.2s;}
+.copy-trigger:hover {background: #15803d;}
+.copy-trigger:active {transform: scale(0.95);}
+
+/* PayPal Styling */
+.paypal-brand {color: #0070ba; font-weight: 800;}
+.paypal-btn {background: #0070ba; color: white; margin-top: 20px;}
+.paypal-btn:hover {background: #005ea6;}
 
 /* FAQ Section */
 .faq-container {max-width: 800px; margin: auto;}
@@ -71,10 +84,7 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
 .footer-socials a:hover{color:#16a34a;}
 .testimonial{text-align:center;}
 .testimonial img{width:90px;height:90px;border-radius:50%;margin-bottom:10px;object-fit:cover;}
-.pay-buttons a{display:inline-block;margin:10px;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600;color:white;}
-.paypal{background:#0070ba;}
-.whatsapp{background:#25D366;}
-.hire{background:#16a34a;}
+.whatsapp{background:#25D366; color: white;}
 .portfolio-img{width:100%; height:200px; border-radius:8px; margin-bottom: 15px; border: 1px solid #eee; object-fit: cover;}
 
 #scrollTopBtn {
@@ -85,7 +95,6 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
   z-index: 99;
   font-size: 18px;
   border: none;
-  outline: none;
   background-color: #16a34a;
   color: white;
   cursor: pointer;
@@ -94,14 +103,13 @@ footer{text-align:center;padding:60px 8% 20px;background:#0f172a;color:white;}
   width: 50px;
   height: 50px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: opacity 0.3s;
 }
-#scrollTopBtn:hover {background-color: #15803d;}
 
 @media(max-width:768px){
     .hero h1{font-size:2.2rem;} 
     .nav {gap: 10px;}
     .payment-grid {grid-template-columns: 1fr;}
+    .method-left {border-right: none; border-bottom: 1px solid #f1f5f9;}
 }
 </style>
 </head>
@@ -144,60 +152,49 @@ I specialize in transforming operational chaos into streamlined success. As an <
 </p>
 </section>
 
-<section class="section" id="process" style="background: #ffffff;">
-    <h2 data-aos="fade-up">My 3-Step Process</h2>
-    <div class="grid">
-        <div class="card" data-aos="fade-up" style="text-align: center;">
-            <div style="font-size: 2rem; color: #16a34a; margin-bottom: 15px;"><i class="fas fa-comments"></i></div>
-            <h3>1. Discovery</h3>
-            <p>Brief consultation to align on your business goals and specific requirements.</p>
-        </div>
-        <div class="card" data-aos="fade-up" style="text-align: center;">
-            <div style="font-size: 2rem; color: #16a34a; margin-bottom: 15px;"><i class="fas fa-cogs"></i></div>
-            <h3>2. Execution</h3>
-            <p>I implement the systems, develop the site, or manage the tasks with precision.</p>
-        </div>
-        <div class="card" data-aos="fade-up" style="text-align: center;">
-            <div style="font-size: 2rem; color: #16a34a; margin-bottom: 15px;"><i class="fas fa-rocket"></i></div>
-            <h3>3. Optimization</h3>
-            <p>Review results and fine-tune processes to ensure long-term efficiency.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="portfolio">
-    <h2 data-aos="fade-up">My Web Design Portfolio</h2>
-    <div class="grid">
-        <div class="card" data-aos="fade-up">
-            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Portfolio" class="portfolio-img">
-            <h3>Portfolio & Creative Sites</h3>
-            <p>Engaging, visual-first layouts designed to highlight personal brands.</p>
-        </div>
-        <div class="card" data-aos="fade-up">
-            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Corporate" class="portfolio-img">
-            <h3>Corporate & Redesign</h3>
-            <p>Modern designs for businesses looking to scale digital authority.</p>
-        </div>
-    </div>
-</section>
-
 <section class="section" id="services">
 <h2 data-aos="fade-up">Professional Services</h2>
 <div class="grid">
     <div class="card" data-aos="fade-up">
+        <h3>Sales & Marketing Automation</h3>
+        <p>Building automated lead nurture sequences and complex HubSpot/Mailchimp workflows.</p>
+        <div class="pricing">Kenya: KSh 2,000/hr | Int: $35/hr</div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <h3>AI Implementation & GPTs</h3>
+        <p>Setting up custom GPTs and AI-driven content repurposing workflows for your brand.</p>
+        <div class="pricing">Kenya: KSh 2,500/hr | Int: $40/hr</div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <h3>Webinar & Launch Support</h3>
+        <p>Technical management for high-stakes digital launches, live events, and funnels.</p>
+        <div class="pricing">Kenya: KSh 1,800/hr | Int: $30/hr</div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <h3>Data Analytics Dashboards</h3>
+        <p>Creating visual "Source of Truth" dashboards using Looker Studio and Google Sheets.</p>
+        <div class="pricing">Kenya: KSh 2,000/hr | Int: $35/hr</div>
+    </div>
+
+    <div class="card" data-aos="fade-up">
         <h3>Website Development</h3>
-        <p>Modern Corporate, and E-commerce websites built for high conversion.</p>
+        <p>Modern Corporate and E-commerce websites built for high conversion and speed.</p>
         <div class="pricing">Kenya: KSh 25,000 | Int: $300</div>
     </div>
     <div class="card" data-aos="fade-up">
-        <h3>SEO Strategy</h3>
-        <p>Technical SEO and keyword strategy to dominate search results.</p>
+        <h3>Technical SEO</h3>
+        <p>Keyword strategy and on-page optimization to dominate search engine results.</p>
         <div class="pricing">Kenya: KSh 10,000 | Int: $100</div>
     </div>
     <div class="card" data-aos="fade-up">
-        <h3>CRM Management</h3>
-        <p>Bespoke automation and optimized workflows for lead tracking.</p>
+        <h3>CRM Architecting</h3>
+        <p>Bespoke system design, lead tracking architectures, and optimized workflows.</p>
         <div class="pricing">Kenya: KSh 1,200/hr | Int: $20/hr</div>
+    </div>
+    <div class="card" data-aos="fade-up">
+        <h3>Graphic & Assets Design</h3>
+        <p>Branding assets, social media sets, and corporate marketing materials.</p>
+        <div class="pricing">Kenya: KSh 4,000/design | Int: $35/design</div>
     </div>
 </div>
 </section>
@@ -213,7 +210,7 @@ I specialize in transforming operational chaos into streamlined success. As an <
             <li><i class="fas fa-check"></i> Calendar Scheduling</li>
             <li><i class="fas fa-check"></i> Basic Admin Support</li>
         </ul>
-        <a href="#contact" class="btn secondary" style="width:100%; text-align:center;">Get Started</a>
+        <a href="#contact" class="btn secondary" style="width:100%;">Get Started</a>
     </div>
 
     <div class="card pricing-card popular" data-aos="zoom-in">
@@ -226,7 +223,7 @@ I specialize in transforming operational chaos into streamlined success. As an <
             <li><i class="fas fa-check"></i> Customer Support</li>
             <li><i class="fas fa-check"></i> Priority Support</li>
         </ul>
-        <a href="#contact" class="btn primary" style="width:100%; text-align:center;">Choose Growth</a>
+        <a href="#contact" class="btn primary" style="width:100%;">Choose Growth</a>
     </div>
 
     <div class="card pricing-card" data-aos="zoom-in">
@@ -237,9 +234,41 @@ I specialize in transforming operational chaos into streamlined success. As an <
             <li><i class="fas fa-check"></i> Digital Presence Maint.</li>
             <li><i class="fas fa-check"></i> Strategic Consulting</li>
         </ul>
-        <a href="#contact" class="btn secondary" style="width:100%; text-align:center;">Contact for Quote</a>
+        <a href="#contact" class="btn secondary" style="width:100%;">Contact for Quote</a>
     </div>
 </div>
+</section>
+
+<section class="section">
+    <h2 data-aos="fade-up">Secure Payment Portal</h2>
+    <div class="payment-box" data-aos="zoom-in">
+        <div class="payment-header">
+            <p><i class="fas fa-shield-alt"></i> Select your preferred secure payment method below.</p>
+        </div>
+        <div class="payment-grid">
+            <div class="payment-method method-left">
+                <div>
+                    <h3><i class="fas fa-mobile-alt" style="color: #16a34a;"></i> M-Pesa</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Direct payment for Kenyan clients. Click the copy button below.</p>
+                </div>
+                <div class="copy-container">
+                    <span class="mpesa-number" id="mpesaNum">0794301929</span>
+                    <button class="copy-trigger" onclick="copyMpesa()"><i class="fas fa-copy"></i> Copy</button>
+                </div>
+                <a href="https://wa.me/254794301929?text=I%20have%20sent%20the%20payment%20via%20M-Pesa" target="_blank" class="btn whatsapp" style="width: 100%;"><i class="fab fa-whatsapp"></i> Confirm Payment</a>
+            </div>
+            
+            <div class="payment-method">
+                <div>
+                    <h3><i class="fab fa-paypal" style="color: #0070ba;"></i> PayPal</h3>
+                    <p style="font-size: 0.9rem; color: #64748b;">Secure global payment for international clients via <span class="paypal-brand">PayPal Merchant</span>.</p>
+                </div>
+                <br>
+                <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn" style="width: 100%;"><i class="fab fa-paypal"></i> Pay via PayPal</a>
+                <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 15px; text-align: center;">Invoices are sent via timothythuo0@gmail.com</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="section" id="faq">
@@ -247,68 +276,17 @@ I specialize in transforming operational chaos into streamlined success. As an <
     <div class="faq-container">
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">How do we get started? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">We begin with a discovery call to understand your needs, followed by a proposal and onboarding session.</p></div>
+            <div class="faq-answer"><p style="padding: 20px 0;">We begin with a discovery call to understand your business goals, followed by a custom proposal and onboarding session.</p></div>
         </div>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">What are your working hours? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">I work on a flexible schedule to accommodate global clients, typically aligning with EST and EAT time zones.</p></div>
+            <div class="faq-answer"><p style="padding: 20px 0;">I work on a flexible schedule to accommodate global clients, typically providing coverage for EAT and EST time zones.</p></div>
         </div>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">Do you sign NDAs? <i class="fas fa-plus"></i></div>
-            <div class="faq-answer"><p style="padding: 20px 0;">Yes, data security and confidentiality are top priorities. I am happy to sign a non-disclosure agreement.</p></div>
+            <div class="faq-answer"><p style="padding: 20px 0;">Absolutely. Data security is top priority. I am happy to sign a non-disclosure agreement before we start.</p></div>
         </div>
     </div>
-</section>
-
-<section class="section">
-<h2 data-aos="fade-up">Payment & Security</h2>
-<div class="payment-box" data-aos="fade-up">
-    <div class="payment-grid">
-        <div style="text-align: left;">
-            <h3><i class="fab fa-paypal" style="color:#0070ba"></i> PayPal</h3>
-            <p>Secure international invoicing.</p>
-            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal" style="margin-top:15px; width:100%; text-align:center;">Pay via PayPal</a>
-        </div>
-        <div style="text-align: left;">
-            <h3><i class="fas fa-mobile-alt" style="color:#16a34a"></i> M-Pesa (Kenya)</h3>
-            <p>Click the number to copy for payment:</p>
-            <div class="mpesa-copy">
-                <span class="mpesa-number" id="mpesaNum">0794301929</span>
-                <button class="copy-btn" onclick="copyMpesa()">Copy</button>
-            </div>
-            <a href="https://wa.me/254794301929?text=I%20would%20like%20to%20pay%20via%20M-Pesa" target="_blank" class="btn whatsapp" style="margin-top:15px; width:100%; text-align:center;">Confirm via WhatsApp</a>
-        </div>
-    </div>
-</div>
-</section>
-
-<section class="section" id="testimonials">
-<h2 data-aos="fade-up">Client Success Stories</h2>
-<div class="grid">
-    <div class="card testimonial" data-aos="zoom-in">
-        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah Johnson">
-        <p>"Timothy transformed our backend efficiency. His strategic approach is unmatched."</p>
-        <strong>Sarah Johnson</strong>
-        <div>Project Manager, New York</div>
-    </div>
-    <div class="card testimonial" data-aos="zoom-in">
-        <img src="https://images.pexels.com/photos/6262970/pexels-photo-6262970.jpeg" alt="James Otieno">
-        <p>"Reliable, technical, and professional. The best investment for our digital growth."</p>
-        <strong>James Otieno</strong>
-        <div>Consultant, Atlanta</div>
-    </div>
-</div>
-</section>
-
-<section class="section" id="contact">
-<h2 data-aos="fade-up">Inquire About Services</h2>
-<form action="https://formsubmit.co/timothythuo0@gmail.com" method="POST" data-aos="fade-up">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Professional Email" required>
-    <textarea name="message" placeholder="Briefly describe your business needs..." required></textarea>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit" class="btn primary">Initiate Contact</button>
-</form>
 </section>
 
 <footer>
@@ -325,7 +303,6 @@ I specialize in transforming operational chaos into streamlined success. As an <
 <script>
 AOS.init({duration:1000,once:true});
 
-// FAQ Toggle
 function toggleFaq(element) {
     const answer = element.nextElementSibling;
     const icon = element.querySelector('i');
@@ -338,28 +315,30 @@ function toggleFaq(element) {
     }
 }
 
-// Copy M-Pesa
 function copyMpesa() {
     const num = document.getElementById("mpesaNum").innerText;
     navigator.clipboard.writeText(num);
-    alert("M-Pesa number copied: " + num);
+    const btn = document.querySelector('.copy-trigger');
+    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+    }, 2000);
 }
 
 let mybutton = document.getElementById("scrollTopBtn");
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
 
 function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 </script>
 
 </body>
-</html>
+      </html>
+  
