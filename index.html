@@ -41,8 +41,8 @@
         .logo{font-weight:700;font-size:1.4rem;color: var(--accent-green); text-decoration: none;}
         .nav a{text-decoration:none;font-weight:600;color: var(--text-main); font-size: 0.85rem; margin-left: 25px;}
 
-        /* Corner 3 Lines Icon */
-        .corner-lines {position: fixed; top: 15px; right: 15px; z-index: 2000; display: flex; flex-direction: column; gap: 4px;}
+        /* The requested 3 lines corner icon */
+        .corner-lines {position: fixed; top: 15px; right: 15px; z-index: 2001; display: flex; flex-direction: column; gap: 4px; pointer-events: none;}
         .corner-lines span {display: block; width: 22px; height: 3px; background: var(--accent-green); border-radius: 2px;}
 
         .floating-btn {position: fixed; width: 45px; height: 45px; border-radius: 50%; background: var(--accent-green); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2000; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2);}
@@ -79,7 +79,6 @@
         .icon-box {width: 50px; height: 50px; background: rgba(22, 163, 74, 0.1); color: var(--accent-green); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 20px; font-size: 1.4rem;}
         .price-tag {display: inline-block; font-size: 0.85rem; font-weight: 700; color: var(--accent-green); margin-top: 15px; background: rgba(22, 163, 74, 0.08); padding: 6px 12px; border-radius: 8px;}
 
-        .retainer-card {border-top: 4px solid var(--accent-green);}
         .package-list {list-style: none; margin: 20px 0; font-size: 0.9rem; color: var(--text-muted);}
         .package-list li {margin-bottom: 12px;}
         .package-list li i {color: var(--accent-green); margin-right: 10px;}
@@ -116,6 +115,7 @@
     <a href="#" class="logo">Timothy Thuo</a>
     <nav class="nav">
         <a href="#about">About</a>
+        <a href="#roadmap">Process</a>
         <a href="#services">Services</a>
         <a href="#packages">Retainers</a>
         <a href="#billing">Payment</a>
@@ -129,12 +129,12 @@
     <p>Strategic Technical Partner for High-Growth Founders & Global Ventures.</p>
     
     <div class="tools-showcase">
-        <i class="devicon-hubspot-plain colored tool-icon" title="HubSpot"></i>
-        <i class="devicon-salesforce-plain colored tool-icon" title="Salesforce"></i>
-        <i class="devicon-wordpress-plain colored tool-icon" title="WordPress"></i>
-        <i class="devicon-woocommerce-plain colored tool-icon" title="WooCommerce"></i>
-        <i class="devicon-amazonwebservices-plain-wordmark colored tool-icon" title="AWS"></i>
-        <i class="devicon-python-plain colored tool-icon" title="Python/Automation"></i>
+        <i class="devicon-hubspot-plain colored tool-icon"></i>
+        <i class="devicon-salesforce-plain colored tool-icon"></i>
+        <i class="devicon-wordpress-plain colored tool-icon"></i>
+        <i class="devicon-woocommerce-plain colored tool-icon"></i>
+        <i class="devicon-amazonwebservices-plain-wordmark colored tool-icon"></i>
+        <i class="devicon-python-plain colored tool-icon"></i>
     </div>
 
     <div style="margin-top: 40px;">
@@ -185,54 +185,14 @@
 <section class="section" id="services">
     <h2>Core Specialized Services</h2>
     <div class="grid">
-        <div class="card" data-aos="fade-up">
-            <div class="icon-box"><i class="fas fa-layer-group"></i></div>
-            <h3>CRM Architecting</h3>
-            <p>HubSpot & Salesforce automation and lead scoring setup.</p>
-            <span class="price-tag">$45/hr | KSh 2,500</span>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box"><i class="fas fa-brain"></i></div>
-            <h3>AI Implementation</h3>
-            <p>Custom GPTs, OpenAI API workflows, and brand-trained bots.</p>
-            <span class="price-tag">$55/hr | KSh 3,000</span>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box"><i class="fas fa-code"></i></div>
-            <h3>Web Development</h3>
-            <p>High-performance WordPress and E-commerce builds.</p>
-            <span class="price-tag">From $750 | KSh 40k</span>
-        </div>
-        <div class="card" data-aos="fade-up">
-            <div class="icon-box"><i class="fas fa-rocket"></i></div>
-            <h3>Launch Support</h3>
-            <p>Technical management for webinars and digital launches.</p>
-            <span class="price-tag">$40/hr | KSh 2,200</span>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-            <h3>Technical SEO</h3>
-            <p>Comprehensive keyword strategy and backend site optimization.</p>
-            <span class="price-tag">From $250 | KSh 15k</span>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box"><i class="fas fa-envelope-open-text"></i></div>
-            <h3>Email Automation</h3>
-            <p>Complex Mailchimp & Klaviyo nurture sequences.</p>
-            <span class="price-tag">$40/hr | KSh 2,000</span>
-        </div>
-        <div class="card" data-aos="fade-up">
-            <div class="icon-box"><i class="fas fa-search-dollar"></i></div>
-            <h3>B2B Lead Gen</h3>
-            <p>Verified list building using Apollo.io and Sales Navigator.</p>
-            <span class="price-tag">$30/hr | KSh 1,500</span>
-        </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box"><i class="fas fa-user-tie"></i></div>
-            <h3>Executive Admin</h3>
-            <p>Calendar, travel, and strategic ops management.</p>
-            <span class="price-tag">$35/hr | KSh 1,200</span>
-        </div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-layer-group"></i></div><h3>CRM Architecting</h3><p>HubSpot & Salesforce automation and lead scoring setup.</p><span class="price-tag">$45/hr | KSh 2,500</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-brain"></i></div><h3>AI Implementation</h3><p>Custom GPTs, OpenAI API workflows, and brand-trained bots.</p><span class="price-tag">$55/hr | KSh 3,000</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>High-performance WordPress and E-commerce builds.</p><span class="price-tag">From $750 | KSh 40k</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-rocket"></i></div><h3>Launch Support</h3><p>Technical management for webinars and digital launches.</p><span class="price-tag">$40/hr | KSh 2,200</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-chart-line"></i></div><h3>Technical SEO</h3><p>Comprehensive keyword strategy and backend site optimization.</p><span class="price-tag">From $250 | KSh 15k</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-envelope-open-text"></i></div><h3>Email Automation</h3><p>Complex Mailchimp & Klaviyo nurture sequences.</p><span class="price-tag">$40/hr | KSh 2,000</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-search-dollar"></i></div><h3>B2B Lead Gen</h3><p>Verified list building using Apollo.io and Sales Navigator.</p><span class="price-tag">$30/hr | KSh 1,500</span></div>
+        <div class="card" data-aos="fade-up"><div class="icon-box"><i class="fas fa-user-tie"></i></div><h3>Executive Admin</h3><p>Calendar, travel, and strategic ops management.</p><span class="price-tag">$35/hr | KSh 1,200</span></div>
     </div>
 </section>
 
@@ -257,21 +217,62 @@
                 <li><i class="fas fa-check"></i>Sales Funnel Management</li>
             </ul>
         </div>
-        <div class="card retainer-card">
-            <h3>Executive Scale</h3>
-            <div style="font-size: 2rem; font-weight:700;">$1,200<small>/mo</small></div>
-            <ul class="package-list">
-                <li><i class="fas fa-check"></i>45 Hours Direct Partnership</li>
-                <li><i class="fas fa-check"></i>24/7 Technical Response</li>
-                <li><i class="fas fa-check"></i>Full Systems Architecture</li>
-            </ul>
+        <div class="card retainer-card" id="packages">
+            <h3>Executive Scale</h3> <div style="font-size: 2rem; font-weight:700;">$1,200<small>/mo</small></div> <ul class="package-list"> <li><i class="fas fa-check"></i>45 Hours Direct Partnership</li> <li><i class="fas fa-check"></i>24/7 Technical Response</li> <li><i class="fas fa-check"></i>Full Systems Architecture</li> </ul>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <h2>Success Stories</h2>
-    <div class="grid">
-        <div class="card" style="text-align: center;">
-            <img src="https://i.pravatar.cc/150?u=a1" class="testimonial
-                                                                 
+<section class="section" style="background: var(--bg-card);"> <h2>Success Stories</h2> <div class="grid">
+        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a1" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
+            <p>"Timothy recovered 15 hours of my week with HubSpot automation. He's a technical powerhouse."</p> <h4 style="margin-top: 15px;">Robert Sterling</h4> <small>CEO, Sterling Media | <strong>New York City, NY</strong></small> </div>
+        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a2" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
+            <p>"The AI lead-gen logic he built is flawless. One of the best partners I've had."</p> <h4 style="margin-top: 15px;">Amanda Ross</h4> <small>Founder, Ross Creative | <strong>Austin, TX</strong></small> </div>
+        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a9" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
+            <p>"Executive-level support with deep backend knowledge. He doesn't just fix; he architects."</p> <h4 style="margin-top: 10px;">David Kim</h4> <small>Ops Director, TechPath | <strong>San Francisco, CA</strong></small> </div>
+    </div>
+</section>
+
+<section class="section" id="billing" style="background: var(--bg-card);"> <h2>Secure Payments</h2> <div class="billing-grid">
+        <div class="payment-portal mpesa" data-aos="fade-right"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-Pesa"> <button class="btn mpesa-btn" onclick="copyNum()"><i class="fas fa-copy"></i> Copy Number</button> </div>
+        <div class="payment-portal paypal" data-aos="fade-left"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal"> <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a> </div>
+    </div>
+</section>
+
+<section class="section" id="contact"> <div style="max-width: 600px; margin: auto;"> <h2 style="text-align: center;">Partner Consultation</h2> <form action="https://formspree.io/f/xvzvbygw" method="POST"> <div style="display:flex; gap:15px; margin-bottom:15px;"> <input type="text" name="name" placeholder="Name" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);"> <input type="email" name="email" placeholder="Email" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);"> </div>
+            <textarea name="message" placeholder="Describe your technical bottlenecks..." rows="5" style="width:100%; padding:15px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:15px;"></textarea> <button type="submit" class="btn primary" style="width:100%;">Send Project Brief</button> </form>
+    </div>
+</section>
+
+<footer> <div class="socials" style="margin-bottom: 20px;"> <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a> <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a> </div>
+    <p>© 2026 Timothy Thuo | Strategic Systems Specialist</p> </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <script>
+    AOS.init({duration:1000, once:true}); //
+    function copyNum() { //
+        navigator.clipboard.writeText("0794301929"); //
+        alert("M-Pesa Number Copied!"); //
+    }
+    
+    const themeBtn = document.getElementById('theme-toggle'); //
+    themeBtn.addEventListener('click', () => { //
+        const isDark = document.body.getAttribute('data-theme') === 'dark'; //
+        if(isDark) { //
+            document.body.removeAttribute('data-theme'); //
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>'; //
+        } else { //
+            document.body.setAttribute('data-theme', 'dark'); //
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>'; //
+        }
+    });
+
+    window.onscroll = function() { 
+        document.getElementById('scroll-top').style.display = window.scrollY > 500 ? "flex" : "none"; 
+    };
+    document.getElementById('scroll-top').addEventListener('click', () => { 
+        window.scrollTo({top: 0, behavior: 'smooth'}); 
+    });
+</script>
+</body>
+    </html>
+    
