@@ -41,7 +41,7 @@
         .logo{font-weight:700;font-size:1.4rem;color: var(--accent-green); text-decoration: none;}
         .nav a{text-decoration:none;font-weight:600;color: var(--text-main); font-size: 0.85rem; margin-left: 25px;}
 
-        /* The requested 3 lines corner icon */
+        /* Corner 3 Lines */
         .corner-lines {position: fixed; top: 15px; right: 15px; z-index: 2001; display: flex; flex-direction: column; gap: 4px; pointer-events: none;}
         .corner-lines span {display: block; width: 22px; height: 3px; background: var(--accent-green); border-radius: 2px;}
 
@@ -90,7 +90,7 @@
         .payment-portal {background: var(--bg-card); border-radius: 24px; padding: 40px 30px; text-align: center; border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center;}
         .payment-portal.mpesa {border-top: 8px solid var(--mpesa-green);}
         .payment-portal.paypal {border-top: 8px solid var(--paypal-blue);}
-        .portal-logo {height: 50px; margin-bottom: 25px;}
+        .portal-logo {height: 50px; margin-bottom: 15px;}
 
         .btn{padding:15px 35px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center;}
         .primary{background: var(--accent-green); color:white;}
@@ -217,61 +217,193 @@
                 <li><i class="fas fa-check"></i>Sales Funnel Management</li>
             </ul>
         </div>
-        <div class="card retainer-card" id="packages">
-            <h3>Executive Scale</h3> <div style="font-size: 2rem; font-weight:700;">$1,200<small>/mo</small></div> <ul class="package-list"> <li><i class="fas fa-check"></i>45 Hours Direct Partnership</li> <li><i class="fas fa-check"></i>24/7 Technical Response</li> <li><i class="fas fa-check"></i>Full Systems Architecture</li> </ul>
+        <div class="card retainer-card">
+            <h3>Executive Scale</h3>
+            <div style="font-size: 2rem; font-weight:700;">$1,200<small>/mo</small></div>
+            <ul class="package-list">
+                <li><i class="fas fa-check"></i>45 Hours Direct Partnership</li>
+                <li><i class="fas fa-check"></i>24/7 Technical Response</li>
+                <li><i class="fas fa-check"></i>Full Systems Architecture</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section class="section" style="background: var(--bg-card);"> <h2>Success Stories</h2> <div class="grid">
-        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a1" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
-            <p>"Timothy recovered 15 hours of my week with HubSpot automation. He's a technical powerhouse."</p> <h4 style="margin-top: 15px;">Robert Sterling</h4> <small>CEO, Sterling Media | <strong>New York City, NY</strong></small> </div>
-        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a2" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
-            <p>"The AI lead-gen logic he built is flawless. One of the best partners I've had."</p> <h4 style="margin-top: 15px;">Amanda Ross</h4> <small>Founder, Ross Creative | <strong>Austin, TX</strong></small> </div>
-        <div class="card" style="text-align: center;"> <img src="https://i.pravatar.cc/150?u=a9" class="testimonial-img"> <div> <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i> </div>
-            <p>"Executive-level support with deep backend knowledge. He doesn't just fix; he architects."</p> <h4 style="margin-top: 10px;">David Kim</h4> <small>Ops Director, TechPath | <strong>San Francisco, CA</strong></small> </div>
+<section class="section" style="background: var(--bg-card);">
+    <h2>Success Stories</h2>
+    <div class="grid">
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a1" class="testimonial-img">
+            <div><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i></div>
+            <p>"Timothy recovered 15 hours of my week with HubSpot automation. He's a technical powerhouse."</p>
+            <h4 style="margin-top:15px;">Robert Sterling</h4>
+            <small>CEO, Sterling Media | <strong>New York City, NY</strong></small>
+        </div>
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a2" class="testimonial-img">
+            <div><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i></div>
+            <p>"The AI lead-gen logic he built is flawless. One of the best partners for any scaling founder."</p>
+            <h4 style="margin-top:15px;">Amanda Ross</h4>
+            <small>Founder, Ross Creative | <strong>Austin, TX</strong></small>
+        </div>
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a3" class="testimonial-img">
+            <div><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i></div>
+            <p>"Executive-level support with deep backend knowledge. He doesn't just fix; he architects."</p>
+            <h4 style="margin-top:15px;">David Kim</h4>
+            <small>Ops Director, TechPath | <strong>San Francisco, CA</strong></small>
+        </div>
     </div>
 </section>
 
-<section class="section" id="billing" style="background: var(--bg-card);"> <h2>Secure Payments</h2> <div class="billing-grid">
-        <div class="payment-portal mpesa" data-aos="fade-right"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-Pesa"> <button class="btn mpesa-btn" onclick="copyNum()"><i class="fas fa-copy"></i> Copy Number</button> </div>
-        <div class="payment-portal paypal" data-aos="fade-left"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal"> <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a> </div>
+<section class="section" id="billing">
+    <h2>Payment Portals</h2>
+    <p class="section-desc">Global and local payment options for seamless transactions.</p>
+    <div class="billing-grid">
+        <div class="payment-portal mpesa" data-aos="fade-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-Pesa">
+            <p style="font-weight:600; color: var(--text-muted);">Direct Local Transfer</p>
+            <div class="payment-details" id="mpesaNum">0794301929</div>
+            <button class="btn mpesa-btn" onclick="copyNum()"><i class="fas fa-copy"></i> Copy Number</button>
+        </div>
+        <div class="payment-portal paypal" data-aos="fade-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal">
+            <p style="font-weight:600; color: var(--text-muted);">Global Invoicing & Retainers</p>
+            <div class="payment-details">timothythuo0@gmail.com</div>
+            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a>
+        </div>
     </div>
 </section>
 
-<section class="section" id="contact"> <div style="max-width: 600px; margin: auto;"> <h2 style="text-align: center;">Partner Consultation</h2> <form action="https://formspree.io/f/xvzvbygw" method="POST"> <div style="display:flex; gap:15px; margin-bottom:15px;"> <input type="text" name="name" placeholder="Name" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);"> <input type="email" name="email" placeholder="Email" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);"> </div>
-            <textarea name="message" placeholder="Describe your technical bottlenecks..." rows="5" style="width:100%; padding:15px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:15px;"></textarea> <button type="submit" class="btn primary" style="width:100%;">Send Project Brief</button> </form>
+<section class="section" id="contact">
+    <div style="max-width: 600px; margin: auto;">
+        <h2 style="text-align: center;">Partner Consultation</h2>
+        <form action="https://formspree.io/f/xvzvbygw" method="POST">
+            <div style="display:flex; gap:15px; margin-bottom:15px;">
+                <input type="text" name="name" placeholder="Name" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
+                <input type="email" name="email" placeholder="Email" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
+            </div>
+            <textarea name="message" placeholder="Describe your technical bottlenecks..." rows="5" style="width:100%; padding:15px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:15px;"></textarea>
+            <button type="submit" class="btn primary" style="width:100%;">Send Project Brief</button>
+        </form>
     </div>
 </section>
 
-<footer> <div class="socials" style="margin-bottom: 20px;"> <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a> <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a> </div>
-    <p>© 2026 Timothy Thuo | Strategic Systems Specialist</p> </footer>
+<footer>
+    <div class="socials" style="margin-bottom: 20px;">
+        <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>© 2026 Timothy Thuo | Strategic Systems Specialist</p>
+</footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <script>
-    AOS.init({duration:1000, once:true}); //
-    function copyNum() { //
-        navigator.clipboard.writeText("0794301929"); //
-        alert("M-Pesa Number Copied!"); //
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({duration:1000, once:true});
+    function copyNum() { 
+        navigator.clipboard.writeText("0794301929"); 
+        alert("M-Pesa Number Copied!"); 
     }
     
-    const themeBtn = document.getElementById('theme-toggle'); //
-    themeBtn.addEventListener('click', () => { //
-        const isDark = document.body.getAttribute('data-theme') === 'dark'; //
-        if(isDark) { //
-            document.body.removeAttribute('data-theme'); //
-            themeBtn.innerHTML = '<i class="fas fa-moon"></i>'; //
-        } else { //
-            document.body.setAttribute('data-theme', 'dark'); //
-            themeBtn.innerHTML = '<i class="fas fa-sun"></i>'; //
-        }
-    });
+    const themeBtn = document.getElementById('theme-t<section class="section" style="background: var(--bg-card);">
+    <h2 style="text-align: center;">Success Stories</h2>
+    <div class="grid">
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a1" class="testimonial-img">
+            <div>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Timothy recovered 15 hours of my week with his HubSpot automation. He's a technical powerhouse."</p>
+            <h4 style="margin-top:15px;">Robert Sterling</h4>
+            <small>CEO, Sterling Media | <strong>New York City, NY</strong></small>
+        </div>
 
-    window.onscroll = function() { 
-        document.getElementById('scroll-top').style.display = window.scrollY > 500 ? "flex" : "none"; 
-    };
-    document.getElementById('scroll-top').addEventListener('click', () => { 
-        window.scrollTo({top: 0, behavior: 'smooth'}); 
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a2" class="testimonial-img">
+            <div>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"The AI lead-gen logic he built is flawless. One of the best partners for any scaling founder."</p>
+            <h4 style="margin-top:15px;">Ananda Ross</h4>
+            <small>Founder, Ross Creative | <strong>Austin, TX</strong></small>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=a3" class="testimonial-img">
+            <div>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Executive-level support with deep backend knowledge. He doesn't just fix; he architects."</p>
+            <h4 style="margin-top:15px;">David Kim</h4>
+            <small>Ops Director, TechPath | <strong>San Francisco, CA</strong></small>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="billing">
+    <h2 style="text-align: center;">Payment Portals</h2>
+    <p class="section-desc" style="text-align: center;">Global and local payment options for seamless transactions.</p>
+    <div class="billing-grid">
+        <div class="payment-portal mpesa" data-aos="fade-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-PESA">
+            <p style="font-weight:600; color: var(--text-muted);">Direct Local Transfer</p>
+            <div class="payment-details" id="mpesaNum">0794301929</div>
+            <button class="btn mpesa-btn" onclick="copyNum()"><i class="fas fa-copy"></i> Copy Number</button>
+        </div>
+
+        <div class="payment-portal paypal" data-aos="fade-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal">
+            <p style="font-weight:600; color: var(--text-muted);">Global Invoicing & Retainers</p>
+            <div class="payment-details">timothythuo0@gmail.com</div>
+            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <div style="max-width: 600px; margin: auto;">
+        <h2 style="text-align: center;">Partner Consultation</h2>
+        <form action="https://formspree.io/f/xvzvbygw" method="POST">
+            <div style="display:flex; gap:15px; margin-bottom:15px;">
+                <input type="text" name="name" placeholder="Name" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
+                <input type="email" name="email" placeholder="Email" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
+            </div>
+            <textarea name="message" placeholder="Describe your technical bottlenecks..." rows="5" style="width:100%; padding:15px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:15px;"></textarea>
+            <button type="submit" class="btn primary" style="width:100%;">Send Project Brief</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="socials" style="margin-bottom: 20px; text-align: center;">
+        <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="text-align: center;">© 2026 Timothy Thuo | Strategic Systems Specialist</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({duration:1000, once:true});
+
+    function copyNum() {
+        navigator.clipboard.writeText("0794301929");
+        alert("M-Pesa Number Copied!");
+    }
+
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        if(isDark) {
+            document.body.removeAttribute('data-theme');
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
     });
 </script>
 </body>
 </html>
+oggle');
+    themeBtn.addEventListener('click', () =>
