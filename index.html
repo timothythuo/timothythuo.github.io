@@ -6,15 +6,6 @@
 <title>Timothy Thuo | Remote Executive VA & Web Specialist</title>
 <meta name="description" content="Timothy Thuo: Expert Remote Executive VA specializing in CRM architecting, web development, and AI implementation for global businesses.">
 
-<!-- SEO & Social Meta -->
-<meta property="og:title" content="Timothy Thuo | Remote Executive VA & Web Specialist">
-<meta property="og:description" content="Strategic CRM Architecting, Web Development & AI Implementation for global businesses.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://yourdomain.com">
-<link rel="icon" href="profile.jpg">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -24,46 +15,55 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;}
 body{background:#f8fafc;color:#0f172a;line-height:1.6;}
-
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:white;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
 .logo{font-weight:700;font-size:1.4rem;color:#16a34a;}
 .nav{display:flex;gap:20px;align-items:center;}
 .nav a{text-decoration:none;font-weight:600;color:#0f172a;font-size:0.9rem;transition:.3s;}
 .nav a:hover{color:#16a34a;}
-
 .hamburger{display:none;font-size:1.6rem;cursor:pointer;}
 .mobile-menu{display:none;flex-direction:column;background:#fff;padding:20px;position:absolute;top:60px;right:8%;box-shadow:0 10px 25px rgba(0,0,0,.1);border-radius:12px;}
 .mobile-menu a{margin:10px 0;text-decoration:none;color:#0f172a;font-weight:600;transition:.3s;}
 .mobile-menu a:hover{color:#16a34a;}
-
 .hero{padding:160px 8% 80px;text-align:center;}
 .hero h1{font-size:2.8rem;margin-bottom:20px;letter-spacing:-1px;}
 .hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#475569;}
 .hero img{width:220px;height:220px;border-radius:50%;border:6px solid white;box-shadow:0 10px 30px rgba(0,0,0,0.1);object-fit:cover;margin-top:30px;animation:float 6s ease-in-out infinite;}
-
 @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
-
 .btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;transition:.3s;margin:8px;cursor:pointer;border:none;}
 .primary{background:#16a34a;color:white;border:2px solid #16a34a;}
 .primary:hover{background:#15803d;transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.1);}
-
+.whatsapp{background:#25D366;color:white;border:2px solid #25D366;}
 .section{padding:80px 8%;}
 .section h2{text-align:center;font-size:2.2rem;margin-bottom:50px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
-
 .card{background:white;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.03);border:1px solid #f1f5f9;transition:.3s;}
 .card:hover{transform:translateY(-6px);box-shadow:0 15px 30px rgba(0,0,0,0.08);}
-
-.results{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;text-align:center;}
-.results div{font-size:1.2rem;}
-.results strong{display:block;font-size:2rem;color:#16a34a;}
-
+.tool-icons {display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;}
+.tool-item {text-align: center; font-size: 0.8rem; font-weight: 600; color: #64748b;}
+.tool-item i {font-size: 2.5rem; display: block; margin-bottom: 8px;}
+.fa-wordpress {color: #21759b;}
+.fa-hubspot {color: #ff7a59;}
+.fa-envelope-open-text {color: #007c89;}
+.fa-paypal {color: #003087;}
+.retainer-card {background: white; border: 2px solid #16a34a; margin-top: 40px; position: relative;}
+.badge {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #16a34a; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;}
+.retainer-card ul {list-style: none; margin: 20px 0;}
+.retainer-card li {margin-bottom: 10px; color: #475569; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;}
+.billing-section {background: #fff; border-top: 1px solid #e2e8f0;}
+.billing-container {max-width: 900px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;}
+.billing-card {padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; position: relative;}
+.billing-card h4 {margin-bottom: 15px; display: flex; align-items: center; gap: 10px;}
+.billing-verified {color: #16a34a; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.copy-area {background: #f8fafc; padding: 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin: 15px 0;}
+.mpesa-num {font-weight: 800; color: #16a34a; font-size: 1.2rem;}
+.copy-btn {background: #16a34a; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;}
+.contact-form-container {max-width: 600px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);}
+input, textarea {width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none;}
+#form-status {margin-top: 15px; font-weight: 600; text-align: center; display: none;}
+footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
+.footer-socials a{color:white; margin: 0 12px; font-size: 1.4rem; transition: 0.3s;}
 .floating-wa{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 8px 20px rgba(0,0,0,.2);z-index:999;}
-
-@media(max-width:768px){
-.nav{display:none;}
-.hamburger{display:block;}
-}
+@media(max-width:768px){.nav{display:none;}.hamburger{display:block;}}
 </style>
 </head>
 <body>
@@ -90,12 +90,12 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <p>Transforming operational chaos into streamlined success through expert web development, CRM architecting, and strategic administration.</p>
 <div>
 <a href="#contact" class="btn primary">Start Our Partnership</a>
-<a href="https://wa.me/254794301929" target="_blank" class="btn primary" style="background:#0f172a;border-color:#0f172a">WhatsApp</a>
+<a href="https://wa.me/254794301929" target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 <img src="profile.jpg" alt="Timothy Thuo - Remote Executive Virtual Assistant Portfolio">
 </section>
 
-<!-- NEW ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="section" id="about">
 <h2>About Timothy</h2>
 <div style="max-width:800px;margin:auto;text-align:center;color:#475569">
@@ -103,63 +103,32 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 </div>
 </section>
 
-<!-- NEW RESULTS SECTION -->
+<!-- RESULTS -->
 <section class="section" id="results" style="background:#fff">
 <h2>Proven Results</h2>
-<div class="results">
+<div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;text-align:center;">
 <div><strong>42%</strong> Lead Conversion Growth</div>
 <div><strong>60%</strong> Operational Efficiency Boost</div>
 <div><strong>3000+</strong> Automations Built</div>
 </div>
 </section>
 
-<!-- PROFESSIONAL SERVICES -->
+<!-- SERVICES -->
 <section class="section" id="services">
 <h2>Professional Services</h2>
 <div class="grid">
-<div class="card" data-aos="fade-up">
-<h3>Sales & Marketing Automation</h3>
-<p>Building automated lead nurture sequences and complex HubSpot/Mailchimp workflows.</p>
-<span class="pricing-tag">Kenya: KSh 2,000/hr | Int: $40/hr</span>
+<div class="card" data-aos="fade-up"><h3>Sales & Marketing Automation</h3><p>Building automated lead nurture sequences and complex HubSpot/Mailchimp workflows.</p><span class="pricing-tag">Kenya: KSh 2,000/hr | Int: $40/hr</span></div>
+<div class="card" data-aos="fade-up"><h3>AI Implementation & GPTs</h3><p>Setting up custom GPTs and AI-driven content repurposing workflows for your brand.</p><span class="pricing-tag">Kenya: KSh 2,500/hr | Int: $50/hr</span></div>
+<div class="card" data-aos="fade-up"><h3>Webinar & Launch Support</h3><p>Technical management for high-stakes digital launches, live events, and funnels.</p><span class="pricing-tag">Kenya: KSh 1,800/hr | Int: $35/hr</span></div>
+<div class="card" data-aos="fade-up"><h3>Website Development</h3><p>Modern Corporate and E-commerce websites built for high conversion and speed.</p><span class="pricing-tag">Kenya: KSh 25,000 | Int: From $500</span></div>
+<div class="card" data-aos="fade-up"><h3>Technical SEO</h3><p>Keyword strategy and on-page optimization to dominate search engine results.</p><span class="pricing-tag">Kenya: KSh 10,000 | Int: $150</span></div>
+<div class="card" data-aos="fade-up"><h3>CRM Architecting</h3><p>Bespoke system design, lead tracking architectures, and optimized workflows.</p><span class="pricing-tag">Kenya: KSh 1,200/hr | Int: $35/hr</span></div>
 </div>
-<div class="card" data-aos="fade-up">
-<h3>AI Implementation & GPTs</h3>
-<p>Setting up custom GPTs and AI-driven content repurposing workflows for your brand.</p>
-<span class="pricing-tag">Kenya: KSh 2,500/hr | Int: $50/hr</span>
-</div>
-<div class="card" data-aos="fade-up">
-<h3>Webinar & Launch Support</h3>
-<p>Technical management for high-stakes digital launches, live events, and funnels.</p>
-<span class="pricing-tag">Kenya: KSh 1,800/hr | Int: $35/hr</span>
-</div>
-<div class="card" data-aos="fade-up">
-<h3>Website Development</h3>
-<p>Modern Corporate and E-commerce websites built for high conversion and speed.</p>
-<span class="pricing-tag">Kenya: KSh 25,000 | Int: From $500</span>
-</div>
-<div class="card" data-aos="fade-up">
-<h3>Technical SEO</h3>
-<p>Keyword strategy and on-page optimization to dominate search engine results.</p>
-<span class="pricing-tag">Kenya: KSh 10,000 | Int: $150</span>
-</div>
-<div class="card" data-aos="fade-up">
-<h3>CRM Architecting</h3>
-<p>Bespoke system design, lead tracking architectures, and optimized workflows.</p>
-<span class="pricing-tag">Kenya: KSh 1,200/hr | Int: $35/hr</span>
-</div>
-</div>
+</section>
 
-<!-- TOOLS ICONS -->
-<div class="tool-icons" data-aos="fade-up">
-<div class="tool-item"><i class="fab fa-wordpress"></i> WordPress</div>
-<div class="tool-item"><i class="fab fa-hubspot"></i> HubSpot</div>
-<div class="tool-item"><i class="fas fa-envelope-open-text"></i> Mailchimp</div>
-<div class="tool-item"><i class="fab fa-paypal"></i> PayPal</div>
-<div class="tool-item"><i class="fas fa-robot" style="color: #16a34a;"></i> OpenAI/GPT</div>
-</div>
-
-<!-- RETAINER CARD -->
-<div style="margin-top: 50px; max-width: 850px; margin-left: auto; margin-right: auto;">
+<!-- RETAINER -->
+<section class="section">
+<div style="margin-top: 50px; max-width: 850px; margin-left:auto; margin-right:auto;">
 <div class="card retainer-card" data-aos="zoom-in">
 <div class="badge">Most Popular Retainer</div>
 <h3>Business Growth Package</h3>
@@ -170,46 +139,23 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <li><i class="fas fa-check-circle" style="color:#16a34a"></i> Weekly Website Maintenance & Updates</li>
 <li><i class="fas fa-check-circle" style="color:#16a34a"></i> Priority Strategic Business Support</li>
 </ul>
-<a href="#contact" class="btn primary" style="width:100%; margin: 0; text-align: center;">Inquire About Growth Retainer</a>
+<a href="#contact" class="btn primary" style="width:100%; margin:0; text-align:center;">Inquire About Growth Retainer</a>
 </div>
 </div>
+</section>
 
 <!-- TESTIMONIALS -->
 <section class="section" id="testimonials" style="background:#fff;">
 <h2>Client Success Stories</h2>
 <div class="grid">
-<div class="card" data-aos="fade-up">
-<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-<img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:60px; height:60px; border-radius:50%;">
-<div><strong>Sarah Jenkins</strong><br><small>Austin, Texas (USA)</small></div>
-</div>
-<p>"Timothy completely revamped our HubSpot CRM. Our lead management is now 100% automated."</p>
-</div>
-<div class="card" data-aos="fade-up">
-<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-<img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:60px; height:60px; border-radius:50%;">
-<div><strong>David Thompson</strong><br><small>Chicago, Illinois (USA)</small></div>
-</div>
-<p>"Professional and technically brilliant. He bridges the gap between tech and business perfectly."</p>
-</div>
-<div class="card" data-aos="fade-up">
-<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-<img src="https://randomuser.me/api/portraits/women/65.jpg" style="width:60px; height:60px; border-radius:50%;">
-<div><strong>Clare Harrison</strong><br><small>London (UK)</small></div>
-</div>
-<p>"Incredible attention to detail. Timothy's web development skills helped us launch our UK store seamlessly."</p>
-</div>
-<div class="card" data-aos="fade-up">
-<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
-<img src="https://randomuser.me/api/portraits/men/45.jpg" style="width:60px; height:60px; border-radius:50%;">
-<div><strong>James MacNeil</strong><br><small>Toronto (Canada)</small></div>
-</div>
-<p>"A reliable strategic partner. Timothy handles our technical operations so we can focus on scaling."</p>
-</div>
+<div class="card" data-aos="fade-up"><div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;"><img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:60px; height:60px; border-radius:50%;"><div><strong>Sarah Jenkins</strong><br><small>Austin, Texas (USA)</small></div></div><p>"Timothy completely revamped our HubSpot CRM. Our lead management is now 100% automated."</p></div>
+<div class="card" data-aos="fade-up"><div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:60px; height:60px; border-radius:50%;"><div><strong>David Thompson</strong><br><small>Chicago, Illinois (USA)</small></div></div><p>"Professional and technically brilliant. He bridges the gap between tech and business perfectly."</p></div>
+<div class="card" data-aos="fade-up"><div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;"><img src="https://randomuser.me/api/portraits/women/65.jpg" style="width:60px; height:60px; border-radius:50%;"><div><strong>Clare Harrison</strong><br><small>London (UK)</small></div></div><p>"Incredible attention to detail. Timothy's web development skills helped us launch our UK store seamlessly."</p></div>
+<div class="card" data-aos="fade-up"><div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;"><img src="https://randomuser.me/api/portraits/men/45.jpg" style="width:60px; height:60px; border-radius:50%;"><div><strong>James MacNeil</strong><br><small>Toronto (Canada)</small></div></div><p>"A reliable strategic partner. Timothy handles our technical operations so we can focus on scaling."</p></div>
 </div>
 </section>
 
-<!-- BILLING SECTION -->
+<!-- BILLING -->
 <section class="section billing-section">
 <h2>Secure Billing & Payments</h2>
 <div class="billing-container">
@@ -221,19 +167,19 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <span class="mpesa-num" id="mNo">0794301929</span>
 <button class="copy-btn" onclick="copyNum()">Copy Number</button>
 </div>
-<a href="https://wa.me/254794301929?text=PaymentSent" class="btn whatsapp" style="width: 100%; margin: 0; font-size: 0.9rem; text-align: center;">Confirm via WhatsApp</a>
+<a href="https://wa.me/254794301929?text=PaymentSent" class="btn whatsapp" style="width:100%; margin:0; font-size:0.9rem; text-align:center;">Confirm via WhatsApp</a>
 </div>
 <div class="billing-card" data-aos="fade-left">
 <div class="billing-verified"><i class="fas fa-globe"></i> Global Secure Checkout</div>
 <h4><i class="fab fa-paypal" style="color:#0070ba"></i> PayPal Merchant</h4>
-<p style="font-size: 0.85rem; color:#64748b;">Secure card payments for international clients.</p>
+<p style="font-size:0.85rem;color:#64748b;">Secure card payments for international clients.</p>
 <br>
-<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba; border-color:#0070ba; width: 100%; margin: 0; font-size: 0.9rem; text-align: center;">Pay via PayPal</a>
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba;border-color:#0070ba;width:100%;margin:0;font-size:0.9rem;text-align:center;">Pay via PayPal</a>
 </div>
 </div>
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT -->
 <section class="section" id="contact">
 <div class="contact-form-container">
 <h2 style="margin-bottom: 20px;">Send a Brief</h2>
@@ -241,7 +187,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <textarea name="message" placeholder="How can I help your business grow?" required></textarea>
-<button type="submit" id="submit-btn" class="btn primary" style="width: 100%; margin: 0;">Submit Request</button>
+<button type="submit" id="submit-btn" class="btn primary" style="width:100%;margin:0;">Submit Request</button>
 <p id="form-status"></p>
 </form>
 </div>
@@ -250,44 +196,4 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 <!-- FOOTER -->
 <footer>
 <div class="footer-socials">
-<a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.facebook.com/share/1DbrXocvYg/" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="mailto:timothythuo0@gmail.com"><i class="fas fa-envelope"></i></a>
-</div>
-<p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">© 2026 Timothy Thuo | Strategic Business Solutions</p>
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/254794301929" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({duration:1000,once:true});
-
-function copyNum() {
-const num = document.getElementById("mNo").innerText;
-navigator.clipboard.writeText(num);
-const btn = document.querySelector('.copy-btn');
-btn.innerHTML = 'Copied!';
-btn.style.background = '#0e7d37';
-setTimeout(() => { btn.innerHTML = 'Copy Number'; btn.style.background = '#16a34a'; }, 2000);
-}
-
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", async function(event) {
-event.preventDefault();
-const data = new FormData(event.target);
-const submitBtn = document.getElementById("submit-btn");
-submitBtn.innerHTML = "Sending...";
-submitBtn.disabled = true;
-fetch(event.target.action, {
-method: form.method,
-body: data,
-headers: { 'Accept': 'application/json' }
-}).then(response => {
-if (response.ok) {
-status.innerHTML = "Thanks! Your message has been sent successfully.";
-status.style.display
+<a href="http://www.linkedin.com/in/tim
