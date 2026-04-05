@@ -317,3 +317,63 @@
                 <input type="email" name="email" placeholder="Email Address" required>
             </div>
             <textarea name="message" rows="6"
+                placeholder="Tell me about your business bottlenecks..." required style="margin-bottom: 20px;"></textarea>
+            <button type="submit" class="btn primary" style="width: 100%; padding: 18px;">Inquire Now</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-socials">
+        <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/1DbrXocvYg/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:timothythuo0@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2026 Timothy Thuo | Strategic Systems Specialist</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({duration:1000,once:true});
+    function toggleMenu() { document.getElementById("nav-menu").classList.toggle("active"); }
+    function copyNum() { navigator.clipboard.writeText("0794301929"); alert("Number copied SUCCESSFULLY!"); }
+
+    // Theme Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+            document.body.removeAttribute('data-theme');
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    });
+
+    // Scroll Top
+    const scrollBtn = document.getElementById('scroll-top');
+    window.onscroll = function() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            scrollBtn.style.display = "flex";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    };
+    scrollBtn.addEventListener('click', () => { window.scrollTo({top: 0, behavior: 'smooth'}); });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+            const icon = item.querySelector('i');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+        });
+    });
+</script>
+
+</body>
+</html>
