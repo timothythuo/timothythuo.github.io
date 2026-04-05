@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <style>
         :root {
@@ -21,6 +22,7 @@
             --accent-green: #16a34a;
             --star-color: #facc15;
             --paypal-blue: #003087;
+            --mpesa-green: #4daf4a;
         }
 
         [data-theme="dark"] {
@@ -54,6 +56,11 @@
         .section h2{text-align:center; font-size:2.5rem; margin-bottom:15px;}
         .section-desc{text-align:center; color: var(--text-muted); margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;}
 
+        /* Tool Icons Section */
+        .tools-showcase {display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; font-size: 2.5rem;}
+        .tool-icon {transition: transform 0.3s;}
+        .tool-icon:hover {transform: translateY(-5px);}
+
         /* About Section */
         .about-flex {display: flex; align-items: center; gap: 50px; flex-wrap: wrap;}
         .about-text {flex: 1; min-width: 300px;}
@@ -62,7 +69,7 @@
         .stat-item {background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);}
         .stat-item span {display: block; font-size: 1.5rem; font-weight: 700; color: var(--accent-green);}
 
-        /* Services Grid - All 8 Restored */
+        /* Services Grid */
         .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px;}
         .card{background: var(--bg-card); padding:40px; border-radius:20px; border: 1px solid var(--border-color); transition: 0.3s;}
         .card:hover{transform: translateY(-10px); border-color: var(--accent-green);}
@@ -75,25 +82,25 @@
         .package-list li {margin-bottom: 12px;}
         .package-list li i {color: var(--accent-green); margin-right: 10px;}
 
-        /* Testimonials */
-        .testi-card {text-align: center;}
-        .testi-img {width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; border: 3px solid var(--accent-green); object-fit: cover;}
-        .stars {color: var(--star-color); margin-bottom: 15px;}
-
         /* Professional Billing Styles */
-        .billing-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 900px; margin: auto;}
-        .payment-portal {background: var(--bg-card); border-radius: 24px; padding: 40px; text-align: center; border: 1px solid var(--border-color); position: relative; overflow: hidden;}
-        .payment-portal.mpesa {border-bottom: 6px solid #4daf4a;}
-        .payment-portal.paypal {border-bottom: 6px solid var(--paypal-blue);}
-        .portal-logo {height: 40px; margin-bottom: 20px;}
-        .payment-details {background: var(--bg-body); padding: 20px; border-radius: 15px; margin: 20px 0; font-family: monospace; font-size: 1.2rem; letter-spacing: 2px; color: var(--text-main); border: 1px dashed var(--text-muted);}
+        .billing-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1000px; margin: auto;}
+        .payment-portal {background: var(--bg-card); border-radius: 24px; padding: 50px 30px; text-align: center; border: 1px solid var(--border-color); position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+        .payment-portal:hover {transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08);}
+        
+        .payment-portal.mpesa {border-top: 8px solid var(--mpesa-green);}
+        .payment-portal.paypal {border-top: 8px solid var(--paypal-blue);}
+        
+        .portal-logo {height: 50px; margin-bottom: 25px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));}
+        .payment-details {background: var(--bg-body); padding: 18px; border-radius: 12px; margin: 20px 0; font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; color: var(--text-main); border: 2px dashed var(--border-color); width: 100%;}
 
-        .btn{padding:15px 35px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block; transition: 0.3s; border: none; cursor: pointer;}
+        .btn{padding:15px 35px; border-radius:10px; text-decoration:none; font-weight:700; display:inline-block; transition: 0.3s; border: none; cursor: pointer; text-align: center;}
         .primary{background: var(--accent-green); color:white;}
-        .paypal-btn {background: var(--paypal-blue); color: white;}
+        .paypal-btn {background: var(--paypal-blue); color: white; width: 100%;}
+        .mpesa-btn {background: var(--mpesa-green); color: white; width: 100%;}
 
         footer{text-align:center; padding:60px 8%; background:#0f172a; color:white;}
-        .socials a {color: white; font-size: 1.5rem; margin: 0 15px; opacity: 0.7;}
+        .socials a {color: white; font-size: 1.5rem; margin: 0 15px; opacity: 0.7; transition: 0.3s;}
+        .socials a:hover {opacity: 1; color: var(--accent-green);}
 
         @media(max-width:768px){ .hero h1{font-size: 2.5rem;} .nav{display: none;} }
     </style>
@@ -118,7 +125,17 @@
     <h1>Executive Solutions & <span style="color: var(--accent-green)">System Architecting</span></h1>
     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
     <p>Strategic Technical Partner for High-Growth Founders & Global Ventures.</p>
-    <div style="margin-top: 30px;">
+    
+    <div class="tools-showcase">
+        <i class="devicon-hubspot-plain colored tool-icon" title="HubSpot"></i>
+        <i class="devicon-salesforce-plain colored tool-icon" title="Salesforce"></i>
+        <i class="devicon-wordpress-plain colored tool-icon" title="WordPress"></i>
+        <i class="devicon-woocommerce-plain colored tool-icon" title="WooCommerce"></i>
+        <i class="devicon-amazonwebservices-plain-wordmark colored tool-icon" title="AWS"></i>
+        <i class="devicon-python-plain colored tool-icon" title="Python/Automation"></i>
+    </div>
+
+    <div style="margin-top: 40px;">
         <a href="#contact" class="btn primary">Get a Consultation</a>
         <a href="https://wa.me/254794301929" target="_blank" class="btn" style="background:#25D366; color:white; margin-left:10px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
@@ -229,54 +246,21 @@
     </div>
 </section>
 
-<section class="section">
-    <h2>Roadmap to Scaling</h2>
-    <div class="grid" style="text-align: center;">
-        <div class="step"><div class="step-num" style="margin:auto; margin-bottom:15px; width:40px; height:40px; background:var(--accent-green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">1</div><h4>Systems Audit</h4><p>Identify bottlenecks.</p></div>
-        <div class="step"><div class="step-num" style="margin:auto; margin-bottom:15px; width:40px; height:40px; background:var(--accent-green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">2</div><h4>Building Engine</h4><p>Deploying Automations.</p></div>
-        <div class="step"><div class="step-num" style="margin:auto; margin-bottom:15px; width:40px; height:40px; background:var(--accent-green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700;">3</div><h4>Optimized Scale</h4><p>Unlimited Support.</p></div>
-    </div>
-</section>
-
-<section class="section" id="testimonials" style="background: var(--bg-card);">
-    <h2>Client Reviews</h2>
-    <div class="grid">
-        <div class="card testi-card">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150" class="testi-img" alt="Sarah">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Timothy saved us 15 hours every week with his CRM logic."</p>
-            <span class="client-info">Sarah Miller | CEO, Austin, TX</span>
-        </div>
-        <div class="card testi-card">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" class="testi-img" alt="Marcus">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"Strategic, technical, and always proactive. A top-tier partner."</p>
-            <span class="client-info">Marcus Thompson | Director, London</span>
-        </div>
-        <div class="card testi-card">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150" class="testi-img" alt="Jessica">
-            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <p>"His automation workflows are flawless. Highly recommended."</p>
-            <span class="client-info">Jessica Richardson | Founder, NY</span>
-        </div>
-    </div>
-</section>
-
 <section class="section" id="billing">
     <h2>Secure Payment Portals</h2>
     <p class="section-desc">Global and Local payment options for seamless transactions.</p>
     <div class="billing-grid">
         <div class="payment-portal mpesa" data-aos="fade-right">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-Pesa">
-            <p>For Local Clients & Direct Deposits</p>
+            <p style="font-weight:600; color: var(--text-muted);">Direct Local Transfer</p>
             <div class="payment-details" id="mpesaNum">0794301929</div>
-            <button class="btn primary" onclick="copyNum()">Copy Number</button>
+            <button class="btn mpesa-btn" onclick="copyNum()"><i class="fas fa-copy"></i> Copy Paybill/Number</button>
         </div>
         <div class="payment-portal paypal" data-aos="fade-left">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal">
-            <p>For Global Retainers & Contracts</p>
+            <p style="font-weight:600; color: var(--text-muted);">Global Invoicing & Retainers</p>
             <div class="payment-details">timothythuo0@gmail.com</div>
-            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn">Pay via PayPal</a>
+            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a>
         </div>
     </div>
 </section>
@@ -297,8 +281,9 @@
 
 <footer>
     <div class="socials">
-        <a href="http://www.linkedin.com/in/timothythuo"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/254794301929"><i class="fab fa-whatsapp"></i></a>
+        <a href="http://www.linkedin.com/in/timothythuo" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/1N6L6doD7V/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/254794301929" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p>© 2026 Timothy Thuo | Strategic Systems Specialist</p>
 </footer>
@@ -311,12 +296,19 @@
     // Theme Toggle
     const themeBtn = document.getElementById('theme-toggle');
     themeBtn.addEventListener('click', () => {
-        document.body.getAttribute('data-theme') === 'dark' ? document.body.removeAttribute('data-theme') : document.body.setAttribute('data-theme', 'dark');
-        themeBtn.innerHTML = document.body.getAttribute('data-theme') === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        if(isDark) {
+            document.body.removeAttribute('data-theme');
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            document.body.setAttribute('data-theme', 'dark');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        }
     });
 
     window.onscroll = function() { document.getElementById('scroll-top').style.display = window.scrollY > 500 ? "flex" : "none"; };
     document.getElementById('scroll-top').addEventListener('click', () => { window.scrollTo({top: 0, behavior: 'smooth'}); });
 </script>
 </body>
-</html>
+    </html>
+    
