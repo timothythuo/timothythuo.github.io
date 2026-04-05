@@ -56,19 +56,16 @@
         .section h2{text-align:center; font-size:2.5rem; margin-bottom:15px;}
         .section-desc{text-align:center; color: var(--text-muted); margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;}
 
-        /* Roadmap Specifics */
-        .roadmap-icon {width: 50px; height: 50px; background: var(--accent-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 700; font-size: 1.2rem;}
-        
-        /* Testimonial Specifics */
-        .testimonial-img {width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-green); margin-bottom: 15px;}
+        /* New Icons & Stars */
+        .roadmap-num {font-size: 2rem; font-weight: 800; color: var(--accent-green); opacity: 0.3; margin-bottom: 10px; display: block;}
         .star-gold {color: var(--star-gold); margin: 0 2px;}
+        .testimonial-img {width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-green); margin-bottom: 15px;}
 
         .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px;}
         .card{background: var(--bg-card); padding:40px; border-radius:20px; border: 1px solid var(--border-color); transition: 0.3s;}
         .card:hover{transform: translateY(-10px); border-color: var(--accent-green);}
         .icon-box {width: 50px; height: 50px; background: rgba(22, 163, 74, 0.1); color: var(--accent-green); display: flex; align-items: center; justify-content: center; border-radius: 12px; margin-bottom: 20px; font-size: 1.4rem;}
         
-        /* Billing Section */
         .billing-grid {display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1000px; margin: auto;}
         .payment-portal {background: var(--bg-card); border-radius: 20px; padding: 30px; text-align: center; border: 1px solid var(--border-color); width: 100%; max-width: 320px; transition: 0.3s;}
         .portal-logo {height: 35px; margin-bottom: 20px;}
@@ -77,6 +74,7 @@
         .primary{background: var(--accent-green); color:white;}
         .paypal-btn {background: var(--paypal-blue); color: white; width: 100%;}
         .mpesa-btn {background: var(--mpesa-green); color: white; width: 100%;}
+        .price-tag {display: inline-block; font-size: 0.85rem; font-weight: 700; color: var(--accent-green); margin-top: 15px; background: rgba(22, 163, 74, 0.08); padding: 6px 12px; border-radius: 8px;}
 
         footer{text-align:center; padding:60px 8%; background:#0f172a; color:white;}
         .socials a {color: white; font-size: 1.5rem; margin: 0 15px; opacity: 0.7; transition: 0.3s;}
@@ -103,7 +101,6 @@
 <section class="hero" data-aos="zoom-in">
     <div class="status-badge"><span class="pulse"></span> Accepting New Projects for 2026</div>
     <h1>Executive Solutions & <span style="color: var(--accent-green)">System Architecting</span></h1>
-    <div class="stars"><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i></div>
     <p>Strategic Technical Partner for High-Growth Founders & Global Ventures.</p>
     
     <div style="margin-top: 40px;">
@@ -115,56 +112,22 @@
 
 <section class="section" id="roadmap">
     <h2>The Execution Roadmap</h2>
-    <p class="section-desc">A professional framework for business automation.</p>
+    <p class="section-desc">A structured technical approach to your business growth.</p>
     <div class="grid">
-        <div class="card" data-aos="fade-up" style="text-align: center;">
-            <div class="roadmap-icon">1</div>
-            <h3>Discovery & Audit</h3>
-            <p>Evaluating your current tech stack and identifying manual friction points.</p>
+        <div class="card" data-aos="fade-up">
+            <span class="roadmap-num">01</span>
+            <h3>Audit & Discovery</h3>
+            <p>Evaluating existing CRM workflows and identifying manual friction points.</p>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100" style="text-align: center;">
-            <div class="roadmap-icon">2</div>
-            <h3>Architecture Design</h3>
-            <p>Mapping out custom API connections, CRM logic, and AI workflows.</p>
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <span class="roadmap-num">02</span>
+            <h3>System Design</h3>
+            <p>Architecting custom AI logic and automated pipelines tailored to your scale.</p>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
-            <div class="roadmap-icon">3</div>
-            <h3>Scale & Optimize</h3>
-            <p>Deploying the systems and refining them for maximum conversion.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" style="background: var(--bg-card);">
-    <h2>Success Stories</h2>
-    <p class="section-desc">Trusted by high-level executives across the United States.</p>
-    <div class="grid">
-        <div class="card" style="text-align:center;">
-            <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" class="testimonial-img" alt="Client">
-            <div style="margin-bottom:15px;">
-                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
-            </div>
-            <p>"Timothy's CRM architecture recovered 20 hours of my work week. He is a technical genius."</p>
-            <h4 style="margin-top:10px;">Robert Sterling</h4>
-            <small>CEO, Sterling Media | <strong>New York, NY</strong></small>
-        </div>
-        <div class="card" style="text-align:center;">
-            <img src="https://i.pravatar.cc/150?u=a042581f4e29026701d" class="testimonial-img" alt="Client">
-            <div style="margin-bottom:15px;">
-                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
-            </div>
-            <p>"The AI lead-gen systems he built are flawless. A true partner for any scaling startup."</p>
-            <h4 style="margin-top:10px;">Amanda Ross</h4>
-            <small>Founder, Ross Creative | <strong>Austin, TX</strong></small>
-        </div>
-        <div class="card" style="text-align:center;">
-            <img src="https://i.pravatar.cc/150?u=a04258114e29026702d" class="testimonial-img" alt="Client">
-            <div style="margin-bottom:15px;">
-                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
-            </div>
-            <p>"High-level executive support that actually understands backend complexity. Highly recommended."</p>
-            <h4 style="margin-top:10px;">David Kim</h4>
-            <small>Operations Lead, TechPath | <strong>San Francisco, CA</strong></small>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <span class="roadmap-num">03</span>
+            <h3>Implementation</h3>
+            <p>Deploying technical solutions, API integrations, and continuous optimization.</p>
         </div>
     </div>
 </section>
@@ -172,50 +135,60 @@
 <section class="section" id="services">
     <h2>Specialized Services</h2>
     <div class="grid">
-        <div class="card">
-            <div class="icon-box"><i class="fas fa-layer-group"></i></div>
-            <h3>CRM Architecting</h3>
-            <p>HubSpot & Salesforce automation and lead scoring setup.</p>
+        <div class="card"><div class="icon-box"><i class="fas fa-layer-group"></i></div><h3>CRM Architecting</h3><p>HubSpot & Salesforce automation and lead scoring setup.</p><span class="price-tag">$45/hr | KSh 2,500</span></div>
+        <div class="card"><div class="icon-box"><i class="fas fa-brain"></i></div><h3>AI Implementation</h3><p>Custom GPTs, OpenAI API workflows, and brand-trained bots.</p><span class="price-tag">$55/hr | KSh 3,000</span></div>
+        <div class="card"><div class="icon-box"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>High-performance WordPress and E-commerce builds.</p><span class="price-tag">From $750 | KSh 40k</span></div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--bg-card);">
+    <h2>Client Testimonials</h2>
+    <div class="grid">
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=8" class="testimonial-img">
+            <div style="margin-bottom: 10px;">
+                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
+            </div>
+            <p>"Timothy recovered 15 hours of my week with his HubSpot automation. He's a technical powerhouse."</p>
+            <h4 style="margin-top:15px;">Robert Sterling</h4>
+            <small>CEO, Sterling Media | <strong>New York City, NY</strong></small>
         </div>
-        <div class="card">
-            <div class="icon-box"><i class="fas fa-brain"></i></div>
-            <h3>AI Implementation</h3>
-            <p>Custom GPTs and OpenAI API workflows for business tasks.</p>
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=9" class="testimonial-img">
+            <div style="margin-bottom: 10px;">
+                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
+            </div>
+            <p>"The AI lead-gen logic he built is flawless. One of the best partners for any scaling founder."</p>
+            <h4 style="margin-top:15px;">Amanda Ross</h4>
+            <small>Founder, Ross Creative | <strong>Austin, TX</strong></small>
         </div>
-        <div class="card">
-            <div class="icon-box"><i class="fas fa-code"></i></div>
-            <h3>Web Development</h3>
-            <p>High-performance WordPress and E-commerce builds.</p>
+        <div class="card" style="text-align: center;">
+            <img src="https://i.pravatar.cc/150?u=12" class="testimonial-img">
+            <div style="margin-bottom: 10px;">
+                <i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i><i class="fas fa-star star-gold"></i>
+            </div>
+            <p>"Executive-level support with deep backend knowledge. He doesn't just fix; he architects."</p>
+            <h4 style="margin-top:15px;">David Kim</h4>
+            <small>Ops Director, TechPath | <strong>San Francisco, CA</strong></small>
         </div>
     </div>
 </section>
 
-<section class="section" id="billing" style="background: var(--bg-card);">
-    <h2>Secure Payments</h2>
-    <p class="section-desc">Global and local payment options for seamless retainers.</p>
+<section class="section" id="billing">
+    <h2>Secure Billing</h2>
     <div class="billing-grid">
         <div class="payment-portal" style="border-top: 4px solid var(--mpesa-green);">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_logo-01.svg" class="portal-logo" alt="M-Pesa">
-            <button class="btn mpesa-btn" onclick="copyValue('0794301929', this)"><i class="fas fa-copy"></i> Copy Number</button>
+            <button class="btn mpesa-btn" onclick="copyValue('0794301929', this)">
+                <i class="fas fa-copy"></i> Copy Number
+            </button>
         </div>
         <div class="payment-portal" style="border-top: 4px solid var(--paypal-blue);">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="portal-logo" alt="PayPal">
-            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn"><i class="fab fa-paypal"></i> Pay via PayPal</a>
+            <a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn paypal-btn">
+                <i class="fab fa-paypal"></i> Pay via PayPal
+            </a>
         </div>
-    </div>
-</section>
-
-<section class="section" id="contact">
-    <div class="contact-form-container" style="max-width: 600px; margin: auto;">
-        <h2 style="text-align: center;">Partner Consultation</h2>
-        <form action="https://formspree.io/f/xvzvbygw" method="POST">
-            <div style="display:flex; gap:15px; margin-bottom:15px;">
-                <input type="text" name="name" placeholder="Name" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
-                <input type="email" name="email" placeholder="Email" required style="flex:1; padding:15px; border-radius:8px; border:1px solid var(--border-color);">
-            </div>
-            <textarea name="message" placeholder="Describe your technical bottlenecks..." rows="5" style="width:100%; padding:15px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:15px;"></textarea>
-            <button type="submit" class="btn primary" style="width:100%;">Send Project Brief</button>
-        </form>
     </div>
 </section>
 
@@ -236,11 +209,9 @@
         const originalHTML = btnElement.innerHTML;
         btnElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
         btnElement.style.background = "#16a34a";
-        btnElement.style.color = "white";
         setTimeout(() => { 
             btnElement.innerHTML = originalHTML;
             btnElement.style.background = ""; 
-            btnElement.style.color = "";
         }, 2000);
     }
 
