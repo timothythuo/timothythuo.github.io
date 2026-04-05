@@ -12,7 +12,7 @@
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior: smooth;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;}
 body{background:#f8fafc;color:#0f172a;line-height:1.6;}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:white;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
 .logo{font-weight:700;font-size:1.4rem;color:#16a34a;}
@@ -22,61 +22,60 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
 .social-icons-top a:hover {color: #16a34a;}
 
 .hero{padding:160px 8% 80px;text-align:center;}
-.hero h1{font-size:2.8rem;margin-bottom:20px; letter-spacing: -1px;}
+.hero h1{font-size:2.8rem;margin-bottom:20px; letter-spacing:-1px;}
 .hero p{max-width:750px;margin:auto;margin-bottom:30px;color:#475569;}
-.hero img{width:220px;height:220px;border-radius:50%;border:6px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit:cover;margin-top:30px;}
+.hero img{width:220px;height:220px;border-radius:50%;border:6px solid white; box-shadow:0 10px 30px rgba(0,0,0,0.1); object-fit:cover;margin-top:30px;}
 
-.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block; transition: 0.3s; margin: 8px; cursor: pointer; border: none;}
-.primary{background:#16a34a;color:white; border: 2px solid #16a34a;}
-.primary:hover{background:#15803d; transform: translateY(-2px);}
-.whatsapp{background:#25D366; color: white; border: 2px solid #25D366;}
+.btn{padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block; transition:0.3s; margin:8px; cursor:pointer; border:none;}
+.primary{background:#16a34a;color:white; border:2px solid #16a34a;}
+.primary:hover{background:#15803d; transform:translateY(-2px);}
+.whatsapp{background:#25D366; color:white; border:2px solid #25D366;}
 
 .section{padding:80px 8%;}
 .section h2{text-align:center;font-size:2.2rem;margin-bottom:50px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
 
-.card{background:white;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.03); border: 1px solid #f1f5f9;}
-.card h3{margin-bottom:12px;color:#16a34a; font-size: 1.25rem;}
-.pricing-tag{font-size:1rem;font-weight:700;margin-top:15px;color:#1e293b; display: block; border-top: 1px solid #f1f5f9; padding-top: 10px;}
+.card{background:white;padding:30px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.03); border:1px solid #f1f5f9;}
+.card h3{margin-bottom:12px;color:#16a34a; font-size:1.25rem;}
+.pricing-tag{font-size:1rem;font-weight:700;margin-top:15px;color:#1e293b; display:block; border-top:1px solid #f1f5f9; padding-top:10px;}
 
 /* Tool Icon Styling */
-.tool-icons {display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;}
-.tool-item {text-align: center; font-size: 0.8rem; font-weight: 600; color: #64748b;}
-.tool-item i {font-size: 2.5rem; display: block; margin-bottom: 8px;}
-.fa-wordpress {color: #21759b;}
-.fa-hubspot {color: #ff7a59;}
-.fa-envelope-open-text {color: #007c89;} 
-.fa-paypal {color: #003087;}
+.tool-icons {display:flex; justify-content:center; gap:30px; margin-top:40px; flex-wrap:wrap;}
+.tool-item {text-align:center; font-size:0.8rem; font-weight:600; color:#64748b;}
+.tool-item i {font-size:2.5rem; display:block; margin-bottom:8px;}
+.fa-wordpress {color:#21759b;}
+.fa-hubspot {color:#ff7a59;}
+.fa-envelope-open-text {color:#007c89;}
+.fa-paypal {color:#003087;}
 
-.retainer-card {background: white; border: 2px solid #16a34a; margin-top: 40px; position: relative; padding: 30px;}
-.badge {position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #16a34a; color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;}
-.retainer-card ul {list-style: none; margin: 20px 0;}
-.retainer-card li {margin-bottom: 10px; color: #475569; font-size: 0.95rem; display: flex; align-items: center; gap: 10px;}
+.retainer-card {background:white; border:2px solid #16a34a; margin-top:40px; position:relative; padding:30px;}
+.badge {position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:#16a34a; color:white; padding:5px 20px; border-radius:20px; font-size:0.8rem; font-weight:800;}
+.retainer-card ul {list-style:none; margin:20px 0;}
+.retainer-card li {margin-bottom:10px; color:#475569; font-size:0.95rem; display:flex; align-items:center; gap:10px;}
 
-.billing-section {background: #fff; border-top: 1px solid #e2e8f0;}
-.billing-container {max-width: 900px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;}
-.billing-card {padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; position: relative;}
-.billing-card h4 {margin-bottom: 15px; display: flex; align-items: center; gap: 10px;}
-.billing-verified {color: #16a34a; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.billing-section {background:#fff; border-top:1px solid #e2e8f0;}
+.billing-container {max-width:900px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+.billing-card {padding:30px; border-radius:12px; border:1px solid #e2e8f0; position:relative;}
+.billing-card h4 {margin-bottom:15px; display:flex; align-items:center; gap:10px;}
+.billing-verified {color:#16a34a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;}
 
-.copy-area {background: #f8fafc; padding: 12px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin: 15px 0;}
-.mpesa-num {font-weight: 800; color: #16a34a; font-size: 1.2rem;}
-.copy-btn {background: #16a34a; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;}
+.copy-area {background:#f8fafc; padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; margin:15px 0;}
+.mpesa-num {font-weight:800; color:#16a34a; font-size:1.2rem;}
+.copy-btn {background:#16a34a; color:white; border:none; padding:6px 12px; border-radius:4px; cursor:pointer; font-size:0.8rem;}
 
-.contact-form-container {max-width: 600px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);}
-input, textarea {width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 8px; outline: none;}
-#form-status {margin-top: 15px; font-weight: 600; text-align: center; display: none;}
+.contact-form-container {max-width:600px; margin:auto; background:white; padding:40px; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,0.05);}
+input, textarea {width:100%; padding:15px; margin-bottom:15px; border:1px solid #e2e8f0; border-radius:8px; outline:none;}
+#form-status {margin-top:15px; font-weight:600; text-align:center; display:none;}
 
 footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
-.footer-socials a{color:white; margin: 0 12px; font-size: 1.4rem; transition: 0.3s;}
+.footer-socials a{color:white; margin:0 12px; font-size:1.4rem; transition:0.3s;}
 
 @media(max-width:768px){
-    .billing-container {grid-template-columns: 1fr;}
-    .nav {display: none;}
+    .billing-container {grid-template-columns:1fr;}
+    .nav {display:none;}
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -92,7 +91,6 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
 </nav>
 </header>
 
-<!-- Hero Section -->
 <section class="hero" data-aos="fade-up">
 <h1>Remote Executive Virtual Assistant & Business Solutions Specialist</h1>
 <p>Transforming operational chaos into streamlined success through expert web development, CRM architecting, and strategic administration.</p>
@@ -103,7 +101,6 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
 <img src="profile.jpg" alt="Timothy Thuo">
 </section>
 
-<!-- Services Section -->
 <section class="section" id="services">
 <h2>Professional Services</h2>
 <div class="grid">
@@ -133,3 +130,124 @@ footer{text-align:center;padding:50px 8% 20px;background:#0f172a;color:white;}
         <span class="pricing-tag">Kenya: KSh 12,000 | Int: $150</span>
     </div>
     <div class="card" data-aos="fade-up">
+        <h3>CRM Architecting</h3>
+        <p>Bespoke system design, lead tracking architectures, and optimized workflows.</p>
+        <span class="pricing-tag">Kenya: KSh 1,500/hr | Int: $40/hr</span>
+    </div>
+</div>
+
+<div class="tool-icons" data-aos="fade-up">
+    <div class="tool-item"><i class="fab fa-wordpress"></i> WordPress</div>
+    <div class="tool-item"><i class="fab fa-hubspot"></i> HubSpot</div>
+    <div class="tool-item"><i class="fas fa-envelope-open-text"></i> Mailchimp</div>
+    <div class="tool-item"><i class="fab fa-paypal"></i> PayPal</div>
+    <div class="tool-item"><i class="fas fa-robot" style="color:#16a34a;"></i> OpenAI/GPT</div>
+</div>
+
+<!-- Retainer Packages -->
+<section class="section">
+<h2>Tiered Retainer Packages</h2>
+<div class="grid">
+<!-- Bronze -->
+<div class="card retainer-card" data-aos="zoom-in">
+<h3>Bronze Package</h3>
+<p>Basic support for small businesses needing regular CRM updates and minor website tweaks.</p>
+<span class="pricing-tag">Kenya: KSh 15,000/mo | International: $150/mo</span>
+<ul>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Up to 10 hrs/month support</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Basic CRM & pipeline updates</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Minor website maintenance</li>
+</ul>
+<a href="#contact" class="btn primary" style="width:100%; margin:0; text-align:center;">Inquire About Bronze</a>
+</div>
+<!-- Silver -->
+<div class="card retainer-card" data-aos="zoom-in">
+<h3>Silver Package</h3>
+<p>Advanced support for growing businesses with consistent website, CRM, and marketing management.</p>
+<span class="pricing-tag">Kenya: KSh 25,000/mo | International: $250/mo</span>
+<ul>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Up to 20 hrs/month support</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Full CRM & automation management</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Weekly website maintenance</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Priority strategic support</li>
+</ul>
+<a href="#contact" class="btn primary" style="width:100%; margin:0; text-align:center;">Inquire About Silver</a>
+</div>
+<!-- Gold -->
+<div class="card retainer-card" data-aos="zoom-in">
+<h3>Gold Package</h3>
+<p>Comprehensive support for established brands needing full-service business operations & technical management.</p>
+<span class="pricing-tag">Kenya: KSh 40,000/mo | International: $400/mo</span>
+<ul>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Up to 40 hrs/month support</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Complete CRM, website & marketing management</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Weekly strategy sessions</li>
+<li><i class="fas fa-check-circle" style="color:#16a34a"></i> Dedicated priority support</li>
+</ul>
+<a href="#contact" class="btn primary" style="width:100%; margin:0; text-align:center;">Inquire About Gold</a>
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials" style="background:#fff;">
+<h2>Client Success Stories</h2>
+<div class="grid">
+<div class="card" data-aos="fade-up">
+<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+<img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:60px; height:60px; border-radius:50%;">
+<div><strong>Sarah Jenkins</strong><br><small>Austin, Texas (USA)</small></div>
+</div>
+<p>"Timothy completely revamped our HubSpot CRM. Our lead management is now 100% automated."</p>
+</div>
+<div class="card" data-aos="fade-up">
+<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:60px; height:60px; border-radius:50%;">
+<div><strong>David Thompson</strong><br><small>Chicago, Illinois (USA)</small></div>
+</div>
+<p>"Professional and technically brilliant. He bridges the gap between tech and business perfectly."</p>
+</div>
+<div class="card" data-aos="fade-up">
+<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+<img src="https://randomuser.me/api/portraits/women/65.jpg" style="width:60px; height:60px; border-radius:50%;">
+<div><strong>Clare Harrison</strong><br><small>London (UK)</small></div>
+</div>
+<p>"Incredible attention to detail. Timothy's web development skills helped us launch our UK store seamlessly."</p>
+</div>
+<div class="card" data-aos="fade-up">
+<div style="display:flex; gap:15px; align-items:center; margin-bottom:15px;">
+<img src="https://randomuser.me/api/portraits/men/45.jpg" style="width:60px; height:60px; border-radius:50%;">
+<div><strong>James MacNeil</strong><br><small>Toronto (Canada)</small></div>
+</div>
+<p>"A reliable strategic partner. Timothy handles our technical operations so we can focus on scaling."</p>
+</div>
+</div>
+</section>
+
+<!-- Billing Section -->
+<section class="section billing-section">
+<h2>Secure Billing & Payments</h2>
+<div class="billing-container">
+<div class="billing-card" data-aos="fade-right">
+<div class="billing-verified"><i class="fas fa-check-shield"></i> Verified Local Merchant</div>
+<h4><i class="fas fa-mobile-alt" style="color:#16a34a"></i> M-Pesa Direct</h4>
+<p style="font-size:0.85rem; color:#64748b;">Instant local payment for Kenyan clients.</p>
+<div class="copy-area">
+<span class="mpesa-num" id="mNo">0794301929</span>
+<button class="copy-btn" onclick="copyNum()">Copy Number</button>
+</div>
+<a href="https://wa.me/254794301929?text=PaymentSent" class="btn whatsapp" style="width:100%; margin:0; font-size:0.9rem; text-align:center;">Confirm via WhatsApp</a>
+</div>
+<div class="billing-card" data-aos="fade-left">
+<div class="billing-verified"><i class="fas fa-globe"></i> Global Secure Checkout</div>
+<h4><i class="fab fa-paypal" style="color:#0070ba"></i> PayPal Merchant</h4>
+<p style="font-size:0.85rem; color:#64748b;">Secure card payments for international clients.</p>
+<br>
+<a href="https://www.paypal.com/paypalme/timothythuo0" target="_blank" class="btn primary" style="background:#0070ba; border-color:#0070ba; width:100%; margin:0; font-size:0.9rem; text-align:center;">Pay via PayPal</a>
+</div>
+</div>
+</section>
+
+<!-- Contact Form -->
+<section class="section" id="contact">
+<div
