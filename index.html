@@ -316,11 +316,12 @@ footer{text-align:center;padding:60px 8%;background:#0f172a;color:white;}
 <h2>Get In Touch</h2>
 <div class="grid" style="max-width:600px;margin:auto;">
 <div class="card">
-<form action="https://formspree.io/f/timothythuo0@gmail.com" method="POST">
+<form id="contact-form" action="https://formspree.io/f/xvzvbygw" method="POST">
 <input type="text" name="name" placeholder="Name" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
 <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
 <textarea name="message" placeholder="Message" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color);height:100px; background: var(--bg-body); color: var(--text-main);"></textarea>
-<button type="submit" class="btn primary" style="width:100%;">Send Message</button>
+<button type="submit" id="submit-btn" class="btn primary" style="width:100%;">Send Message</button>
+<p id="form-status"></p>
 </form>
 </div>
 </div>
@@ -338,10 +339,50 @@ footer{text-align:center;padding:60px 8%;background:#0f172a;color:white;}
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({duration:800,once:true});
+
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+const btn = document.getElementById('submit-btn');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+    
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    if (response.ok) {
+      status.style.color = "var(--accent-green)";
+            status.style.marginTop = "15px";
+      status.innerText = "Thanks! I'll get back to you shortly.";
+      btn.innerText = "Send Message";
+      btn.disabled = false;
+      form.reset();
+    } else {
+      status.style.color = "red";
+      status.innerText = "Oops! Problem sending. Try again.";
+      btn.disabled = false;
+    }
+});
+
 const corner = document.getElementById('cornerMenu');
 const overlay = document.getElementById('mobileMenu');
-corner.addEventListener('click', () => { corner.classList.toggle('active'); overlay.classList.toggle('active'); });
-overlay.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { corner.classList.remove('active'); overlay.classList.remove('active'); }); });
+corner.addEventListener('click', () => { 
+  corner.classList.toggle('active'); 
+  overlay.classList.toggle('active'); 
+});
+overlay.querySelectorAll('a').forEach(link => { 
+  link.addEventListener('click', () => { 
+    corner.classList.remove('active'); 
+    overlay.classList.remove('active'); 
+  }); 
+});
+
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
@@ -349,16 +390,41 @@ themeBtn.addEventListener('click', () => {
   document.documentElement.setAttribute('data-theme', next);
   themeBtn.innerHTML = next === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
-document.querySelector('.paypal-btn').addEventListener('click', () => { window.location.href = "https://www.paypal.me/YOUR_USERNAME"; });
-document.querySelector('.mpesa-btn').addEventListener('click', () => { window.location.href = "https://wa.me/254794301929?text=I%20want%20to%20pay%20via%20M-Pesa"; });
+
+document.querySelector('.paypal-btn').addEventListener('click', () => { 
+  window.location.href = "https://www.paypal.me/YOUR_USERNAME"; 
+});
+document.querySelector('.mpesa-btn').addEventListener('click', () => { 
+  window.location.href = "https://wa.me/254794301929?text=I%20want%20to%20pay%20via%20M-Pesa"; 
+});
+
 const scrollBtn = document.getElementById('scroll-top');
-window.addEventListener('scroll', ()=>{scrollBtn.style.display=window.scrollY>400?'flex':'none';});
-scrollBtn.addEventListener('click', ()=>{window.scrollTo({top:0,behavior:'smooth'});});
+window.addEventListener('scroll', () => { 
+  scrollBtn.style.display = window.scrollY > 400 ? 'flex' : 'none'; 
+});
+scrollBtn.addEventListener('click', () => { 
+  window.scrollTo({top: 0, behavior: 'smooth'}); 
+});
+
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 let w, h, particles = [];
-function init() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; particles = []; for(let i=0; i<80; i++) particles.push({x:Math.random()*w, y:Math.random()*h, dx:(Math.random()-0.5), dy:(Math.random()-0.5)}); }
-function draw() { ctx.clearRect(0,0,w,h); ctx.fillStyle = 'rgba(22, 163, 74, 0.2)'; particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI*2); ctx.fill(); p.x += p.dx; p.y += p.dy; if(p.x<0||p.x>w) p.dx*=-1; if(p.y<0||p.y>h) p.dy*=-1; }); requestAnimationFrame(draw); }
+function init() { 
+  w = canvas.width = window.innerWidth; 
+  h = canvas.height = window.innerHeight; 
+  particles = []; 
+  for(let i=0; i<80; i++) particles.push({x:Math.random()*w, y:Math.random()*h, dx:(Math.random()-0.5), dy:(Math.random()-0.5)}); 
+}
+function draw() { 
+  ctx.clearRect(0,0,w,h); 
+  ctx.fillStyle = 'rgba(22, 163, 74, 0.2)'; 
+  particles.forEach(p => { 
+    ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI*2); ctx.fill(); 
+    p.x += p.dx; p.y += p.dy; 
+    if(p.x<0||p.x>w) p.dx*=-1; if(p.y<0||p.y>h) p.dy*=-1; 
+  }); 
+  requestAnimationFrame(draw); 
+}
 window.addEventListener('resize', init);
 init(); draw();
 </script>
