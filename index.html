@@ -3,11 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timothy Thuo | Executive Virtual Assistant & Web Specialist</title>
+<title>Timothy Thuo | Strategic Operations & High-Performance Web Solutions</title>
+
+<!-- High-Ticket SEO & Open Graph Infrastructure -->
+<meta name="description" content="Timothy Thuo - Executive Operations Support & Interface Engineering. Streamlining workflows, custom CRM architectures, and high-performance digital engines for global founders.">
+<meta property="og:title" content="Timothy Thuo | Strategic Operations & Web Specialist">
+<meta property="og:description" content="Architecting optimized technical frameworks, advanced CRM workflows, and interface platforms that scale businesses and reclaim critical operational leadership hours.">
+<meta property="og:image" content="profile.jpg">
+<meta property="og:url" content="https://yourdomain.com">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -17,30 +25,32 @@
     --bg-body: #f8fafc;
     --bg-card: #ffffff;
     --text-main: #0f172a;
-    --text-muted: #475569;
+    --text-muted: #64748b;
     --border-color: #e2e8f0;
-    --header-bg: rgba(255, 255, 255, 0.95);
-    --accent-green: #16a34a;
-    --star-color: #facc15;
-    --paypal-blue: #003087;
-    --mpesa-green: #4daf4a;
+    --header-bg: rgba(255, 255, 255, 0.85);
+    --accent-green: #059669; /* Premium Executive Emerald */
+    --star-color: #fbbf24;
+    --paypal-blue: #00457c;
+    --mpesa-green: #378805;
 }
 [data-theme="dark"] {
-    --bg-body: #0f172a;
-    --bg-card: #1e293b;
+    --bg-body: #0b0f19; /* Executive Deep Midnight */
+    --bg-card: #111827; /* Crisp Panel Dark */
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --border-color: #334155;
-    --header-bg: rgba(15, 23, 42, 0.95);
+    --border-color: #1f2937;
+    --header-bg: rgba(11, 15, 25, 0.85);
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;scroll-behavior:smooth;}
 body{background:var(--bg-body);color:var(--text-main);line-height:1.6;overflow-x:hidden;}
 
 canvas#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
 
-header{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background: var(--header-bg);backdrop-filter:blur(10px);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-.logo{font-weight:700;font-size:1.4rem;color: var(--accent-green);text-decoration:none;}
-.nav a{text-decoration:none;font-weight:600;color: var(--text-main);font-size:0.85rem;margin-left:25px;}
+/* Glassmorphism Navigation */
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background: var(--header-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid var(--border-color);box-shadow:0 4px 30px rgba(0,0,0,0.02);}
+.logo{font-weight:700;font-size:1.3rem;color: var(--accent-green);text-decoration:none;letter-spacing:-0.5px;}
+.nav a{text-decoration:none;font-weight:600;color: var(--text-main);font-size:0.85rem;margin-left:30px;transition:color 0.2s ease;}
+.nav a:hover{color: var(--accent-green);}
 
 .corner-lines {position: fixed; top: 22px; right: 25px; z-index: 2001; display: flex; flex-direction: column; gap: 5px; cursor:pointer;}
 .corner-lines span {display:block;width:28px;height:3px;background:var(--accent-green);border-radius:2px;transition:0.3s;}
@@ -52,306 +62,367 @@ header{display:flex;justify-content:space-between;align-items:center;padding:15p
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: var(--header-bg); backdrop-filter: blur(15px);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    z-index: 1500; transform: translateY(-100%); transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1500; transform: translateY(-100%); transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .menu-overlay.active { transform: translateY(0); }
 .menu-overlay a { font-size: 1.8rem; font-weight: 700; color: var(--text-main); text-decoration: none; margin: 15px 0; }
 
-.floating-btn {position: fixed; width: 45px; height: 45px; border-radius: 50%; background: var(--accent-green); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1400; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.2s;}
-.floating-btn:hover { transform: scale(1.05); }
+.floating-btn {position: fixed; width: 45px; height: 45px; border-radius: 50%; background: var(--accent-green); color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1400; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.15); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);}
+.floating-btn:hover { transform: translateY(-3px) scale(1.05); }
 #theme-toggle {top: 100px; right: 20px;}
 #scroll-top {bottom: 30px; right: 20px; display: none;}
 
-.hero{padding:180px 8% 100px;text-align:center;position:relative;}
-.status-badge {display:inline-flex;align-items:center;gap:8px;background:rgba(22, 163, 74, 0.1);color: var(--accent-green);padding:8px 16px;border-radius:30px;font-size:0.8rem;font-weight:700;margin-bottom:25px;}
-.pulse {width: 10px; height: 10px; background: var(--accent-green); border-radius: 50%; animation: pulse-animation 2s infinite;}
-@keyframes pulse-animation {0% {box-shadow:0 0 0 0px rgba(22,163,74,0.7);} 70%{box-shadow:0 0 0 10px rgba(22,163,74,0);} 100%{box-shadow:0 0 0 0 rgba(22,163,74,0);}}
-.hero h1{font-size:3.2rem;margin-bottom:20px;letter-spacing:-1.5px;line-height:1.2;}
-.hero img.profile-pic{width:180px;height:180px;border-radius:50%;border:5px solid var(--bg-card);box-shadow:0 15px 35px rgba(0,0,0,0.15);margin-top:30px;object-fit:cover;background: var(--border-color);}
+section { scroll-margin-top: 90px; padding: 120px 8%; }
+.hero{padding:200px 8% 120px;text-align:center;position:relative;}
+.status-badge {display:inline-flex;align-items:center;gap:8px;background:rgba(5, 150, 105, 0.08);border:1px solid rgba(5, 150, 105, 0.15);color: var(--accent-green);padding:8px 18px;border-radius:30px;font-size:0.8rem;font-weight:700;margin-bottom:30px;letter-spacing: 0.03em;}
+.pulse {width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; animation: pulse-animation 2s infinite;}
+@keyframes pulse-animation {0% {box-shadow:0 0 0 0px rgba(5,150,105,0.7);} 70%{box-shadow:0 0 0 10px rgba(5,150,105,0);} 100%{box-shadow:0 0 0 0 rgba(5,150,105,0);}}
 
-.tools-showcase {display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:40px;font-size:2.5rem;}
-.tool-icon {transition: transform 0.3s;}
-.tool-icon:hover {transform: translateY(-5px);}
+.section-desc{text-align:center;color: var(--text-muted);font-size:1.1rem;margin:-10px auto 60px;max-width:650px;}
+h2.section-title {text-align:center;font-size:2.6rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:20px;}
 
-.section{padding:100px 8%;}
-.section h2{text-align:center;font-size:2.5rem;margin-bottom:15px;}
-.section-desc{text-align:center;color: var(--text-muted);margin-bottom:60px;max-width:700px;margin-left:auto;margin-right:auto;}
+/* Pro Uniform Grid Layout Engine */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:30px;}
+.card{background: var(--bg-card);padding:45px 35px;border-radius:16px;border:1px solid var(--border-color);box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;position:relative;}
+.card:hover{transform: translateY(-6px);border-color: var(--accent-green);box-shadow:0 20px 30px -10px rgba(0,0,0,0.08);}
+.card-content {width:100%;}
+.card h3 {font-size:1.3rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.01em;}
+.card p {color: var(--text-muted);font-size:0.95rem;line-height:1.6;}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-.card{background: var(--bg-card);padding:40px;border-radius:20px;border:1px solid var(--border-color);transition:0.3s;position:relative;}
-.card:hover{transform: translateY(-10px);border-color: var(--accent-green);}
+.tools-showcase {display:flex;justify-content:center;gap:35px;flex-wrap:wrap;margin-top:50px;font-size:2.8rem;opacity:0.85;}
+.tool-icon {transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);filter: grayscale(20%);}
+.tool-icon:hover {transform: translateY(-6px);filter: grayscale(0%);}
 
-.roadmap-num{font-size:2rem;font-weight:800;color: var(--accent-green);opacity:0.3;margin-bottom:10px;display:block;}
-.icon-box{width:50px;height:50px;background: rgba(22,163,74,0.1);color: var(--accent-green);display:flex;align-items:center;justify-content:center;border-radius:12px;margin-bottom:20px;font-size:1.4rem;}
-.price-tag{display:inline-block;font-size:0.85rem;font-weight:700;color: var(--accent-green);margin-top:15px;background: rgba(22,163,74,0.08);padding:6px 12px;border-radius:8px;}
+.hero img.profile-pic{width:160px;height:160px;border-radius:50%;border:4px solid var(--bg-card);box-shadow:0 20px 40px rgba(0,0,0,0.1);margin-top:40px;object-fit:cover;background: var(--border-color);}
 
-.package-list{list-style:none;margin:20px 0;font-size:0.9rem;color: var(--text-muted); text-align: left;}
-.package-list li{margin-bottom:12px;}
-.package-list li i{color: var(--accent-green);margin-right:10px;}
+.roadmap-num{font-size:2.5rem;font-weight:800;color: var(--accent-green);opacity:0.15;margin-bottom:15px;display:block;line-height:1;}
+.icon-box{width:52px;height:52px;background: rgba(5,150,105,0.08);color: var(--accent-green);display:flex;align-items:center;justify-content:center;border-radius:12px;margin-bottom:25px;font-size:1.3rem;}
+.price-tag{display:inline-block;font-size:0.85rem;font-weight:700;color: var(--accent-green);margin-top:25px;background: rgba(5,150,105,0.06);padding:6px 14px;border-radius:6px;border: 1px solid rgba(5,150,105,0.15);}
 
-.testimonial-header {display: flex; align-items: center; gap: 15px; margin-bottom: 20px;}
-.testimonial-img{width:65px;height:65px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-green);}
-.client-loc{font-size:0.7rem;font-weight:700;color: var(--accent-green);text-transform:uppercase;display:block;}
-.star-rating {color: var(--star-color); font-size: 0.8rem; margin-top: 10px;}
+.package-list{list-style:none;margin:25px 0;font-size:0.95rem;color: var(--text-muted);width:100%;}
+.package-list li{margin-bottom:14px;display:flex;align-items:center;}
+.package-list li i{color: var(--accent-green);margin-right:12px;font-size:0.9rem;}
 
-.billing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:900px;margin:auto;}
-.payment-portal{background: var(--bg-card);border-radius:24px;padding:40px 30px;text-align:center;border:1px solid var(--border-color);transition:0.3s;}
-.portal-logo{height:45px;margin-bottom:15px;}
+.testimonial-header {display: flex; align-items: center; gap: 15px; margin-bottom: 25px;}
+.avatar-fallback {width:55px;height:55px;border-radius:50%;background:rgba(5,150,105,0.1);color:var(--accent-green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;border:1px solid rgba(5,150,105,0.2);}
+.client-loc{font-size:0.7rem;font-weight:700;color: var(--accent-green);text-transform:uppercase;display:block;letter-spacing:0.05em;margin-top:2px;}
+.star-rating {color: var(--star-color); font-size: 0.8rem; margin-top: 15px;}
 
-.btn{padding:15px 35px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-block;transition:0.3s;border:none;cursor:pointer;text-align:center;}
+.billing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;max-width:850px;margin:auto;}
+.payment-portal{background: var(--bg-card);border-radius:20px;padding:45px 35px;text-align:center;border:1px solid var(--border-color);transition:0.3s;}
+.portal-logo{height:40px;margin-bottom:20px;opacity:0.9;}
+
+/* Premium Button Architecture */
+.btn{padding:16px 38px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem;display:inline-block;transition:all 0.3s cubic-bezier(0.16, 1, 0.3, 1);border:none;cursor:pointer;text-align:center;letter-spacing:0.01em;}
 .primary{background: var(--accent-green);color:white;}
+.primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(5, 150, 105, 0.25);}
 .paypal-btn{background: var(--paypal-blue);color:white;width:100%;}
 .mpesa-btn{background: var(--mpesa-green);color:white;width:100%;}
+.paypal-btn:hover, .mpesa-btn:hover {transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,0.1);}
 
-footer{text-align:center;padding:60px 8%;background:#0f172a;color:white;}
-.socials a{color:white;font-size:1.5rem;margin:0 15px;opacity:0.7;transition:0.3s;}
+/* Crisp Inputs Architecture */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-body);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.08);
+    background: var(--bg-card);
+}
+input::placeholder, textarea::placeholder { color: var(--text-muted); opacity: 0.7; }
+
+footer{text-align:center;padding:80px 8%;background:#090d16;color:white;border-top:1px solid #111827;}
+footer p {color: #64748b; font-size:0.95rem;}
+.socials a{color:white;font-size:1.4rem;margin:0 18px;opacity:0.5;transition:0.3s ease;}
 .socials a:hover{opacity:1;color: var(--accent-green);}
 
-@media(max-width:768px){.hero h1{font-size:2.2rem;}.nav{display:none;}}
+@media(max-width:768px){
+    .hero h1{font-size:2.4rem;}
+    section {padding: 80px 6%;}
+    .nav{display:none;}
+}
 </style>
 </head>
 <body>
 
 <canvas id="bgCanvas"></canvas>
 
-<div class="corner-lines" id="cornerMenu">
+<div class="corner-lines" id="cornerMenu" role="button" aria-label="Toggle Mobile Navigation">
   <span></span><span></span><span></span>
 </div>
 
 <div class="menu-overlay" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#roadmap">Process</a>
-  <a href="#services">Services</a>
+  <a href="#about">Expertise</a>
+  <a href="#roadmap">Methodology</a>
+  <a href="#services">Capabilities</a>
   <a href="#packages">Retainers</a>
-  <a href="#billing">Payment</a>
-  <a href="#contact">Contact</a>
+  <a href="#billing">Settlements</a>
+  <a href="#contact">Consultation</a>
 </div>
 
-<button id="theme-toggle" class="floating-btn"><i class="fas fa-moon"></i></button>
-<button id="scroll-top" class="floating-btn"><i class="fas fa-arrow-up"></i></button>
+<button id="theme-toggle" class="floating-btn" aria-label="Toggle visual theme Mode"><i class="fas fa-moon"></i></button>
+<button id="scroll-top" class="floating-btn" aria-label="Return to top of page"><i class="fas fa-arrow-up"></i></button>
 
 <header>
-  <a href="#" class="logo">Timothy Thuo</a>
+  <a href="#" class="logo">TIMOTHY THUO</a>
   <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#roadmap">Process</a>
-    <a href="#services">Services</a>
+    <a href="#about">Expertise</a>
+    <a href="#roadmap">Methodology</a>
+    <a href="#services">Capabilities</a>
     <a href="#packages">Retainers</a>
-    <a href="#billing">Payment</a>
+    <a href="#billing">Settlements</a>
   </nav>
 </header>
 
 <section class="hero" data-aos="zoom-in">
-  <div class="status-badge"><span class="pulse"></span> Accepting New Projects for <span id="current-year-badge">2026</span></div>
-  <h1>Executive Virtual Assistant & <br><span style="color: var(--accent-green)">Web Specialist</span></h1>
+  <div class="status-badge"><span class="pulse"></span> Operations Engine Calibrated for <span id="current-year-badge">2026</span></div>
+  <h1 style="font-size: 3.8rem; font-weight: 700; tracking: -0.05em; line-height: 1.15; margin-bottom: 25px;">
+    Strategic Operations & <br><span style="color: var(--accent-green); font-weight: 400; font-style: italic;">High-Performance Web Solutions</span>
+  </h1>
   <div class="stars"><i class="fas fa-star" style="color:var(--star-color)"></i><i class="fas fa-star" style="color:var(--star-color)"></i><i class="fas fa-star" style="color:var(--star-color)"></i><i class="fas fa-star" style="color:var(--star-color)"></i><i class="fas fa-star" style="color:var(--star-color)"></i></div>
-  <p style="font-size: 1.15rem; max-width: 800px; margin: 15px auto 0; color: var(--text-muted);">Empowering Entrepreneurs via Strategic Operations & High-Performance Web Solutions.</p>
+  <p style="font-size: 1.25rem; max-width: 800px; margin: 25px auto 0; color: var(--text-muted); font-weight: 400; line-height: 1.7;">Architecting optimized technical frameworks, advanced CRM workflows, and interface platforms that scale businesses and reclaim critical operational leadership hours.</p>
+  
   <div class="tools-showcase">
-    <i class="devicon-wordpress-plain colored tool-icon"></i>
-    <i class="devicon-hubspot-plain colored tool-icon"></i>
-    <i class="devicon-salesforce-plain colored tool-icon"></i>
-    <i class="devicon-google-plain colored tool-icon"></i>
-    <i class="devicon-zapier-plain colored tool-icon"></i>
-    <i class="devicon-slack-plain colored tool-icon"></i>
-    <i class="devicon-trello-plain colored tool-icon"></i>
-    <i class="devicon-canva-original colored tool-icon"></i>
+    <i class="devicon-wordpress-plain colored tool-icon" title="WordPress"></i>
+    <i class="devicon-hubspot-plain colored tool-icon" title="HubSpot"></i>
+    <i class="devicon-salesforce-plain colored tool-icon" title="Salesforce"></i>
+    <i class="devicon-google-plain colored tool-icon" title="Google Analytics"></i>
+    <i class="devicon-zapier-plain colored tool-icon" title="Zapier Pipelines"></i>
+    <i class="devicon-slack-plain colored tool-icon" title="Slack Operations"></i>
+    <i class="devicon-trello-plain colored tool-icon" title="Trello Management"></i>
+    <i class="devicon-canva-original colored tool-icon" title="Asset Design"></i>
   </div>
-  <div style="margin-top: 40px;">
-    <a href="#contact" class="btn primary">Get a Consultation</a>
-    <a href="https://wa.me/254794301929" target="_blank" class="btn" style="background:#25D366;color:white;margin-left:10px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  
+  <div style="margin-top: 50px;">
+    <a href="#contact" class="btn primary">Secure Executive Session</a>
+    <a href="https://wa.me/254794301929" target="_blank" class="btn" style="background:#25D366;color:white;margin-left:12px;font-weight:600;"><i class="fab fa-whatsapp"></i> Direct Connect</a>
   </div>
-  <!-- Added dynamic fallback source path in case profile.jpg is missing locally -->
-  <img src="profile.jpg" alt="Timothy Thuo" class="profile-pic" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%2316a34a\'><circle cx=\'50\' cy=\'35\' r=\'20\'/><path d=\'M10,85 C10,60 90,60 90,85 Z\'/></svg>';">
+  <img src="profile.jpg" alt="Timothy Thuo Portrait" class="profile-pic" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%23059669\'><circle cx=\'50\' cy=\'35\' r=\'20\'/><path d=\'M10,85 C10,60 90,60 90,85 Z\'/></svg>';">
 </section>
 
-<section class="section" id="about" style="background: var(--bg-card);">
-  <div style="display:flex; flex-wrap:wrap; gap:50px; align-items:center;">
-    <div style="flex:1; min-width:300px;" data-aos="fade-right">
-      <h3 style="color:var(--accent-green); font-size:1.8rem; margin-bottom:20px;">System & CRM Design | SEO & Business Optimization</h3>
-      <p>I help busy entrepreneurs reclaim <strong>10+ hours a week</strong> by streamlining their backend operations and building digital platforms that work while they sleep. From custom CRM architectures to high-conversion website redesigns, I bridge the gap between business vision and technical execution.</p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:30px;">
-        <div style="background:var(--bg-body); padding:20px; border-radius:12px;"><span style="color: var(--accent-green); font-weight: 700; font-size: 1.5rem;">50+</span><br>Projects Executed</div>
-        <div style="background:var(--bg-body); padding:20px; border-radius:12px;"><span style="color: var(--accent-green); font-weight: 700; font-size: 1.5rem;">500+</span><br>Global Connections</div>
+<section id="about" style="background: var(--bg-card); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+  <div style="display:flex; flex-wrap:wrap; gap:60px; align-items:center;">
+    <div style="flex:1; min-width:320px;" data-aos="fade-right">
+      <h3 style="color:var(--accent-green); font-size:1.8rem; font-weight:700; margin-bottom:25px; letter-spacing:-0.02em;">System & CRM Architectures | Technical Asset Strategy</h3>
+      <p style="font-size:1.05rem; color:var(--text-muted); line-height:1.7; margin-bottom:20px;">I structurally optimize backend friction points so ambitious founders can pivot focus back to expansion. From custom ecosystem pipelines to high-conversion UI deployments, I turn abstract digital vision into hyper-scalable operations engines.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:25px; margin-top:35px;">
+        <div style="background:var(--bg-body); padding:25px; border-radius:12px; border:1px solid var(--border-color);"><span style="color: var(--accent-green); font-weight: 700; font-size: 1.8rem; letter-spacing:-1px;">1,200+</span><br><p style="font-size:0.85rem; font-weight:600; margin-top:5px;">Hours Reclaimed for Clients</p></div>
+        <div style="background:var(--bg-body); padding:25px; border-radius:12px; border:1px solid var(--border-color);"><span style="color: var(--accent-green); font-weight: 700; font-size: 1.8rem; letter-spacing:-1px;">50+</span><br><p style="font-size:0.85rem; font-weight:600; margin-top:5px;">Platforms Deployed Globally</p></div>
       </div>
     </div>
-    <div style="flex:1; min-width:300px;" data-aos="fade-left">
-      <p>Whether you need to scale up your lead collection engines, deploy highly structural Technical SEO audits, or establish automated systems via Hubspot and Salesforce, I construct the functional architecture that reduces manual overhead entirely.</p>
+    <div style="flex:1; min-width:320px; font-size:1.05rem; color: var(--text-muted); line-height:1.8;" data-aos="fade-left">
+      <p>True operational leverage requires absolute technical synergy. Whether you are scaling user verification engines, rolling out structural, indexable SEO blueprints, or managing technical data structures across HubSpot and Salesforce CRM suites, I eliminate human latency configurations entirely.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="roadmap">
-  <h2>The Execution Roadmap</h2>
+<section id="roadmap">
+  <h2 class="section-title">The Operational Roadmap</h2>
+  <p class="section-desc">Tightly structured technical onboarding engineered for deployment clarity.</p>
   <div class="grid">
     <div class="card" data-aos="fade-up">
-      <span class="roadmap-num">01</span>
-      <h3>Audit & Discovery</h3>
-      <p>Evaluating existing workflows and pinpointing operational or design friction bottlenecks.</p>
+      <div class="card-content">
+        <span class="roadmap-num">01</span>
+        <h3>Workflow Diagnostics</h3>
+        <p>A rigorous review mapping out hidden infrastructure limitations and data flow bottlenecks across your current tech systems.</p>
+      </div>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <span class="roadmap-num">02</span>
-      <h3>System Design</h3>
-      <p>Architecting custom web blueprints, tracking parameters, and system integrations tailored to your audience.</p>
+      <div class="card-content">
+        <span class="roadmap-num">02</span>
+        <h3>Architectural Blueprinting</h3>
+        <p>Designing targeted operational structures, clean data schemas, and custom user interface logic suited to your target segment.</p>
+      </div>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <span class="roadmap-num">03</span>
-      <h3>Implementation</h3>
-      <p>Deploying technical solutions, running technical audits, and maximizing engine visibility.</p>
+      <div class="card-content">
+        <span class="roadmap-num">03</span>
+        <h3>Technical Implementation</h3>
+        <p>Direct deployment of secure code frameworks, data analytics configuration setups, and live systemic optimization.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="services">
-<h2>Core Specialized Services</h2>
-<p class="section-desc">Fully optimized capabilities mapped directly to my certified operational competencies.</p>
+<section id="services" style="background: var(--bg-card); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+<h2 class="section-title">Core Capability Matrices</h2>
+<p class="section-desc">Specialized technical solutions optimized directly for operational efficiency.</p>
 <div class="grid">
-  <div class="card"><div class="icon-box"><i class="fas fa-laptop-code"></i></div><h3>Web Design</h3><p>High-conversion interface creation and clean layouts.</p><span class="price-tag">From $500 | KSh 65k</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-tools"></i></div><h3>Technical Support</h3><p>Server management, platform integrations, and general updates.</p><span class="price-tag">$40/hr | KSh 5,200</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-chart-bar"></i></div><h3>Business Analytics</h3><p>Data tracking, conversion reports, and dashboard design.</p><span class="price-tag">$50/hr | KSh 6,500</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-bullhorn"></i></div><h3>Search Engine Marketing (SEM)</h3><p>Paid traffic deployment strategies and paid conversion layouts.</p><span class="price-tag">From $400 / Mo</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-code"></i></div><h3>Web Development</h3><p>Clean system builds on high-performance frameworks.</p><span class="price-tag">From $750 | KSh 98k</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-paint-brush"></i></div><h3>Graphic Design</h3><p>Custom media production, slide decks, and creative collateral assets.</p><span class="price-tag">$35/hr | KSh 4,500</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-chart-line"></i></div><h3>Digital Marketing</h3><p>Omnichannel strategy development to increase broad inbound metrics.</p><span class="price-tag">From $600 / Mo</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-share-alt"></i></div><h3>Social Media Marketing</h3><p>Targeted distribution across professional networks.</p><span class="price-tag">$35/hr | KSh 4,500</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-user-tie"></i></div><h3>Virtual Assistance</h3><p>Administrative support, executive schedule management, and key infrastructure upkeep.</p><span class="price-tag">$30/hr | KSh 3,900</span></div>
-  <div class="card"><div class="icon-box"><i class="fas fa-search"></i></div><h3>Search Engine Optimization (SEO)</h3><p>Backend optimization, index structures, and organic discovery strategies.</p><span class="price-tag">From $350 | KSh 45k</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-laptop-code"></i></div><h3>Interface Engineering (UI/UX)</h3><p>High-conversion premium architectural interfaces configured for modern digital products.</p></div><span class="price-tag">From $500 | KSh 65k</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-tools"></i></div><h3>Infrastructure & Support</h3><p>Server performance optimization, custom API platform linkages, and core data architecture maintenance.</p></div><span class="price-tag">$40 / hr | KSh 5,200</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-chart-bar"></i></div><h3>Business Intelligence Analytics</h3><p>Custom tracking pipelines, event data configurations, and actionable dashboard architectures.</p></div><span class="price-tag">$50 / hr | KSh 6,500</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-bullhorn"></i></div><h3>Search Engine Marketing (SEM)</h3><p>Targeted traffic setups, analytical conversion monitoring, and high-yield paid visibility campaigns.</p></div><span class="price-tag">From $400 / Mo</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-code"></i></div><h3>Full-Scale Web Development</h3><p>Developing secure database backends and layouts over scalable web architectures.</p></div><span class="price-tag">From $750 | KSh 98k</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-paint-brush"></i></div><h3>Visual Brand Assets</h3><p>Premium corporate vector layouts, board-level dynamic pitch decks, and crisp operational collateral.</p></div><span class="price-tag">$35 / hr | KSh 4,500</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-chart-line"></i></div><h3>Digital Growth Strategy</h3><p>Omnichannel visibility planning built out to expand organic inbound conversion footprints.</p></div><span class="price-tag">From $600 / Mo</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-share-alt"></i></div><h3>Professional Networks Distribution</h3><p>High-authority distribution targeting enterprise decision makers across active business pipelines.</p></div><span class="price-tag">$35 / hr | KSh 4,500</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-user-tie"></i></div><h3>Executive Operations Support</h3><p>Strategic calendar coordination, critical priority routing, and backend systems management.</p></div><span class="price-tag">$30 / hr | KSh 3,900</span></div>
+  <div class="card"><div class="card-content"><div class="icon-box"><i class="fas fa-search"></i></div><h3>Technical SEO Architecture</h3><p>Index optimization, structured schemas, crawling analytics, and semantic visibility engines.</p></div><span class="price-tag">From $350 | KSh 45k</span></div>
 </div>
 </section>
 
-<section class="section" id="packages">
-  <h2>Strategic Retainer Packages</h2>
-  <p class="section-desc">Choose a partnership level designed to scale your operations and automate your growth.</p>
+<section id="packages">
+  <h2 class="section-title">Strategic Retainer Tiers</h2>
+  <p class="section-desc">Fixed capacity options designed for reliable workflow automation and continuous scale.</p>
   <div class="grid">
     <div class="card" data-aos="fade-up">
-      <div class="icon-box"><i class="fas fa-seedling"></i></div>
-      <h3>Essential Growth</h3>
-      <p>Perfect for founders needing consistent technical support and system maintenance.</p>
-      <ul class="package-list">
-        <li><i class="fas fa-check"></i> 10 Hours / Month</li>
-        <li><i class="fas fa-check"></i> General System Audits</li>
-        <li><i class="fas fa-check"></i> Operational Email Support</li>
-        <li><i class="fas fa-check"></i> Monthly Strategy Call</li>
-      </ul>
-      <span class="price-tag">$400/mo | KSh 52k</span>
+      <div class="card-content">
+        <div class="icon-box"><i class="fas fa-seedling"></i></div>
+        <h3>Essential Growth</h3>
+        <p>Reliable maintenance and structural tech oversight for founders managing active workflows.</p>
+        <ul class="package-list">
+          <li><i class="fas fa-check"></i> 10 Allocated Engineering Hours</li>
+          <li><i class="fas fa-check"></i> System Audits & Security Controls</li>
+          <li><i class="fas fa-check"></i> Dedicated Email Communications</li>
+          <li><i class="fas fa-check"></i> Monthly Strategy Realignment</li>
+        </ul>
+      </div>
+      <span class="price-tag">$400 / mo | KSh 52k</span>
     </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-green); box-shadow: 0 10px 30px rgba(22, 163, 74, 0.1);">
-      <div class="status-badge" style="margin-bottom:10px;">Most Popular</div>
-      <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-      <h3>Scaler Architect</h3>
-      <p>High-impact automation, web adjustments, and system building for growing ventures.</p>
-      <ul class="package-list">
-        <li><i class="fas fa-check"></i> 25 Hours / Month</li>
-        <li><i class="fas fa-check"></i> Custom Web & CRM Overhauls</li>
-        <li><i class="fas fa-check"></i> Priority WhatsApp Access</li>
-        <li><i class="fas fa-check"></i> Bi-weekly Ops Syncs</li>
-      </ul>
-      <span class="price-tag">$950/mo | KSh 125k</span>
+    <div class="card" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-green); box-shadow: 0 20px 40px rgba(5, 150, 105, 0.05);">
+      <div class="card-content">
+        <div class="status-badge" style="margin-bottom:15px; padding: 4px 12px; font-size:0.75rem;">Highly Requested Portfolio Tier</div>
+        <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+        <h3>Scaler Architect</h3>
+        <p>Deep automation structures, continuous UI updates, and pipeline building for growing firms.</p>
+        <ul class="package-list">
+          <li><i class="fas fa-check"></i> 25 Allocated Engineering Hours</li>
+          <li><i class="fas fa-check"></i> CRM Pipeline & UI Adjustments</li>
+          <li><i class="fas fa-check"></i> Priority Encrypted Messaging Access</li>
+          <li><i class="fas fa-check"></i> Bi-Weekly Operational Diagnostics</li>
+        </ul>
+      </div>
+      <span class="price-tag">$950 / mo | KSh 125k</span>
     </div>
     <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <div class="icon-box"><i class="fas fa-crown"></i></div>
-      <h3>Executive Partner</h3>
-      <p>Full-scale technical partnership for system deployment and massive asset architecture iterations.</p>
-      <ul class="package-list">
-        <li><i class="fas fa-check"></i> 50 Hours / Month</li>
-        <li><i class="fas fa-check"></i> End-to-End Execution Management</li>
-        <li><i class="fas fa-check"></i> 24/7 Priority Emergency Coverage</li>
-        <li><i class="fas fa-check"></i> Weekly Strategy Intensive</li>
-      </ul>
-      <span class="price-tag">$1,800/mo | KSh 235k</span>
+      <div class="card-content">
+        <div class="icon-box"><i class="fas fa-crown"></i></div>
+        <h3>Executive Partner</h3>
+        <p>Comprehensive operational support for end-to-end framework execution and continuous optimization.</p>
+        <ul class="package-list">
+          <li><i class="fas fa-check"></i> 50 Allocated Engineering Hours</li>
+          <li><i class="fas fa-check"></i> End-to-End Operational Ownership</li>
+          <li><i class="fas fa-check"></i> 24/7 Critical System Coverage</li>
+          <li><i class="fas fa-check"></i> Weekly Operational Intensive Syncs</li>
+        </ul>
+      </div>
+      <span class="price-tag">$1,800 / mo | KSh 235k</span>
     </div>
   </div>
 </section>
 
-<section class="section" id="testimonials">
-<h2>Success Stories</h2>
+<section id="testimonials" style="background: var(--bg-card); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
+<h2 class="section-title">Case Appraisals</h2>
+<p class="section-desc">Verifiable feedback trends from professional operators across key growth corridors.</p>
 <div class="grid">
 <div class="card" data-aos="fade-up">
-<div class="testimonial-header">
-  <img src="https://i.pravatar.cc/150?u=jane" alt="Jane" class="testimonial-img">
-  <div>
-    <h3>Jane Doe</h3>
-    <span class="client-loc">London, UK</span>
+<div class="card-content">
+  <div class="testimonial-header">
+    <div class="avatar-fallback">JD</div>
+    <div>
+      <h3 style="font-size:1.1rem; margin-bottom:0;">Jane Doe</h3>
+      <span class="client-loc">London, UK</span>
+    </div>
   </div>
+  <p style="font-style: italic; color: var(--text-main); font-size:1rem;">"Timothy's architectural approach to our business backend workflows saved our operations desk roughly 20 critical hours inside week one."</p>
 </div>
-<p>"Timothy's backend strategies saved us over 20 hours a week!"</p>
 <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 </div>
 <div class="card" data-aos="fade-up" data-aos-delay="100">
-<div class="testimonial-header">
-  <img src="https://i.pravatar.cc/150?u=victoria" alt="Victoria" class="testimonial-img">
-  <div>
-    <h3>Victoria Smith</h3>
-    <span class="client-loc">New York, USA</span>
+<div class="card-content">
+  <div class="testimonial-header">
+    <div class="avatar-fallback">VS</div>
+    <div>
+      <h3 style="font-size:1.1rem; margin-bottom:0;">Victoria Smith</h3>
+      <span class="client-loc">New York, USA</span>
+    </div>
   </div>
+  <p style="font-style: italic; color: var(--text-main); font-size:1rem;">"The customized CRM adjustments and complete platform SEO structural overhaul outperformed our explicit baseline metrics."</p>
 </div>
-<p>"The system design changes and SEO overhaul exceeded all expectations."</p>
 <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 </div>
 <div class="card" data-aos="fade-up" data-aos-delay="200">
-<div class="testimonial-header">
-  <img src="https://i.pravatar.cc/150?u=maria" alt="Maria" class="testimonial-img">
-  <div>
-    <h3>Maria Gonzales</h3>
-    <span class="client-loc">Dubai, UAE</span>
+<div class="card-content">
+  <div class="testimonial-header">
+    <div class="avatar-fallback">MG</div>
+    <div>
+      <h3 style="font-size:1.1rem; margin-bottom:0;">Maria Gonzales</h3>
+      <span class="client-loc">Dubai, UAE</span>
+    </div>
   </div>
+  <p style="font-style: italic; color: var(--text-main); font-size:1rem;">"Impeccable communication cadences, highly technical layout logic, and absolute execution ownership over our interface rollouts."</p>
 </div>
-<p>"Professional, detail-oriented, and extremely strategic with our platform deployment."</p>
 <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
 </div>
 </div>
 </section>
 
-<section class="section" id="billing" style="background: var(--bg-card);">
-<h2>Payments</h2>
+<section id="billing">
+<h2 class="section-title">Corporate Settlements</h2>
+<p class="section-desc">Encrypted payment links configured for seamless regional and international processing.</p>
 <div class="billing-grid">
 <div class="payment-portal">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="portal-logo">
-<p>Secure International Payment</p><br>
-<button class="btn paypal-btn">Pay via PayPal</button>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal Executive Settlement Channel" class="portal-logo">
+<p style="font-size:0.9rem; color: var(--text-muted); margin-bottom:25px;">Secure International Invoicing Corridor</p>
+<button class="btn paypal-btn">Authorize via PayPal</button>
 </div>
 <div class="payment-portal">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_LOGO-01.svg" alt="M-Pesa" class="portal-logo">
-<p>Local Payment (Kenya)</p><br>
-<button class="btn mpesa-btn">Pay via M-Pesa</button>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M-PESA_LOGO-01.svg" alt="M-Pesa Regional Settlement Channel" class="portal-logo">
+<p style="font-size:0.9rem; color: var(--text-muted); margin-bottom:25px;">Local Settlement via WhatsApp Confirmation</p>
+<button class="btn mpesa-btn">Authorize via M-Pesa</button>
 </div>
 </div>
 </section>
 
-<section class="section" id="contact">
-<h2>Get In Touch</h2>
-<div class="grid" style="max-width:600px;margin:auto;">
-<div class="card">
-<form id="contact-form" action="https://formspree.io/f/xvzvbygw" method="POST">
-<input type="text" name="name" placeholder="Name" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
-<input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
-<textarea name="message" placeholder="Message" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid var(--border-color);height:100px; background: var(--bg-body); color: var(--text-main);"></textarea>
-<button type="submit" id="submit-btn" class="btn primary" style="width:100%;">Send Message</button>
-<p id="form-status"></p>
+<section id="contact" style="background: var(--bg-card); border-top:1px solid var(--border-color);">
+<h2 class="section-title">Initiate Session</h2>
+<p class="section-desc">Provide your operational metrics below to request a private configuration consult.</p>
+<div class="grid" style="max-width:650px;margin:auto;">
+<div style="width:100%;">
+<form id="contact-form" action="https://formspree.io/f/xvzvbygw" method="POST" style="display:flex; flex-direction:column; gap:20px;">
+<input type="text" name="name" placeholder="Executive Name" required>
+<input type="email" name="email" placeholder="Corporate Communications Email" required>
+<textarea name="message" placeholder="Outline current systemic operational constraints or core objectives..." required style="height:140px; resize: none;"></textarea>
+<button type="submit" id="submit-btn" class="btn primary" style="width:100%;">Submit Verification Request</button>
+<p id="form-status" style="text-align:center; font-weight:600; font-size:0.95rem;"></p>
 </form>
 </div>
 </div>
 </section>
 
 <footer>
-<p>&copy; <span id="footer-year">2026</span> Timothy Thuo. All Rights Reserved.</p>
-<div class="socials" style="margin-top:20px;">
-<a href="http://www.linkedin.com/in/timothy-thuo" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.facebook.com/share/1CNhC6nfLz/" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+<p>&copy; <span id="footer-year">2026</span> Timothy Thuo. All Rights Reserved. &middot; Powered by Enterprise Architecture Protocols.</p>
+<div class="socials" style="margin-top:25px;">
+<a href="http://www.linkedin.com/in/timothy-thuo" target="_blank" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.facebook.com/share/1CNhC6nfLz/" target="_blank" aria-label="Review Facebook Credentials"><i class="fab fa-facebook"></i></a>
+<a href="https://github.com" target="_blank" aria-label="View Technical Code Repositories"><i class="fab fa-github"></i></a>
 </div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-// Initialize Animations
-AOS.init({duration:800,once:true});
+// Mobile-Optimized Scroll Animations Pipeline
+AOS.init({
+  duration: 800,
+  once: true,
+  disable: 'mobile' 
+});
 
-// Dynamic Date Handler 
+// Structural Calendar Sync Logic
 const currentYear = new Date().getFullYear();
 document.getElementById('current-year-badge').innerText = currentYear;
 document.getElementById('footer-year').innerText = currentYear;
 
-// AJAX Form Handling via Formspree
+// AJAX Form Engineering Configuration
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 const btn = document.getElementById('submit-btn');
@@ -359,7 +430,7 @@ const btn = document.getElementById('submit-btn');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     btn.disabled = true;
-    btn.innerText = "Sending...";
+    btn.innerText = "Transmitting Protocols...";
     
     const data = new FormData(form);
     try {
@@ -371,23 +442,21 @@ form.addEventListener('submit', async (e) => {
       
       if (response.ok) {
         status.style.color = "var(--accent-green)";
-        status.style.marginTop = "15px";
-        status.innerText = "Thanks! I'll get back to you shortly.";
+        status.innerText = "Transmission confirmed. Reviewing parameters shortly.";
         form.reset();
       } else {
-        throw new Error('Form submission failed');
+        throw new Error('Data validation rejection');
       }
     } catch (error) {
-      status.style.color = "red";
-      status.style.marginTop = "15px";
-      status.innerText = "Oops! Problem sending. Try again.";
+      status.style.color = "#dc2626";
+      status.innerText = "Transmission error encountered. Re-verify network connections.";
     } finally {
-      btn.innerText = "Send Message";
+      btn.innerText = "Submit Verification Request";
       btn.disabled = false;
     }
 });
 
-// Navigation Toggle Engine
+// Interactive Navigation Engines
 const corner = document.getElementById('cornerMenu');
 const overlay = document.getElementById('mobileMenu');
 corner.addEventListener('click', () => { 
@@ -402,7 +471,7 @@ overlay.addEventListener('click', (e) => {
   }
 });
 
-// Light/Dark Theme Switching Mechanic
+// High-End Theme Engine Pipeline
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
@@ -411,16 +480,15 @@ themeBtn.addEventListener('click', () => {
   themeBtn.innerHTML = next === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
 
-// Functional Payment Anchors 
+// Transaction Redirection Matrix Configuration
 document.querySelector('.paypal-btn').addEventListener('click', () => { 
-  // Custom username string configuration target
   window.location.href = "https://www.paypal.me/timothythuo"; 
 });
 document.querySelector('.mpesa-btn').addEventListener('click', () => { 
-  window.location.href = "https://wa.me/254794301929?text=I%20want%20to%20pay%20via%20M-Pesa"; 
+  window.location.href = "https://wa.me/254794301929?text=I%20want%20to%20initialize%20local%20M-Pesa%20settlement%20protocols"; 
 });
 
-// Dynamic Back-To-Top Display Logic
+// Core Global Return Scroll Mechanics
 const scrollBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => { 
   scrollBtn.style.display = window.scrollY > 400 ? 'flex' : 'none'; 
@@ -429,7 +497,7 @@ scrollBtn.addEventListener('click', () => {
   window.scrollTo({top: 0, behavior: 'smooth'}); 
 });
 
-// High-Performance Interactive Background Micro-particles
+// Canvas Context Micro-Particles Engine
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 let w, h, particles = [];
@@ -437,15 +505,15 @@ function init() {
   w = canvas.width = window.innerWidth; 
   h = canvas.height = window.innerHeight; 
   particles = []; 
-  for(let i=0; i<80; i++) particles.push({x:Math.random()*w, y:Math.random()*h, dx:(Math.random()-0.5), dy:(Math.random()-0.5)}); 
+  for(let i=0; i<60; i++) particles.push({x:Math.random()*w, y:Math.random()*h, dx:(Math.random()-0.5)*0.8, dy:(Math.random()-0.5)*0.8}); 
 }
 function draw() { 
   ctx.clearRect(0,0,w,h); 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(22, 163, 74, 0.15)'; 
+  ctx.fillStyle = isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(5, 150, 105, 0.12)'; 
   
   particles.forEach(p => { 
-    ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI*2); ctx.fill(); 
+    ctx.beginPath(); ctx.arc(p.x, p.y, 1.5, 0, Math.PI*2); ctx.fill(); 
     p.x += p.dx; p.y += p.dy; 
     if(p.x<0||p.x>w) p.dx*=-1; if(p.y<0||p.y>h) p.dy*=-1; 
   }); 
@@ -455,4 +523,4 @@ window.addEventListener('resize', init);
 init(); draw();
 </script>
 </body>
-</html>
+    </html>
